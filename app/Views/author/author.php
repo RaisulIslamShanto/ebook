@@ -152,8 +152,8 @@
                                 <div class="card-body text-end">
                                 <a class="nav-link "  href="<?php echo base_url('addauthor')?>">
 
-                                <div class="sb-nav-link-icon btn btn-primary">
-                                Add Author
+                                    <div class="sb-nav-link-icon btn btn-primary">
+                                        Add Author
                                 </a>
 
                                 </div>
@@ -179,11 +179,10 @@
                                 <thead>
                                     <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Image</th>
+                                    
                                     <th scope="col">Name</th>
-                                    <th scope="col">Create By</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Verified</th>
+                                    
+                                    <th scope="col">Create by</th>
                                     <th scope="col">Created</th>
                                     </tr>
                                 </thead>
@@ -192,13 +191,14 @@
                                     <?php foreach($user as $value):?>
                                     <tr>
                                     <th scope="row"><?= $value['id'] ?></th>
-                                    <td><?= $value['Image'] ?></td>
-                                    <td><?= $value['Name'] ?></td>
-                                    <td><?= $value['CreatedBy'] ?></td>
+                                  
+                                    <td><?= $value['name'] ?></td>
+
+                                    <td><?= $value['create'] ?></td>
                                     
-                                    <td><?= $value['Status'] ?></td>
-                                    <td><?= $value['Verified'] ?></td>
-                                    <td><?= $value['Created'] ?></td>
+                                    
+                                    
+                                    <td><?= $value['created'] ?></td>
                                     
                                     </tr>
                                     <tr>
@@ -207,8 +207,7 @@
                                   
                                 </tbody>
                         </table>
-
-                                
+                       
 
 
 

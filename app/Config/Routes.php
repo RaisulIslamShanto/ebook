@@ -33,16 +33,64 @@ $routes->get('/', 'Home::index');
 
 $routes->get('/login', 'Home::login');
 $routes->get('/logout', 'Home::logout'); 
-$routes->get('/ebook', 'Home::ebook');
+// $routes->get('/ebook', 'Home::ebook');
+
+
 $routes->get('/author', 'Home::author');
 
 $routes->post('/author', 'Home::author');
-$routes->get('/category', 'Home::category');
-// $routes->get('/author', 'Home::author');
-$routes->get('/ebook/ebook', 'Home::ebook/ebook');
-$routes->get('/addauthor', 'Home::addAuthor');
+//  $routes->get('/category', 'Home::category');
+$routes->get('/author', 'Home::author');
+// $routes->get('/ebook/ebook', 'Home::ebook/ebook');
+
+//author routes
+$routes->get('/addauthor', 'AuthorController::index');
 $routes->post('/authorStore', 'Home::store');
 $routes->post('/addauthor', 'AuthorController::addAuthor');
+
+$routes->get('/category', 'CategoryController::categoryShow');
+
+// category
+$routes->get('/addcategory', 'CategoryController::addcategory');
+
+$routes->post('/addcategory', 'CategoryController::addcategory');
+
+$routes->get('/edit_category/(:num)', 'CategoryController::editcategory/$1');
+$routes->post('/edit_category/update/(:num)', 'CategoryController::updatecategory/$1');
+
+
+
+$routes->get('/delete_category/(:num)', 'CategoryController::deletecategory/$1');
+
+
+$routes->get('/add_sub_category', 'CategoryController::addSubCategory');
+
+
+$routes->get('/subcategoryview/(:num)', 'CategoryController::subcategoryview/$1');
+$routes->post('/subcategoryview', 'SubcategoryController::addSubCategory');
+// $routes->get('/ebook/addcategory', 'SubcategoryController::view');
+
+$routes->post('/add_sub_category', 'SubcategoryController::addSubCategory');
+
+
+// ebooks
+
+$routes->get('/ebook', 'EbookController::ebook');
+$routes->get('/ebookform', 'EbookController::ebookform');
+$routes->post('/ebookformsubmit', 'EbookController::addebook');
+$routes->get('/ebooktable', 'EbookController::ebookformsubmit');
+
+$routes->get('/delete_ebook/(:num)', 'EbookController::deleteebook/$1');
+
+$routes->get('/edit_ebook/(:num)', 'EbookController::editebook/$1');
+$routes->post('/edit_ebook/update/(:num)', 'EbookController::updateebook/$1');
+$routes->get('/search', 'EbookController::search');
+
+
+
+
+
+
 
 
 /*

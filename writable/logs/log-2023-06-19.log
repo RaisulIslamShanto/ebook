@@ -1,0 +1,451 @@
+CRITICAL - 2023-06-19 07:21:05 --> syntax error, unexpected token "endif", expecting end of file
+in APPPATH\Views\category\add_category.php on line 205.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 3 APPPATH\Controllers\CategoryController.php(24): view('category/add_category', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 07:31:50 --> Undefined variable $successMessage
+in APPPATH\Views\category\add_category.php on line 197.
+ 1 APPPATH\Views\category\add_category.php(197): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $successMessage', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 197)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(33): view('category/add_category')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->msgshow()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 07:37:21 --> syntax error, unexpected token "=>", expecting ";"
+in APPPATH\Controllers\CategoryController.php on line 38.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CategoryController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CategoryController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\CategoryController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 07:37:24 --> syntax error, unexpected token "=>", expecting ";"
+in APPPATH\Controllers\CategoryController.php on line 38.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CategoryController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CategoryController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\CategoryController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 07:37:28 --> syntax error, unexpected token "=>", expecting ";"
+in APPPATH\Controllers\CategoryController.php on line 38.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CategoryController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CategoryController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\CategoryController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 07:38:43 --> Undefined variable $successMessage
+in APPPATH\Views\category\add_category.php on line 197.
+ 1 APPPATH\Views\category\add_category.php(197): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $successMessage', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 197)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(34): view('category/add_category')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->msgshow()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 07:39:05 --> Undefined variable $successMessage
+in APPPATH\Views\category\add_category.php on line 197.
+ 1 APPPATH\Views\category\add_category.php(197): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $successMessage', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 197)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(34): view('category/add_category')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->msgshow()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 07:40:28 --> Undefined variable $successMessage
+in APPPATH\Views\category\add_category.php on line 197.
+ 1 APPPATH\Views\category\add_category.php(197): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $successMessage', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 197)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(34): view('category/add_category')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->msgshow()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 07:41:34 --> Undefined variable $successMessage
+in APPPATH\Views\category\add_category.php on line 197.
+ 1 APPPATH\Views\category\add_category.php(197): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $successMessage', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 197)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(34): view('category/add_category')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->msgshow()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 09:48:33 --> Class "App\Models\add_author_model" not found
+in APPPATH\Controllers\AuthorController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AuthorController->addAuthor()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthorController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:22:48 --> Undefined variable $categoryName
+in APPPATH\Controllers\CategoryController.php on line 38.
+ 1 APPPATH\Controllers\CategoryController.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoryName', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:22:53 --> Undefined variable $categoryName
+in APPPATH\Controllers\CategoryController.php on line 38.
+ 1 APPPATH\Controllers\CategoryController.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoryName', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:28:21 --> Undefined variable $categoryName
+in APPPATH\Controllers\CategoryController.php on line 38.
+ 1 APPPATH\Controllers\CategoryController.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoryName', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:30:58 --> Undefined variable $categoryName
+in APPPATH\Controllers\CategoryController.php on line 38.
+ 1 APPPATH\Controllers\CategoryController.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoryName', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:31:22 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\CategoryController.php(38): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:31:33 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\CategoryController.php(38): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:32:45 --> Class "App\Models\add_author_model" not found
+in APPPATH\Controllers\AuthorController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AuthorController->addAuthor()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthorController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:33:04 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\CategoryController.php(38): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:34:02 --> Undefined variable $categoryName
+in APPPATH\Views\category\add_category.php on line 175.
+ 1 APPPATH\Views\category\add_category.php(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoryName', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 175)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(44): view('category/add_category')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:34:22 --> Trying to access array offset on value of type null
+in APPPATH\Views\category\add_category.php on line 178.
+ 1 APPPATH\Views\category\add_category.php(178): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 178)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(44): view('category/add_category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:35:22 --> Trying to access array offset on value of type null
+in APPPATH\Views\category\add_category.php on line 178.
+ 1 APPPATH\Views\category\add_category.php(178): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 178)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(44): view('category/add_category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:36:50 --> Trying to access array offset on value of type null
+in APPPATH\Views\category\add_category.php on line 178.
+ 1 APPPATH\Views\category\add_category.php(178): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 178)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(44): view('category/add_category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:39:49 --> Undefined variable $successMessage
+in APPPATH\Views\category\add_category.php on line 205.
+ 1 APPPATH\Views\category\add_category.php(205): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $successMessage', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 205)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(44): view('category/add_category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:43:29 --> Undefined variable $successMessage
+in APPPATH\Views\category\add_category.php on line 238.
+ 1 APPPATH\Views\category\add_category.php(238): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $successMessage', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 238)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(44): view('category/add_category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 10:48:14 --> Class "App\Models\add_author_model" not found
+in APPPATH\Controllers\AuthorController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AuthorController->addAuthor()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthorController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 11:00:31 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\CategoryController.php(45): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 11:00:35 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\CategoryController.php(45): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 11:01:34 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\CategoryController.php(45): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 11:14:06 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\CategoryController.php on line 53.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CategoryController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CategoryController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\CategoryController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 11:14:08 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\CategoryController.php on line 53.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CategoryController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CategoryController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\CategoryController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 11:15:44 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\CategoryController.php on line 54.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CategoryController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CategoryController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\CategoryController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 11:15:45 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\CategoryController.php on line 54.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\CategoryController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\CategoryController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\CategoryController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 11:19:39 --> Undefined variable $successMessage
+in APPPATH\Views\category\add_category.php on line 238.
+ 1 APPPATH\Views\category\add_category.php(238): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $successMessage', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 238)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(49): view('category/add_category')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 11:24:05 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\CategoryController.php(37): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-19 11:55:04 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\ebook\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\ebook\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ebook\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ebook\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php(37): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ebook\system\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+#9 C:\xampp\htdocs\ebook\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 C:\xampp\htdocs\ebook\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ebook\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-19 11:55:04 --> Column 'category_name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `categorytable` (`category_name`) VALUES (NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `categorytable` (`category_name`) VALUES (NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `categorytable` (`category_name`) VALUES (NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categorytable` (`category_name`) VALUES (:category_name:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CategoryController.php(37): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-19 13:03:30 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\ebook\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\ebook\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ebook\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ebook\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php(46): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ebook\system\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+#9 C:\xampp\htdocs\ebook\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 C:\xampp\htdocs\ebook\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ebook\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-19 13:03:30 --> Column 'category_name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (NULL, 0, 0)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (NULL, 0, 0)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (NULL, 0, 0)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (:category_name:, :searchable:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CategoryController.php(46): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-19 13:09:04 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\ebook\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\ebook\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ebook\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ebook\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php(46): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ebook\system\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+#9 C:\xampp\htdocs\ebook\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 C:\xampp\htdocs\ebook\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ebook\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-19 13:09:04 --> Column 'category_name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (NULL, 0, 0)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (NULL, 0, 0)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (NULL, 0, 0)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (:category_name:, :searchable:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CategoryController.php(46): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 13:11:49 --> Undefined variable $categories
+in APPPATH\Views\category\category.php on line 165.
+ 1 APPPATH\Views\category\category.php(165): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\category.php', 165)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(14): view('category/category')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->categoryShow()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-19 13:29:22 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\ebook\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\ebook\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ebook\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ebook\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php(47): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ebook\system\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+#9 C:\xampp\htdocs\ebook\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 C:\xampp\htdocs\ebook\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ebook\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-19 13:29:22 --> Column 'category_name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (NULL, 0, 0)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (NULL, 0, 0)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (NULL, 0, 0)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (:category_name:, :searchable:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CategoryController.php(47): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-19 13:33:41 --> Undefined variable $categories
+in APPPATH\Views\category\add_sub_category.php on line 171.
+ 1 APPPATH\Views\category\add_sub_category.php(171): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_sub_category.php', 171)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_sub_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_sub_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(85): view('category/add_sub_category')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addSubCategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

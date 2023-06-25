@@ -1,0 +1,106 @@
+CRITICAL - 2023-06-25 03:08:30 --> Undefined array key "Image"
+in APPPATH\Views\ebook\index.php on line 176.
+ 1 APPPATH\Views\ebook\index.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Image"', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebook\\index.php', 176)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebook\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebook/index', [], true)
+ 5 APPPATH\Controllers\Home.php(19): view('ebook/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 03:09:17 --> Undefined array key "Image"
+in APPPATH\Views\ebook\index.php on line 176.
+ 1 APPPATH\Views\ebook\index.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Image"', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebook\\index.php', 176)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebook\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebook/index', [], true)
+ 5 APPPATH\Controllers\Home.php(19): view('ebook/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-25 03:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 03:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 03:26:45 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\SubcategoryController.php on line 64.
+ 1 APPPATH\Controllers\SubcategoryController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 03:27:34 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\SubcategoryController.php on line 64.
+ 1 APPPATH\Controllers\SubcategoryController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-25 03:29:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 03:30:57 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\SubcategoryController.php on line 64.
+ 1 APPPATH\Controllers\SubcategoryController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 03:31:30 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\SubcategoryController.php on line 64.
+ 1 APPPATH\Controllers\SubcategoryController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 03:31:53 --> Undefined array key "subcategoryname"
+in APPPATH\Controllers\SubcategoryController.php on line 64.
+ 1 APPPATH\Controllers\SubcategoryController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subcategoryname"', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 03:36:12 --> Undefined array key "subcategoryname"
+in APPPATH\Controllers\SubcategoryController.php on line 64.
+ 1 APPPATH\Controllers\SubcategoryController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subcategoryname"', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 03:36:37 --> Undefined array key "subcategoryname"
+in APPPATH\Controllers\SubcategoryController.php on line 64.
+ 1 APPPATH\Controllers\SubcategoryController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subcategoryname"', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 03:36:40 --> Undefined array key "subcategoryname"
+in APPPATH\Controllers\SubcategoryController.php on line 64.
+ 1 APPPATH\Controllers\SubcategoryController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subcategoryname"', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 03:36:57 --> Undefined array key "subcategoryname"
+in APPPATH\Controllers\SubcategoryController.php on line 64.
+ 1 APPPATH\Controllers\SubcategoryController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subcategoryname"', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 03:39:09 --> Undefined array key "subcategoryname"
+in APPPATH\Controllers\SubcategoryController.php on line 64.
+ 1 APPPATH\Controllers\SubcategoryController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subcategoryname"', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-25 03:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 03:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 03:57:45 --> Undefined variable $catid
+in APPPATH\Controllers\SubcategoryController.php on line 20.
+ 1 APPPATH\Controllers\SubcategoryController.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $catid', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\SubcategoryController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-25 03:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 03:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

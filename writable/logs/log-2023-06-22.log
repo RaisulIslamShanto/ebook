@@ -1,0 +1,450 @@
+CRITICAL - 2023-06-22 04:09:50 --> Undefined array key "cid"
+in APPPATH\Controllers\CategoryController.php on line 70.
+ 1 APPPATH\Controllers\CategoryController.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cid"', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 70)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-22 05:13:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 3 in C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\ebook\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ebook\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ebook\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php(70): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\ebook\system\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+#8 C:\xampp\htdocs\ebook\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#9 C:\xampp\htdocs\ebook\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ebook\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-06-22 05:13:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `subcategory`
+WHERE 2 = :2:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `subcategory`
+WHERE 2 = :2:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `subcategory`
+WHERE 2 = :2:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `subcategory`
+WHERE 2 = :2:', [...], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Controllers\CategoryController.php(70): CodeIgniter\BaseModel->find()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-22 07:44:04 --> mysqli_sql_exception: Column 'subcategoryname' cannot be null in C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `su...', 0)
+#1 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `su...')
+#2 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `su...')
+#3 C:\xampp\htdocs\ebook\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `su...', Array, false)
+#4 C:\xampp\htdocs\ebook\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ebook\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ebook\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ebook\app\Controllers\SubcategoryController.php(53): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ebook\system\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+#9 C:\xampp\htdocs\ebook\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+#10 C:\xampp\htdocs\ebook\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ebook\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-22 07:44:04 --> Column 'subcategoryname' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `subcategory` (`subcategoryname`, `cid`) VALUES (NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `subcategory` (`subcategoryname`, `cid`) VALUES (NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `subcategory` (`subcategoryname`, `cid`) VALUES (NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `subcategory` (`subcategoryname`, `cid`) VALUES (:subcategoryname:, :cid:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\SubcategoryController.php(53): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 09:56:18 --> Call to a member function getName() on null
+in APPPATH\Controllers\EbookController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->addebook()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 09:58:38 --> Call to a member function getName() on null
+in APPPATH\Controllers\EbookController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->addebook()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 10:07:37 --> Call to a member function getName() on null
+in APPPATH\Controllers\EbookController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->addebook()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 10:09:12 --> Call to a member function getName() on null
+in APPPATH\Controllers\EbookController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->addebook()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 10:11:13 --> Call to a member function getName() on null
+in APPPATH\Controllers\EbookController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->addebook()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 10:13:27 --> Call to a member function getName() on null
+in APPPATH\Controllers\EbookController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->addebook()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 11:12:04 --> Undefined variable $photo
+in APPPATH\Controllers\EbookController.php on line 45.
+ 1 APPPATH\Controllers\EbookController.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $photo', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->addebook()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-22 11:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 11:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-22 11:33:40 --> Call to undefined method CodeIgniter\Session\Session::getFladata()
+in APPPATH\Views\ebookshow\ebookform.php on line 157.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebookform', [], true)
+ 4 APPPATH\Controllers\EbookController.php(18): view('ebookshow/ebookform')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->ebookform()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-22 11:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-22 11:34:04 --> Call to undefined method CodeIgniter\Session\Session::getFlasdata()
+in APPPATH\Views\ebookshow\ebookform.php on line 157.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebookform', [], true)
+ 4 APPPATH\Controllers\EbookController.php(18): view('ebookshow/ebookform')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->ebookform()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-22 11:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 11:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 11:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-22 11:55:53 --> Undefined variable $ebook
+in APPPATH\Views\ebookshow\ebook.php on line 182.
+ 1 APPPATH\Views\ebookshow\ebook.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebook', [], true)
+ 5 APPPATH\Controllers\Home.php(63): view('ebookshow/ebook')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->ebook()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 11:56:38 --> Undefined variable $ebook
+in APPPATH\Views\ebookshow\ebook.php on line 182.
+ 1 APPPATH\Views\ebookshow\ebook.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebook', [], true)
+ 5 APPPATH\Controllers\Home.php(63): view('ebookshow/ebook')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->ebook()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 11:56:41 --> Undefined variable $ebook
+in APPPATH\Views\ebookshow\ebook.php on line 182.
+ 1 APPPATH\Views\ebookshow\ebook.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebook', [], true)
+ 5 APPPATH\Controllers\Home.php(63): view('ebookshow/ebook')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->ebook()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 11:58:31 --> Undefined variable $ebook
+in APPPATH\Views\ebookshow\ebook.php on line 182.
+ 1 APPPATH\Views\ebookshow\ebook.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebook', [], true)
+ 5 APPPATH\Controllers\Home.php(63): view('ebookshow/ebook')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->ebook()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-22 11:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:00:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-22 12:00:16 --> Undefined variable $data
+in APPPATH\Views\ebookshow\ebook.php on line 182.
+ 1 APPPATH\Views\ebookshow\ebook.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebook', [], true)
+ 5 APPPATH\Controllers\EbookController.php(25): view('ebookshow/ebook', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->ebookform()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 12:25:29 --> Undefined variable $ebook
+in APPPATH\Views\ebookshow\ebook.php on line 182.
+ 1 APPPATH\Views\ebookshow\ebook.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebook', [], true)
+ 5 APPPATH\Controllers\Home.php(63): view('ebookshow/ebook')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->ebook()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 12:25:33 --> Undefined variable $ebook
+in APPPATH\Views\ebookshow\ebook.php on line 182.
+ 1 APPPATH\Views\ebookshow\ebook.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebook', [], true)
+ 5 APPPATH\Controllers\Home.php(63): view('ebookshow/ebook')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->ebook()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-22 12:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-22 12:30:04 --> Undefined variable $ebook
+in APPPATH\Views\ebookshow\ebook.php on line 182.
+ 1 APPPATH\Views\ebookshow\ebook.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebook', [], true)
+ 5 APPPATH\Controllers\Home.php(63): view('ebookshow/ebook')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->ebook()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-22 12:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-22 12:30:23 --> Call to undefined method CodeIgniter\HTTP\Files\UploadedFile::newName()
+in APPPATH\Controllers\EbookController.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->addebook()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-22 12:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-22 12:33:07 --> Undefined variable $ebook
+in APPPATH\Views\ebookshow\ebook.php on line 182.
+ 1 APPPATH\Views\ebookshow\ebook.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebook', [], true)
+ 5 APPPATH\Controllers\Home.php(63): view('ebookshow/ebook')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->ebook()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 12:37:32 --> Undefined variable $ebook
+in APPPATH\Views\ebookshow\ebook.php on line 182.
+ 1 APPPATH\Views\ebookshow\ebook.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebook', [], true)
+ 5 APPPATH\Controllers\Home.php(63): view('ebookshow/ebook')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->ebook()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 12:37:35 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\EbookController.php on line 91.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\EbookController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\EbookController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\EbookController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 12:37:36 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\EbookController.php on line 91.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\EbookController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\EbookController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\EbookController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 12:39:31 --> Undefined variable $ebook
+in APPPATH\Views\ebookshow\ebook.php on line 182.
+ 1 APPPATH\Views\ebookshow\ebook.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebook', [], true)
+ 5 APPPATH\Controllers\Home.php(63): view('ebookshow/ebook')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->ebook()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 12:41:44 --> Undefined variable $ebook
+in APPPATH\Views\ebookshow\ebook.php on line 182.
+ 1 APPPATH\Views\ebookshow\ebook.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebook', [], true)
+ 5 APPPATH\Controllers\Home.php(63): view('ebookshow/ebook')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->ebook()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 12:42:42 --> Undefined variable $ebook
+in APPPATH\Views\ebookshow\ebook.php on line 182.
+ 1 APPPATH\Views\ebookshow\ebook.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebook', [], true)
+ 5 APPPATH\Controllers\Home.php(63): view('ebookshow/ebook')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->ebook()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 12:42:47 --> Undefined variable $ebook
+in APPPATH\Views\ebookshow\ebook.php on line 182.
+ 1 APPPATH\Views\ebookshow\ebook.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebook', [], true)
+ 5 APPPATH\Controllers\Home.php(63): view('ebookshow/ebook')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->ebook()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 12:50:25 --> syntax error, unexpected token "/"
+in APPPATH\Controllers\EbookController.php on line 28.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\EbookController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\EbookController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\EbookController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-22 12:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:51:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 12:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-22 12:59:56 --> Undefined variable $photoName
+in APPPATH\Controllers\EbookController.php on line 81.
+ 1 APPPATH\Controllers\EbookController.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $photoName', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 81)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->addebook()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-22 13:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:03:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:09:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:10:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 13:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 14:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-22 14:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-22 14:21:49 --> Undefined variable $editebook
+in APPPATH\Controllers\EbookController.php on line 127.
+ 1 APPPATH\Controllers\EbookController.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $editebook', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 127)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->editebook('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-22 14:23:01 --> Undefined variable $edit_ebook
+in APPPATH\Views\ebookshow\edit_ebook.php on line 162.
+ 1 APPPATH\Views\ebookshow\edit_ebook.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $edit_ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\edit_ebook.php', 162)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\edit_ebook.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/edit_ebook', [], true)
+ 5 APPPATH\Controllers\EbookController.php(131): view('ebookshow/edit_ebook', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->editebook('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

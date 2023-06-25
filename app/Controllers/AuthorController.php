@@ -2,42 +2,75 @@
 
 namespace App\Controllers;
 
-use App\Models\add_author_model;
+use App\Models\Authormodel;
 
 class AuthorController extends BaseController
 {
    
     
+
+    public function index(){
+
+        return view('author/addauthor');
+
+    }
     
+
     public function addAuthor()
     {
-        // echo "r";
-        // die();
+       
+        $author = new Authormodel();
 
+        if ($this->request->getMethod() === 'post') 
+    {
+
+        // Retrieve the category name from the form
+        $name = $this->request->getPost('name');
+        $create = $this->request->getPost('create');
+        $created = $this->request->getPost('created');
         
 
-        $author = new add_author_model();
 
         $data = 
         [
             'name'=> $this->request->getPost('name'), 
-            'image'=> $this->request->getPost('image'), 
-            'description'=> $this->request->getPost('description'), 
-            'status'=> $this->request->getPost('status'), 
-            'varified'=> $this->request->getPost('varified'), 
-        
+            'create'=> $this->request->getPost('create'), 
+            'created'=> $this->request->getPost('created'), 
+           
         ];
 
         // print_r($data);
         // die();
 
-        // $author->save($data);
         $author->insert($data);
 
         // return redirect()->to(base_url('author/author'))->with('status','employee added successfully');
-        return view('author/author');
+        //return view('author/addauthor');
        
         
     }
     
+
+    $author = new Authormodel();
+
+    // $users = $author->findAll();
+    $data['author'] = $author->paginate();
+    $data['pager'] = $author->pager;
+    
+    $sl=1;
+
+    return view('author/authortable',$data,['sl'=>$sl] );
+
+
+    
+
 }
+
+
+
+
+
+
+
+}
+

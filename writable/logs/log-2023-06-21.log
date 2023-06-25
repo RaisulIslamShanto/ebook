@@ -1,0 +1,331 @@
+CRITICAL - 2023-06-21 04:50:41 --> Too few arguments to function App\Controllers\CategoryController::subcategoryview(), 0 passed in C:\xampp\htdocs\ebook\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\CategoryController.php on line 145.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 05:29:51 --> Undefined variable $array
+in APPPATH\Controllers\CategoryController.php on line 156.
+ 1 APPPATH\Controllers\CategoryController.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $array', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 156)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 05:33:46 --> Cannot access offset of type string on string
+in APPPATH\Controllers\CategoryController.php on line 168.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 05:34:14 --> Attempt to read property "category_name" on string
+in APPPATH\Controllers\CategoryController.php on line 168.
+ 1 APPPATH\Controllers\CategoryController.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "category_name" on string', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 168)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 05:34:40 --> Attempt to read property "category_name" on string
+in APPPATH\Controllers\CategoryController.php on line 168.
+ 1 APPPATH\Controllers\CategoryController.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "category_name" on string', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 168)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 05:35:04 --> Cannot access offset of type string on string
+in APPPATH\Controllers\CategoryController.php on line 168.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 05:37:33 --> Undefined variable $updatecat
+in APPPATH\Controllers\CategoryController.php on line 182.
+ 1 APPPATH\Controllers\CategoryController.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $updatecat', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 05:38:46 --> Cannot access offset of type string on string
+in APPPATH\Controllers\CategoryController.php on line 170.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 05:49:31 --> base_url(): Argument #2 ($scheme) must be of type ?string, array given, called in C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php on line 169
+in SYSTEMPATH\Helpers\url_helper.php on line 145.
+ 1 APPPATH\Controllers\CategoryController.php(169): base_url('subcategoryview', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 05:54:06 --> base_url(): Argument #2 ($scheme) must be of type ?string, array given, called in C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php on line 158
+in SYSTEMPATH\Helpers\url_helper.php on line 145.
+ 1 APPPATH\Controllers\CategoryController.php(158): base_url('subcategoryview', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 05:54:09 --> base_url(): Argument #2 ($scheme) must be of type ?string, array given, called in C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php on line 158
+in SYSTEMPATH\Helpers\url_helper.php on line 145.
+ 1 APPPATH\Controllers\CategoryController.php(158): base_url('subcategoryview', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:02:13 --> base_url(): Argument #2 ($scheme) must be of type ?string, array given, called in C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php on line 158
+in SYSTEMPATH\Helpers\url_helper.php on line 145.
+ 1 APPPATH\Controllers\CategoryController.php(158): base_url('subcategoryview', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:03:34 --> base_url(): Argument #2 ($scheme) must be of type ?string, array given, called in C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php on line 158
+in SYSTEMPATH\Helpers\url_helper.php on line 145.
+ 1 APPPATH\Controllers\CategoryController.php(158): base_url('subcategoryview', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:05:05 --> base_url(): Argument #2 ($scheme) must be of type ?string, array given, called in C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php on line 158
+in SYSTEMPATH\Helpers\url_helper.php on line 145.
+ 1 APPPATH\Controllers\CategoryController.php(158): base_url('subcategoryview', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:05:08 --> base_url(): Argument #2 ($scheme) must be of type ?string, array given, called in C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php on line 158
+in SYSTEMPATH\Helpers\url_helper.php on line 145.
+ 1 APPPATH\Controllers\CategoryController.php(158): base_url('subcategoryview', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:13:37 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php on line 158
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\CategoryController.php(158): view('subcategoryview', 'Education')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:14:25 --> Invalid file: "subcategoryview.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('subcategoryview.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('subcategoryview', [], true)
+ 3 APPPATH\Controllers\CategoryController.php(158): view('subcategoryview')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:14:49 --> Invalid file: "subcategoryview/(:num).php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('subcategoryview/(:num).php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('subcategoryview/(:num)', [], true)
+ 3 APPPATH\Controllers\CategoryController.php(158): view('subcategoryview/(:num)')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:16:18 --> Invalid file: "subcategoryview/(:num).php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('subcategoryview/(:num).php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('subcategoryview/(:num)', [], true)
+ 3 APPPATH\Controllers\CategoryController.php(158): view('subcategoryview/(:num)')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:16:43 --> Invalid file: "subcategoryview.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('subcategoryview.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('subcategoryview', [], true)
+ 3 APPPATH\Controllers\CategoryController.php(158): view('subcategoryview')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:17:02 --> Invalid file: "subcategoryview.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('subcategoryview.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('subcategoryview', [], true)
+ 3 APPPATH\Controllers\CategoryController.php(158): view('subcategoryview')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:21:52 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php on line 158
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\CategoryController.php(158): view('category/subcategoryview', 'Education')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:23:51 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php on line 158
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\CategoryController.php(158): view('category/subcategoryview', 'Education')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:25:06 --> Undefined variable $categoryName
+in APPPATH\Views\category\subcategoryview.php on line 221.
+ 1 APPPATH\Views\category\subcategoryview.php(221): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoryName', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php', 221)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/subcategoryview', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(158): view('category/subcategoryview', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:40:35 --> Undefined variable $categories
+in APPPATH\Views\category\subcategoryview.php on line 221.
+ 1 APPPATH\Views\category\subcategoryview.php(221): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php', 221)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/subcategoryview', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(158): view('category/subcategoryview', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:40:56 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\category\subcategoryview.php on line 221.
+ 1 APPPATH\Views\category\subcategoryview.php(221): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php', 221)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/subcategoryview', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(158): view('category/subcategoryview', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 06:47:05 --> Undefined variable $data
+in APPPATH\Views\category\subcategoryview.php on line 221.
+ 1 APPPATH\Views\category\subcategoryview.php(221): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php', 221)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/subcategoryview', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(160): view('category/subcategoryview', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-21 07:07:14 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\ebook\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\ebook\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ebook\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ebook\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php(49): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ebook\system\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+#9 C:\xampp\htdocs\ebook\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 C:\xampp\htdocs\ebook\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ebook\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-21 07:07:14 --> Column 'category_name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (NULL, 0, 0)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (NULL, 0, 0)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (NULL, 0, 0)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (:category_name:, :searchable:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CategoryController.php(49): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 07:24:50 --> Too few arguments to function App\Controllers\CategoryController::subcategoryview(), 0 passed in C:\xampp\htdocs\ebook\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\CategoryController.php on line 145.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 07:28:44 --> Unmatched '}'
+in APPPATH\Controllers\SubcategoryController.php on line 56.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\SubcategoryController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\SubcategoryController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\SubcategoryController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-21 07:49:29 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`ebook`.`subcategory`, CONSTRAINT `subcategory_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `categorytable` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `su...', 0)
+#1 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `su...')
+#2 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `su...')
+#3 C:\xampp\htdocs\ebook\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `su...', Array, false)
+#4 C:\xampp\htdocs\ebook\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ebook\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ebook\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ebook\app\Controllers\SubcategoryController.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ebook\system\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+#9 C:\xampp\htdocs\ebook\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+#10 C:\xampp\htdocs\ebook\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ebook\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-06-21 07:49:29 --> Cannot add or update a child row: a foreign key constraint fails (`ebook`.`subcategory`, CONSTRAINT `subcategory_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `categorytable` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `subcategory` (`subcategoryname`) VALUES (\'australia\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `subcategory` (`subcategoryname`) VALUES (\'australia\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `subcategory` (`subcategoryname`) VALUES (\'australia\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `subcategory` (`subcategoryname`) VALUES (:subcategoryname:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\SubcategoryController.php(45): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 09:52:07 --> Undefined variable $catid
+in APPPATH\Views\category\subcategoryview.php on line 226.
+ 1 APPPATH\Views\category\subcategoryview.php(226): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $catid', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php', 226)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/subcategoryview', [...], true)
+ 5 APPPATH\Controllers\CategoryController.php(167): view('category/subcategoryview', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 10:00:02 --> Undefined variable $catid
+in APPPATH\Views\category\subcategoryview.php on line 226.
+ 1 APPPATH\Views\category\subcategoryview.php(226): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $catid', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php', 226)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/subcategoryview', [...], true)
+ 5 APPPATH\Controllers\CategoryController.php(168): view('category/subcategoryview', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 10:56:37 --> Undefined variable $id
+in APPPATH\Controllers\SubcategoryController.php on line 60.
+ 1 APPPATH\Controllers\SubcategoryController.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 11:44:30 --> Undefined variable $namofsub
+in APPPATH\Views\category\add_category.php on line 185.
+ 1 APPPATH\Views\category\add_category.php(185): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namofsub', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 185)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(64): view('category/add_category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-21 12:14:10 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\SubcategoryController.php on line 66.
+ 1 APPPATH\Controllers\SubcategoryController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php', 66)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

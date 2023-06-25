@@ -67,18 +67,7 @@
                             <div class="sb-sidenav-menu-heading"> Ebook Interface</div>
 
 
-                            <!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Layouts
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
-                                </nav>
-                            </div> -->
-
+                            
 
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -138,6 +127,7 @@
                     </div> -->
                 </nav>
             </div>
+
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
@@ -146,54 +136,27 @@
                             <li class="breadcrumb-item active">Ebook Page</li>
                         </ol>
 
+
+
+
                         <!-- main part  -->
 
                         <div class="card mb-4">
                                 <div class="card-body text-end">
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+                                    <a class="btn btn-primary" href="<?php echo base_url('ebookform') ?>">Add Ebook</a>
+                                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     Add Ebook
-                                    </button>
+                                    </button> -->
+
                                 </div>
-                            </div><!-- Button trigger modal -->
+                        </div>
 
  
 
-<!-- Modal -->
-<!-- Button trigger modal -->
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"     aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Ebook</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="" method="get">
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Ebook Name</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ebook name">
-        </div>
-            <div class="form-check mb-4">
-                    <!-- <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Status Active
-                    </label> -->
-            </div>
 
-            <div>        
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" >Add Ebook</button>
-            </div>
-
-        </form>
-      </div>
-    
-    </div>
-  </div>
-</div>
 
 
 
@@ -201,53 +164,7 @@
 
 
                        
-                                    <table class="table table-striped">
-                                        <thead class="thead-dark">
-                                            <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Book Cover</th>
-                                            <th scope="col">Title</th>
-                                            <th scope="col">Password Protected</th>
-                                            <th scope="col">Featured</th>
-                                            <th scope="col">private	Views</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Created</th>
-                                            
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                            <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td>@mdo</td>
-                                            <td>@mdo</td>
-                                            <td>@mdo</td>
-                                            <td>@mdo</td>
-                                            </tr>
-                                            <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                            <td>@fat</td>
-                                            <td>@fat</td>
-                                            <td>@fat</td>
-                                            <td>@fat</td>
-                                            </tr>
-                                            <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                            <td>@twitter</td>
-                                            <td>@twitter</td>
-                                            <td>@twitter</td>
-                                            <td>@twitter</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                   
 
                                         
                                        

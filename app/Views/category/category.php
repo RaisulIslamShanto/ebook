@@ -148,13 +148,74 @@
 
                         <!-- main part  -->
 
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
                             <div class="card mb-4">
+                                <div class="card-body text-start">
+                                    <button type="button" class="btn btn-primary"               data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                    All Category listings
+                                    </button>
+                                </div>
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                        
+                                        <th><a href="<?php echo base_url('articleview')?>"> 
+                                        Article</a></th>  
+                                        
+                                        </tr>
+                                        <tr>
+                                        
+                                        <!-- <th scope="col">Education</th>
+                                        
+                                        </tr>
+                                        <tr>
+                                        
+                                        <th scope="col">Food</th>
+                                        
+                                        </tr> -->
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        
+                                        </tr>
+                                        
+                                    </tbody>
+                        </table>
+                            </div>   
+                    </div>
+
+
+
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-body text-end">
+                                <a class="btn btn-primary"  href="<?php echo base_url('addcategory')?>">Add root category
+                                </a>
+                                <!-- <a class="btn btn-primary"  href="<?php// echo base_url('addcategory')?>">Add subcategory
+                                </a> -->
+                                
+                                    
+                                   
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                            <!-- <div class="card mb-4">
                                 <div class="card-body text-end">
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     Add category
                                     </button>
                                 </div>
-                            </div><!-- Button trigger modal -->
+                            </div> -->
+                            
+                            <!-- Button trigger modal -->
 
  
 
