@@ -116,7 +116,7 @@
 <!-- for the menu items -->
 
                             <div class="sb-sidenav-menu-heading">Menu items</div>
-                            <a class="nav-link" href="<?php echo base_url('/addauthorform')?>">
+                            <a class="nav-link" href="<?php echo base_url('/aform')?>">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Author
                             </a>

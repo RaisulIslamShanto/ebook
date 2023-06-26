@@ -183,37 +183,28 @@
                                              e.preventDefault();
                                             //  alert('Please enter');
 
-                                            var data = {
 
-                                               'name': $('#name').val(),
-                                                'create': $('#create').val(),
-                                                'created': $('#created').val()
-                                            }
+                                            var name = $('#name').val();
+                                            var create = $('#create').val();
+                                            var created = $('#created').val();
+
+                                            var formData = 'name='+name + '&create='+create + '&created='+created
                                             
-                                    
-
-                                            // Get the form data
-                                            // var formData = $(this).serialize();
-
-                                            // console.log(formData);
-                                            // console.log(data);
-
+                                            console.log(formData);
                                             // alert('Please enter');
 
-                                            // Send an AJAX request to the server
-                                            
+
                                             $.ajax({
                                                 
-
-                                                    url: '/addauthor',
+                                                    url: "<?php echo base_url('addauthor')?>",
                                                     
                                                     type: 'POST',
                                                     
-                                                    data: data,
+                                                    data: formData,
                                                     
-                                                    success: function(response) {
+                                                    success: function(response){
 
-                                                        // alert("success")
+                                                        alert(response);
 
                                                        
                                                     },

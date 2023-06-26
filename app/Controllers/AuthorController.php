@@ -14,12 +14,10 @@ class AuthorController extends BaseController
 
     }
     
-
     public function addauthor()
-
     {   
 
-        
+       
         $author = new Authormodel();
        
         $data = 
@@ -30,21 +28,20 @@ class AuthorController extends BaseController
            
         ];
 
-        print_r($data);
-        die();
+        // print_r($data);
+        // die();
+        
+       $authordata = $author->insert($data);
+
+        if($authordata){
+            return 'Data successfully inserted';
+        } 
+
         
 
-        $author->insert($data);
-
-        // return $this->response->""
-
     
 
-    // $users = $author->findAll();
-    $data['author'] = $author->paginate();
-    $data['pager'] = $author->pager;
     
-    $sl=1;
 
 
 
@@ -54,11 +51,6 @@ class AuthorController extends BaseController
      
 
 }
-
-
-
-
-
 
 
 

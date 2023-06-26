@@ -11,14 +11,7 @@ class Home extends BaseController
 {
     public function index()
     {
-         // Create an instance of the UserModel
-         $authorModel = new Authormodel();
-
-         // Fetch all users from the database
-         $users = $authorModel->findAll();
-         
-
-         return view('ebook/index', ['users'=>$users]);
+        
      
 
        
@@ -52,10 +45,6 @@ class Home extends BaseController
         $users = $authorModel->findAll();
 
         return view('author/author',['user'=>$users]);
-
-
-       
-       
         
     }
 
