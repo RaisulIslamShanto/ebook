@@ -38,6 +38,9 @@ class SubcategoryController extends Controller
         // print_r($subcategoryname);
         // die();
         $catid = $this->request->getPost('catid');
+        // print_r($catid);
+        // die();
+
         $cattablerow = $catModel->find($catid); 
 
         // print_r($cattablerow);
@@ -56,15 +59,17 @@ class SubcategoryController extends Controller
 
         $subcatModel->insert($subcategoryData);
 
-        
+        // print_r($catid);
         // die();
-        $subcat = $subcatModel->findAll($catid); 
+        
+        
+        // $subcat = $subcatModel->find($catid); 
            
-           print_r($subcat);
-           die();
+        //    print_r($subcat);
+        //    die();
         //    Array ( [id] => 2 [subcategoryname] => australia [cid] => 2 )
 
-           $subcatname = $subcat['subcategoryname'];
+        //    $subcatname = $subcat['subcategoryname'];
 
         //    echo gettype($subcatname);
         //    die();
@@ -76,9 +81,46 @@ class SubcategoryController extends Controller
         //    die();
 
         // return view('category/add_category',['categories'=>$users, 'sl'=>$sl]);
-           return redirect()->to(base_url('addcategory', $subcatname));
+        //    return redirect()->to(base_url('addcategory', $subcatname));
 
     }
+
+
+    $categoryModel = new CategoryModel();
+
+    $users = $categoryModel->findAll();
+
+    // print_r($users);
+    // die();
+
+    
+
+
+    foreach ($users as $key => $user){
+
+        $scmodel = new SubCategoryModel;
+
+        $subcategories = $scmodel->where("cid", $user["id"])->find();
+
+        // print_r($subcategories);
+        // die();
+
+        $users[$key]["subcategories"] = $subcategories;
+         
+        // print_r($users[$key]["subcategories"]);
+        // die();
+    }
+
+
+
+
+
+    // print_r($users);
+    // die();  
+
+    $sl=1;
+
+    return view('category/add_category',['categories'=>$users, 'sl'=>$sl]);
 
            
 }

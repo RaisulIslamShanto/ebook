@@ -9,7 +9,9 @@
         <meta name="author" content="" />
         <title>Ebook</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-
+        <!-- jquery  -->
+        <script src=" <?php echo base_url('public/assets/');?>/js/jquery/jquery-3.7.0.js"></script>
+        <script src=" <?php echo base_url('public/assets/');?>/js/jquery/main.js"></script>
     <!-- css link for code igniter -->
         <link href=" <?php echo base_url('public/assets/');?>css/styles.css" rel="stylesheet" />
 
@@ -153,6 +155,7 @@
                                     <a class="btn btn-primary" href="<?php echo base_url('ebookform') ?>">Add Ebook</a>
                                     
                                 </div>
+
                                  <?php 
                                  if (session()->getFlashdata('status')){
                                     echo "<h5>".session()->getFlashdata('status').  "</h5>";
@@ -162,7 +165,10 @@
                                  ?>
                                 
                                 <div class="card-body text-start">
-                                <form action="<?= base_url('ebookformsubmit') ?>" method="Post" enctype="multipart/form-data">
+
+                                <!-- action="<?// base_url('ebookformsubmit') ?>" -->
+
+                                <form  id="form"  method="Post" enctype="multipart/form-data">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Title</label>
                                         <input type="text" class="form-control" id="title" name="title" value="">
@@ -179,21 +185,80 @@
                                         
                                     </div>
 
-
-
-                                    
                                     
                                     <button type="submit" name="save" class="btn btn-primary">Save</button>
                                 </form>
 
+
+
                                 </div>
-
-
-
-
-
                         </div>
+                                 <script>
 
+                                    $(document).ready(function() 
+                                    {
+
+                                       
+                                        $('#form').on('submit', function() 
+                                        {
+                                            // e.preventDefault();
+                                             alert('Please enter');
+                                            var data = {
+
+                                                name: $('#title').val(),
+                                                create: $('#user').val(),
+                                                created: $('#photo').val()
+                                            }
+                                            
+                                    
+
+                                            // Get the form data
+                                            // var formData = $(this).serialize();
+
+                                            // console.log(formData);
+                                            console.log(data);
+
+                                            //  alert('Please enter');
+
+                                            // Send an AJAX request to the server
+                                            $.ajax({
+                                                
+
+                                                    url: "<?php echo base_url('')?>",
+                                                    
+                                                    type: 'POST',
+                                                    data: data,
+                                                    // dataType: 'json',
+
+                                                    success: function(response) {
+                                                        if (response.success) {
+                                                            // Display a success message
+                                                            // alert(response.message);
+                                                            alertify.set('notifier','position','top-right');
+                                                            alertify.success(response.status);
+
+
+
+                                                            // Reset the form
+                                                            // $('#authorForm')[0].reset();
+                                                        } 
+                                                        else {
+
+                                                        //     // Display an error message
+                                                        //     alert('Failed to add author.');
+                                                         }
+                                                    },
+                                                    // error: function() {
+                                                    //     // Display an error message
+                                                    //     alert('An error occurred while processing the request.');
+                                                    // }
+
+                                                       });
+
+                                        });
+                                    });
+
+                    </script>
  
 
 
@@ -208,25 +273,7 @@
                        
                                     
                                         
-                                       
-
-
-
-
-
-
-
-
-
-
-
-
-                        
-
-
-
-
-                        
+                    
                     </div> 
                 </main>
 
@@ -250,11 +297,11 @@
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
+        <!-- <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/chart-area-demo.js"></script>
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
+        <script src="js/datatables-simple-demo.js"></script> -->
     </body>
 </html>

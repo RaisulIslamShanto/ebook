@@ -104,3 +104,161 @@ in APPPATH\Controllers\SubcategoryController.php on line 20.
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 INFO - 2023-06-25 03:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-25 03:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 04:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 04:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 04:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 04:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 04:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 04:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 04:59:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 04:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 06:14:48 --> Undefined variable $subcatname
+in APPPATH\Controllers\SubcategoryController.php on line 84.
+ 1 APPPATH\Controllers\SubcategoryController.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $subcatname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\SubcategoryController.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-25 06:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:43:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:45:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:16:01 --> Undefined variable $ebook
+in APPPATH\Views\frontview\frontview.php on line 197.
+ 1 APPPATH\Views\frontview\frontview.php(197): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\frontview\\frontview.php', 197)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\frontview\\frontview.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontview/frontview', [], true)
+ 5 APPPATH\Controllers\Home.php(107): view('frontview/frontview')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->frontview()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 09:20:13 --> syntax error, unexpected token ";"
+in APPPATH\Views\frontview\frontview.php on line 198.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontview/frontview', [], true)
+ 3 APPPATH\Controllers\Home.php(107): view('frontview/frontview')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->frontview()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 09:20:50 --> syntax error, unexpected token ";"
+in APPPATH\Views\frontview\frontview.php on line 198.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontview/frontview', [], true)
+ 3 APPPATH\Controllers\Home.php(107): view('frontview/frontview')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->frontview()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 09:21:57 --> syntax error, unexpected token ";"
+in APPPATH\Views\frontview\frontview.php on line 198.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontview/frontview', [], true)
+ 3 APPPATH\Controllers\Home.php(107): view('frontview/frontview')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->frontview()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 09:41:34 --> Undefined variable $ebook
+in APPPATH\Views\frontview\frontview.php on line 171.
+ 1 APPPATH\Views\frontview\frontview.php(171): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\frontview\\frontview.php', 171)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\frontview\\frontview.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontview/frontview', [], true)
+ 5 APPPATH\Controllers\Home.php(120): view('frontview/frontview')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->frontview()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 09:44:07 --> Undefined array key "photo"
+in APPPATH\Controllers\Home.php on line 118.
+ 1 APPPATH\Controllers\Home.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "photo"', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\Home.php', 118)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->frontview()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 09:45:09 --> Undefined array key "photo"
+in APPPATH\Controllers\Home.php on line 118.
+ 1 APPPATH\Controllers\Home.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "photo"', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\Home.php', 118)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->frontview()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 09:50:28 --> Object of class App\Models\EbookModel could not be converted to string
+in APPPATH\Controllers\Home.php on line 115.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->frontview()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 09:54:40 --> Undefined array key "photo"
+in APPPATH\Controllers\Home.php on line 119.
+ 1 APPPATH\Controllers\Home.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "photo"', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\Home.php', 119)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->frontview()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 09:58:27 --> syntax error, unexpected token "/"
+in APPPATH\Controllers\Home.php on line 131.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ebook\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 10:04:30 --> Cannot access offset of type string on string
+in APPPATH\Views\frontview\frontview.php on line 174.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontview/frontview', [], true)
+ 4 APPPATH\Controllers\Home.php(125): view('frontview/frontview', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->frontview()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 10:05:41 --> Undefined array key "photo"
+in APPPATH\Views\frontview\frontview.php on line 174.
+ 1 APPPATH\Views\frontview\frontview.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "photo"', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\frontview\\frontview.php', 174)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\frontview\\frontview.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('frontview/frontview', [], true)
+ 5 APPPATH\Controllers\Home.php(125): view('frontview/frontview', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->frontview()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-25 11:06:07 --> Undefined variable $authordata
+in APPPATH\Controllers\Home.php on line 131.
+ 1 APPPATH\Controllers\Home.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authordata', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\Home.php', 131)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->frontview()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-25 11:30:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 11:31:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 12:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 13:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 13:28:57 --> Undefined variable $photoName
+in APPPATH\Controllers\EbookController.php on line 65.
+ 1 APPPATH\Controllers\EbookController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $photoName', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->addebook()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-25 13:29:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 13:51:43 --> Undefined variable $author
+in APPPATH\Views\author\authortable.php on line 191.
+ 1 APPPATH\Views\author\authortable.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $author', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\author\\authortable.php', 191)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\author\\authortable.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('author/authortable', [], true)
+ 5 APPPATH\Controllers\AuthorController.php(14): view('author/authortable')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AuthorController->authortable()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthorController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-25 14:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

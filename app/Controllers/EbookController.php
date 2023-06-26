@@ -35,7 +35,6 @@ class EbookController extends Controller
 
 {
     
-
     $ebookModel = new EbookModel;
 
     

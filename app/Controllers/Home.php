@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Controllers;
-
+use App\Models\EbookModel;
 use App\Models\AuthorModel;
+use App\Models\CategoryModel;
+
 // use App\Models\add_author_model;
 
 class Home extends BaseController
@@ -101,5 +103,55 @@ class Home extends BaseController
        
         
     }
+
+        //front view 
+
+    public function frontview(){
+
+
+
+        $ebookModel = new EbookModel;
+
+        $ebookrow = $ebookModel->findAll();
+
+
+        $authorModel = new AuthorModel;
+
+        $authorrow = $authorModel->findAll();
+
+        $catModel = new CategoryModel;
+
+        $catrow = $catModel->findAll();
+
+
+
+
+
+
+        return view('frontview/frontview', ['imageData' => $ebookrow,'catdata' => $catrow, 'authordata'=>$authorrow]);
+       
+
+        
+
+
+
+
+        // return view('image_view', ['imageData' => $imageData]);
+        // return view('frontview/frontview');
+
+
+    }
+
+    //     public function ebookname(){
+
+    //     $ebookModel = new EbookModel;
+
+    //     $ebookrow = $ebookModel->findAll();
+    //     return view('frontview/frontview', ['ebookname' => $ebookrow]);
+
+    // }
+
+
+
     
 }

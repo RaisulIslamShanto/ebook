@@ -8,8 +8,11 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Ebook</title>
-        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
 
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <!-- jquery  -->
+        <script src=" <?php echo base_url('public/assets/');?>/js/jquery/jquery-3.7.0.js"></script>
+        <script src=" <?php echo base_url('public/assets/');?>/js/jquery/main.js"></script>
     <!-- css link for code igniter -->
         <link href=" <?php echo base_url('public/assets/');?>css/styles.css" rel="stylesheet" />
 
@@ -114,9 +117,9 @@
                             </div>
 
                 <!-- for the menu items -->
-
+                                
                             <div class="sb-sidenav-menu-heading">Menu items</div>
-                            <a class="nav-link" href="<?php echo base_url('author')?>">
+                            <a class="nav-link" href="<?php echo base_url('aform')?>">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Author
                             </a>
@@ -149,7 +152,7 @@
                         <!-- main part  -->
 
                          
-                        <form action="<?php echo base_url('addauthor')?>" method="post">
+                        <form id="form" action =""  method="post">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Name </label>
                                     <input type="text" class="form-control" id="name" name="name" >
@@ -158,17 +161,70 @@
                                 
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">create by</label>
-                                    <input type="text" class="form-control" id="description" name="create">
+                                    <input type="text" class="form-control" id="create" name="create">
                                 </div>
+
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">created </label>
-                                    <input type="text" class="form-control" id="name" name="created" >
+                                    <input type="text" class="form-control" id="created" name="created" >
                                    
                                 </div>
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button  type="submit" id ="submit" name ="submit" class="btn btn-primary">Save</button>
                         </form>
+                        
+                    <script>
 
+                                    $(document).ready(function() 
+                                    {
 
+                                       
+                                        $('#form').on('submit', function(e) 
+                                        {
+                                             e.preventDefault();
+                                            //  alert('Please enter');
+
+                                            var data = {
+
+                                               'name': $('#name').val(),
+                                                'create': $('#create').val(),
+                                                'created': $('#created').val()
+                                            }
+                                            
+                                    
+
+                                            // Get the form data
+                                            // var formData = $(this).serialize();
+
+                                            // console.log(formData);
+                                            // console.log(data);
+
+                                            // alert('Please enter');
+
+                                            // Send an AJAX request to the server
+                                            
+                                            $.ajax({
+                                                
+
+                                                    url: '/addauthor',
+                                                    
+                                                    type: 'POST',
+                                                    
+                                                    data: data,
+                                                    
+                                                    success: function(response) {
+
+                                                        // alert("success")
+
+                                                       
+                                                    },
+                                                    
+
+                                                       });
+
+                                        });
+                                    });
+
+                    </script>
 
 
 
@@ -216,11 +272,11 @@
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <!-- <script src="js/scripts.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/chart-area-demo.js"></script>
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
+        <script src="js/datatables-simple-demo.js"></script> -->
     </body>
 </html>
