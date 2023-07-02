@@ -219,6 +219,7 @@
                                                     
                                                     success: function(response){
 
+                                                        clearmyform();
                                                          alert(response);
 
                                                        
@@ -226,6 +227,10 @@
                                                     
 
                                                        });
+
+                                                       function clearmyform(){
+                                                        $('#form')[0].reset();
+                                                       }
 
                                         });
                                     });
