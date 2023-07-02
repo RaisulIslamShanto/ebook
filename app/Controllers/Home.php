@@ -60,7 +60,6 @@ class Home extends BaseController
     {
 
          return view('addauthor/addauthor');
-       
         
     }
     public function store()

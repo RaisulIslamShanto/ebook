@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\EbookModel;
+use App\Models\AuthorModel;
+use App\Models\CategoryModel;
 // use App\Models\SubCategoryModel;
 use CodeIgniter\Controller;
 
@@ -10,7 +12,12 @@ use CodeIgniter\Controller;
 
 class EbookController extends Controller
 {
-   
+    protected $db; // Define the $db property
+
+    public function __construct()
+    {
+        $this->db = \Config\Database::connect(); // Initialize the $db property
+    }
 
     public function ebook()
 
@@ -26,7 +33,20 @@ class EbookController extends Controller
 
 {
        
-    return view('ebookshow/ebookform');
+    $authorModel = new AuthorModel;
+
+    $authorrow = $authorModel->findAll();
+
+    // print_r($authorrow);
+    // die();
+    $catModel = new CategoryModel;
+
+    $catrow = $catModel->findAll();
+
+    // print_r($catrow);
+    // die();
+
+    return view('ebookshow/ebookform', ["authname"=>$authorrow, "catname"=>$catrow ]);
       
 }
 
@@ -44,34 +64,65 @@ class EbookController extends Controller
         
         $title = $this->request->getPost('title');
         $user = $this->request->getPost('user');
+       
         $photo = $this->request->getFile('photo');
-        
+        $cat = $this->request->getPost('catname');
+        $auth = $this->request->getPost('authorname');
 
-        // print_r($photo);
+        // print_r($auth);
+        // die();
+        
+        $catModel = new CategoryModel;
+        $authModel = new AuthorModel;
+
+        $catrow = $catModel->find($cat);
+        $authrow = $authModel->find($auth);
+        
+        // print_r( $authrow );
         // die();
 
+        $categoryName = $catrow['category_name'];
+        $authorName = $authrow['name'];
+
+        // $type = gettype($authorName);
+        // print_r($type);
+        // die();
+        // print_r($categoryName);
+        // print_r($authorName);
+        // die();
+        // print_r($cat);
+        // die();
+        // print_r($auth);
+        // die();
+        $photoName = $photo->getRandomName();
+
         if ($photo->isValid() && !$photo->hasMoved()) {
-            $photoName = $photo->getRandomName();
+            // $photoName = $photo->getRandomName();
             $photo->move('uploads/', $photoName);
             
         }
 
-        
       
         $ebookData = [
 
-            'title' => $this->request->getPost('title'),
-            'user' => $this->request->getPost('user'),
+            'title' => $title,
+            'user' => $user,
             'photo' => $photoName,
+            'category' => $categoryName,
+            'author' => $authorName,
             
             
         ];
+    
+        
 
-        // print_r($ebookData);
+        $ebookModel->insert($ebookData);
+
+        // $query = $this->db->getLastQuery();
+        // echo $query;
         // die();
-
-        $ebookModel->save($ebookData);
-
+       
+       
        
         return redirect()->to('ebooktable')->with('status', 'success');
        
@@ -198,6 +249,12 @@ public function search(){
 
     }
 
+
+    
+
+        
+
+    
         
       
 }

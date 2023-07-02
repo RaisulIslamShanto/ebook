@@ -17,7 +17,10 @@ class AuthorController extends BaseController
     public function addauthor()
     {   
 
-       
+        // echo "hi";
+        // die();
+
+
         $author = new Authormodel();
        
         $data = 
@@ -35,17 +38,15 @@ class AuthorController extends BaseController
 
         if($authordata){
             return 'Data successfully inserted';
-        } 
-
-        
-
-    
+        }else{
+            return 'Error inserting';
+        }
 
     
+            // $sl=1;
 
 
-
-    return view('author/authortable',$data,['sl'=>$sl] );
+    // return view('author/authortable',$data,['sl'=>$sl] );
 
 
      

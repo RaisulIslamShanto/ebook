@@ -182,16 +182,27 @@
                                         {
                                              e.preventDefault();
                                             //  alert('Please enter');
-
+                                                
+                                            var formData = new FormData(this); // Create FormData object
+    
+                                            // Check if any field is empty
+                                        
 
                                             var name = $('#name').val();
                                             var create = $('#create').val();
                                             var created = $('#created').val();
 
-                                            var formData = 'name='+name + '&create='+create + '&created='+created
+                                            // if (formData.get('name') === '' || formData.get('create') === '' || formData.get('created') === '') {
+                                            // alert('Please fill in all fields');
+                                            // return;
+                                            // }
+                                                
+
+                                            // var formData = 'name='+name + '&create='+create + '&created='+created
                                             
-                                            console.log(formData);
+                                            // console.log(formData);
                                             // alert('Please enter');
+                                            // console.log(data);
 
 
                                             $.ajax({
@@ -202,9 +213,13 @@
                                                     
                                                     data: formData,
                                                     
+                                                    processData : false,
+
+                                                    contentType : false,
+                                                    
                                                     success: function(response){
 
-                                                        alert(response);
+                                                         alert(response);
 
                                                        
                                                     },

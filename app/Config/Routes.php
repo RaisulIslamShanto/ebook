@@ -53,8 +53,8 @@ $routes->get('/author', 'Home::author');
 // $routes->post('/aform', 'AuthorController::authorform');
 
 $routes->get('/aform', 'AuthorController::authorform');
-$routes->post('/aform', 'AuthorController::authorform');
-$routes->post('/aform/authoradd', 'AuthorController::authoradd');
+$routes->post('/aform', 'AuthorController::addauthor');
+$routes->post('/aform/authoradd', 'AuthorController::addauthor');
 
 $routes->post('/addauthor', 'AuthorController::addauthor');
 
@@ -104,6 +104,9 @@ $routes->get('/delete_ebook/(:num)', 'EbookController::deleteebook/$1');
 $routes->get('/edit_ebook/(:num)', 'EbookController::editebook/$1');
 $routes->post('/edit_ebook/update/(:num)', 'EbookController::updateebook/$1');
 $routes->get('/search', 'EbookController::search');
+$routes->get('/search', 'EbookController::search');
+
+
 
 
 

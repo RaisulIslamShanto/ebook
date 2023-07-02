@@ -12,7 +12,7 @@ class EbookModel extends Model
 
     protected $table = 'ebooktable'; 
     protected $primaryKey = 'id';
-    protected $allowedFields = ['title','user','photo']; 
+    protected $allowedFields = ['title','user','photo','category','author']; 
 
 
 

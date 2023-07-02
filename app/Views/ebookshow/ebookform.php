@@ -166,9 +166,9 @@
                                 
                                 <div class="card-body text-start">
 
-                                <!-- action="<?// base_url('ebookformsubmit') ?>" -->
+                                
 
-                                <form  id="form"  method="Post" enctype="multipart/form-data">
+                                <form  id="form" action ="<?php echo base_url('ebookformsubmit')?>" method="Post" enctype="multipart/form-data">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Title</label>
                                         <input type="text" class="form-control" id="title" name="title" value="">
@@ -179,6 +179,38 @@
                                         <input type="text" class="form-control" id="user" name="user" value="">
                                         
                                     </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Categories </label>
+
+                                        <!-- <input type="text" class="form-control" id="categories" name="categories" value=""> -->
+
+                                        <select class="form-control" name="catname" id="catname">
+
+                                        <?php foreach($catname as $value) :?>
+                                           
+                                        <option value="<?php echo $value['id'] ?>"><?php echo $value['category_name'] ?> </option>
+
+
+                                        <?php endforeach; ?>
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Author </label>
+                                        <!-- <input type="text" class="form-control" id="author" name="" value=""> -->
+                                        <select class="form-control" name="authorname" id="authorname">
+                                            
+                                            
+                                            <?php foreach($authname as $value) :?>
+                                            
+                                            
+                                            <option id="author"  value="<?php echo $value['id'] ?>"> <?php echo $value['name'] ?></option>
+                                                
+                                            <?php endforeach; ?>
+
+                                        </select>
+                                    </div>
+
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Photo</label>
                                         <input type="file" class="form-control" id="photo" name="photo" value="">
@@ -193,72 +225,7 @@
 
                                 </div>
                         </div>
-                                 <script>
-
-                                    $(document).ready(function() 
-                                    {
-
-                                       
-                                        $('#form').on('submit', function() 
-                                        {
-                                            // e.preventDefault();
-                                             alert('Please enter');
-                                            var data = {
-
-                                                name: $('#title').val(),
-                                                create: $('#user').val(),
-                                                created: $('#photo').val()
-                                            }
-                                            
-                                    
-
-                                            // Get the form data
-                                            // var formData = $(this).serialize();
-
-                                            // console.log(formData);
-                                            console.log(data);
-
-                                            //  alert('Please enter');
-
-                                            // Send an AJAX request to the server
-                                            $.ajax({
-                                                
-
-                                                    url: "<?php echo base_url('')?>",
-                                                    
-                                                    type: 'POST',
-                                                    data: data,
-                                                    // dataType: 'json',
-
-                                                    success: function(response) {
-                                                        if (response.success) {
-                                                            // Display a success message
-                                                            // alert(response.message);
-                                                            alertify.set('notifier','position','top-right');
-                                                            alertify.success(response.status);
-
-
-
-                                                            // Reset the form
-                                                            // $('#authorForm')[0].reset();
-                                                        } 
-                                                        else {
-
-                                                        //     // Display an error message
-                                                        //     alert('Failed to add author.');
-                                                         }
-                                                    },
-                                                    // error: function() {
-                                                    //     // Display an error message
-                                                    //     alert('An error occurred while processing the request.');
-                                                    // }
-
-                                                       });
-
-                                        });
-                                    });
-
-                    </script>
+                                
  
 
 
