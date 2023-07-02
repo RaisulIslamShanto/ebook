@@ -183,14 +183,14 @@
                                              e.preventDefault();
                                             //  alert('Please enter');
                                                 
-                                            var formData = new FormData(this); // Create FormData object
+                                            var formData = new FormData(this); 
     
-                                            // Check if any field is empty
+                                            
                                         
 
-                                            var name = $('#name').val();
-                                            var create = $('#create').val();
-                                            var created = $('#created').val();
+                                            // var name = $('#name').val();
+                                            // var create = $('#create').val();
+                                            // var created = $('#created').val();
 
                                             // if (formData.get('name') === '' || formData.get('create') === '' || formData.get('created') === '') {
                                             // alert('Please fill in all fields');

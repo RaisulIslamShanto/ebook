@@ -61,6 +61,8 @@ class EbookController extends Controller
     if ($this->request->getMethod() === 'post') 
     {
 
+        // echo "hello";
+        // die();
         
         $title = $this->request->getPost('title');
         $user = $this->request->getPost('user');
@@ -116,13 +118,23 @@ class EbookController extends Controller
     
         
 
-        $ebookModel->insert($ebookData);
+        $ebookdata = $ebookModel->insert($ebookData);
+        
 
+    
         // $query = $this->db->getLastQuery();
         // echo $query;
         // die();
        
        
+
+        if($ebookdata){
+            return 'Data successfully inserted';
+        }else{
+            return 'Error inserting';
+        }
+
+            
        
         return redirect()->to('ebooktable')->with('status', 'success');
        

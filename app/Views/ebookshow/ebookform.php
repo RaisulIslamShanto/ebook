@@ -153,6 +153,7 @@
                                 <div class="card-body text-end">
 
                                     <a class="btn btn-primary" href="<?php echo base_url('ebookform') ?>">Add Ebook</a>
+                                    <a class="btn btn-primary" href="<?php echo base_url('ebooktable') ?>">Ebook list</a>
                                     
                                 </div>
 
@@ -168,7 +169,7 @@
 
                                 
 
-                                <form  id="form" action ="<?php echo base_url('ebookformsubmit')?>" method="Post" enctype="multipart/form-data">
+                         <form  id="myform" action ="" method="Post" enctype="multipart/form-data">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Title</label>
                                         <input type="text" class="form-control" id="title" name="title" value="">
@@ -198,7 +199,7 @@
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Author </label>
                                         <!-- <input type="text" class="form-control" id="author" name="" value=""> -->
-                                        <select class="form-control" name="authorname" id="authorname">
+                                        <select class="form-control" name="authorname" id="authorname" >
                                             
                                             
                                             <?php foreach($authname as $value) :?>
@@ -218,14 +219,69 @@
                                     </div>
 
                                     
-                                    <button type="submit" name="save" class="btn btn-primary">Save</button>
+                                    <button type="submit" name="submit" class="btn btn-primary">Save</button>
                                 </form>
 
 
 
                                 </div>
                         </div>
-                                
+
+                        <script>
+
+                                            $(document).ready(function() 
+                                            {
+
+                                            
+                                                $('#myform').on('submit', function(e) 
+                                                {
+                                                    e.preventDefault();
+                                                    //  alert('Please enter');
+                                                        
+                                                    var formData = new FormData(this); 
+
+                                                    
+
+                                                     console.log(formData);
+                                                    
+                                                    
+                                                   
+
+
+                                                    $.ajax({
+                                                        
+                                                            url: "<?php echo base_url('ebookformsubmit')?>",
+                                                            
+                                                            type: 'POST',
+                                                            
+                                                            data: formData,
+
+                                                         
+                                                            
+                                                            processData : false,
+
+                                                            contentType : false,
+                                                            
+                                                            success: function(response){
+
+                                                                clearForm();
+                                                                alert(response);
+                                                                
+                                                            
+                                                            },
+                                                            
+
+                                                            });
+
+                                                            function clearForm(){
+                                                                $('#myform')[0].reset();}
+
+                                                });
+                                            });
+  
+                                            </script>
+
+
  
 
 

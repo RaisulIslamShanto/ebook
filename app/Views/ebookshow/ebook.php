@@ -145,6 +145,7 @@
                                 <div class="card-body text-end">
 
                                     <a class="btn btn-primary" href="<?php echo base_url('ebookform') ?>">Add Ebook</a>
+                                    <a class="btn btn-primary" href="<?php echo base_url('ebooktable') ?>">Ebook list</a>
                                     <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     Add Ebook
                                     </button> -->
