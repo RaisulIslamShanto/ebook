@@ -97,6 +97,7 @@ class Home extends BaseController
     public function frontview(){
 
 
+        $pager = \Config\Services::pager();
 
         $ebookModel = new EbookModel;
 
@@ -114,10 +115,10 @@ class Home extends BaseController
 
 
 
-
-
+        
         return view('frontview/frontview', ['imageData' => $ebookrow,'catdata' => $catrow, 'authordata'=>$authorrow]);
-       
+        
+        
 
         
 
@@ -139,6 +140,36 @@ class Home extends BaseController
 
     // }
 
+    public function listajax(){
+
+        $authorModel = new AuthorModel;
+
+        $authorrow = $authorModel->findAll();
+
+        $catModel = new CategoryModel;
+
+        $catrow = $catModel->findAll();
+
+        $ebookModel = new EbookModel;
+
+        $ebookrow = $ebookModel->findAll();
+
+        $response = [
+            'authors' => $authorrow,
+            'categories' => $catrow,
+            'ebooks' => $ebookrow
+        ];
+        
+
+        return json_encode($response);
+
+        // return $this->response->setJSON($response);
+        
+
+
+
+
+    }
 
 
     

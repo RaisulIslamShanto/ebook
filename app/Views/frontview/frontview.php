@@ -13,7 +13,16 @@
     <!-- css link for code igniter -->
         <link href=" <?php echo base_url('public/assets/');?>css/styles.css" rel="stylesheet" />
 
+        <script src=" <?php echo base_url('public/assets/');?>/js/jquery/jquery-3.7.0.js"></script>
+        <script src=" <?php echo base_url('public/assets/');?>/js/jquery/main.js"></script>
+
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <style>
+            #photoContainer img{
+                height: 262px;
+                width: 300px;
+            }
+        </style>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -64,10 +73,28 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Ebook Page
                             </a>
-                            <div class="sb-sidenav-menu-heading"> Ebook Interface</div>
+                            <div class="sb-sidenav-menu-heading">Ebook Interface</div>
+                            
 
+                            <!-- authorlist -->
+                            <div >
+                                <h6 class="sb-nav-link-icon">Authorlist</h6>
+                                <ol id="authorList">
+
+                                </ol> 
+                                <h6 class="sb-nav-link-icon">Categorylist</h6>
+                                <ol id="catList">
+
+                                </ol>  
+                                <h6 class="sb-nav-link-icon">Ebooklist</h6>
+                                <ol id="ebookList">
+
+                                </ol>  
+                            </div>
+                           
 
                             
+                       
 
 
                             <!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -121,6 +148,7 @@
                                            </a>
                                                           
                             <?php endforeach; ?>
+
                             <!-- <a class="nav-link" href="<?php echo base_url('category')?>">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Category
@@ -141,6 +169,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Ebook
                             </a> -->
+
                             <?php foreach($imageData as $value) :?>
                                            
                                 <a class="nav-link" href="<?php echo base_url('ebook')?>">
@@ -207,19 +236,94 @@
                                             <td>
                                                 <img height="262" width="300" src="<?php echo base_url('uploads/'.$value['photo']); ?>" alt="Image" >
                                             </td>
-                                            <!-- <br>
-                                            <br> -->
+                                            
+
                                                 
-                                        <?php endforeach; ?>
+                                    <?php endforeach; ?>
                                           
                                     <?php //echo $pager->links(); ?>  
 
                                     </div>
 
+                                    <div class="container">
+                                        <div class="row text-center mx-auto ">
+                                            <div class="col-md-12 ">
+                                                 <div id="photoContainer" >
+                                        
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <script>
+
+                                        $(document).ready(function() {
+                                            
+                                            function fetchall() {
+                                                $.ajax({
+                                                    url: '<?php echo base_url('frontview/listajax'); ?>',
+                                                    type: 'GET',
+                                                    dataType: 'json',
+                                                    success: function(data) {
+                                                        
+                                                        // alert('Success');
+                                                        console.log(data);
+
+                                                        var authorList = $('#authorList');
+                                                        var catList = $('#catList');
+                                                        var ebookList = $('#ebookList');
+                                                        var photoContainer = $('#photoContainer');
+                                                        // authorList.empty(); 
+
+                                                       
+                                                        for (var i = 0; i < data.authors.length; i++) {
+
+                                                            var authorName = data.authors[i].name; 
+                                                            var listItem = $('<li>').text(authorName);
+                                                            authorList.append(listItem);
+                                                        }
+
+                                                        for (var i = 0; i < data.categories.length; i++) {
+
+                                                            var catName = data.categories[i].category_name; 
+                                                            var listItem = $('<li>').text(catName);
+                                                            catList.append(listItem);
+                                                        }
+
+                                                        for (var i = 0; i < data.ebooks.length; i++) {
+
+                                                            var ebooksName = data.ebooks[i].title; 
+                                                            var listItem = $('<li>').text(ebooksName);
+                                                            ebookList.append(listItem);
+                                                        }
+
+                                                        for (var i = 0; i < data.ebooks.length; i++) {
+
+                                                            var photoUrl = data.ebooks[i].photo;
+
+                                                            console.log(photoUrl);
+
+                                                           
+                                                            
+                                                            var img = $('<img>').attr('src',"<?php echo base_url('uploads/');?>"+ photoUrl);
+
+                                                            // alert(img);
+                                                            console.log(img);
+                                                            photoContainer.append(img);
+                                                        }
+                                                    },
+                                                   
+                                                });
+                                            }
+
+                                            
+                                            fetchall();
+                                        });
+                            </script>
                                 </div>
                             </div>
-
-                       
+                            
+                            
                                    
                                         
                                         

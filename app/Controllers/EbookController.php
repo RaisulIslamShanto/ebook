@@ -12,11 +12,11 @@ use CodeIgniter\Controller;
 
 class EbookController extends Controller
 {
-    protected $db; // Define the $db property
+    protected $db; 
 
     public function __construct()
     {
-        $this->db = \Config\Database::connect(); // Initialize the $db property
+        $this->db = \Config\Database::connect();
     }
 
     public function ebook()
@@ -168,9 +168,14 @@ class EbookController extends Controller
     {
         
          $deletecat = new EbookModel;
-         $deletecat->delete($id);
+           $del = $deletecat->delete($id);
     
-    
+            if($del){
+                return 'Data successfully deleted';
+            }else{
+                return 'Data not found';
+            }
+
          //return view('category/add_category');
     
          return redirect()->to(base_url('ebooktable'));
@@ -183,13 +188,17 @@ class EbookController extends Controller
 
     public function editebook($id)
 {
-    
+    // echo "hi";
+    // die();
     
     $editebook = new EbookModel;
     $data = $editebook->find($id);
 
+
+   
     //  print_r($data);
     //  die();
+    
 
     return view('ebookshow/edit_ebook', ["ebookname"=>$data]); 
    
@@ -238,6 +247,7 @@ public function updateebook($id)
 
 public function search(){
 
+   
     if($this->request->getGet('search')){
 
         $ebookModel = new EbookModel;
@@ -246,18 +256,25 @@ public function search(){
 
         $searchResults =  $ebookModel->search($search);
 
-       
-            $data['ebook'] = $ebookModel->paginate();
-            $data['pager'] = $ebookModel->pager;
+            $pager = \Config\Services::pager();
 
-        // print_r($searchResults);
+            // $data['title'] = $ebookModel->paginate(2);
+            // $data['pager'] = $ebookModel->pager;
+
+            $data = [
+                'title' =>  $ebookModel->paginate(10),
+                'pager' =>  $ebookModel->pager,
+            ];
+
+        // echo "<pre>";
+        // print_r($data);
         // die();
         
         // $data['searchResults'] = $searchResults;
 
         // $ebookData ['title'] = $ebookModel->like('title', $search)->findAll();
 
-        return view('/ebookshow/ebooksearchshow', ['searchResults' => $searchResults],$data);
+        return view('/ebookshow/ebooksearchshow',['searchResults'=> $searchResults],$data);
 
     }
 

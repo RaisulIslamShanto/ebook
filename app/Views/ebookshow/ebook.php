@@ -9,7 +9,8 @@
         <meta name="author" content="" />
         <title>Ebook</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-
+        <script src=" <?php echo base_url('public/assets/');?>/js/jquery/jquery-3.7.0.js"></script>
+        <script src=" <?php echo base_url('public/assets/');?>/js/jquery/main.js"></script>
     <!-- css link for code igniter -->
         <link href=" <?php echo base_url('public/assets/');?>css/styles.css" rel="stylesheet" />
 

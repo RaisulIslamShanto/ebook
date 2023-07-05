@@ -1,0 +1,191 @@
+CRITICAL - 2023-07-04 06:04:33 --> Undefined constant "App\Controllers\request"
+in APPPATH\Controllers\EbookController.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 06:04:35 --> Undefined constant "App\Controllers\request"
+in APPPATH\Controllers\EbookController.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 07:02:45 --> Unmatched '}'
+in APPPATH\Controllers\EbookController.php on line 316.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\EbookController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\EbookController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\EbookController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 07:05:19 --> CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, null given, called in C:\xampp\htdocs\ebook\system\Model.php on line 840
+in SYSTEMPATH\Database\BaseBuilder.php on line 984.
+ 1 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->like('title', null)
+ 2 APPPATH\Models\EbookModel.php(24): CodeIgniter\Model->__call('like', [...])
+ 3 APPPATH\Controllers\EbookController.php(265): App\Models\EbookModel->search(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 07:05:28 --> CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, null given, called in C:\xampp\htdocs\ebook\system\Model.php on line 840
+in SYSTEMPATH\Database\BaseBuilder.php on line 984.
+ 1 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->like('title', null)
+ 2 APPPATH\Models\EbookModel.php(24): CodeIgniter\Model->__call('like', [...])
+ 3 APPPATH\Controllers\EbookController.php(265): App\Models\EbookModel->search(null)
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 07:11:55 --> CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, array given, called in C:\xampp\htdocs\ebook\system\Model.php on line 840
+in SYSTEMPATH\Database\BaseBuilder.php on line 984.
+ 1 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->like('title', [...])
+ 2 APPPATH\Models\EbookModel.php(24): CodeIgniter\Model->__call('like', [...])
+ 3 APPPATH\Controllers\EbookController.php(267): App\Models\EbookModel->search([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 07:11:57 --> CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, array given, called in C:\xampp\htdocs\ebook\system\Model.php on line 840
+in SYSTEMPATH\Database\BaseBuilder.php on line 984.
+ 1 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->like('title', [...])
+ 2 APPPATH\Models\EbookModel.php(24): CodeIgniter\Model->__call('like', [...])
+ 3 APPPATH\Controllers\EbookController.php(267): App\Models\EbookModel->search([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 07:13:12 --> CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, array given, called in C:\xampp\htdocs\ebook\system\Model.php on line 840
+in SYSTEMPATH\Database\BaseBuilder.php on line 984.
+ 1 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->like('title', [...])
+ 2 APPPATH\Models\EbookModel.php(24): CodeIgniter\Model->__call('like', [...])
+ 3 APPPATH\Controllers\EbookController.php(267): App\Models\EbookModel->search([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 07:33:31 --> Undefined variable $pager
+in APPPATH\Views\ebookshow\ebooksearchshow.php on line 216.
+ 1 APPPATH\Views\ebookshow\ebooksearchshow.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php', 216)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/ebookshow/ebooksearchshow', [...], true)
+ 5 APPPATH\Controllers\EbookController.php(271): view('/ebookshow/ebooksearchshow', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 07:35:52 --> Undefined variable $pager
+in APPPATH\Views\ebookshow\ebooksearchshow.php on line 216.
+ 1 APPPATH\Views\ebookshow\ebooksearchshow.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php', 216)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/ebookshow/ebooksearchshow', [...], true)
+ 5 APPPATH\Controllers\EbookController.php(271): view('/ebookshow/ebooksearchshow', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 07:55:49 --> Undefined variable $pager
+in APPPATH\Views\ebookshow\ebooksearchshow.php on line 216.
+ 1 APPPATH\Views\ebookshow\ebooksearchshow.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php', 216)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/ebookshow/ebooksearchshow', [...], true)
+ 5 APPPATH\Controllers\EbookController.php(271): view('/ebookshow/ebooksearchshow', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 08:00:56 --> Undefined variable $pager
+in APPPATH\Views\ebookshow\ebooksearchshow.php on line 216.
+ 1 APPPATH\Views\ebookshow\ebooksearchshow.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php', 216)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/ebookshow/ebooksearchshow', [...], true)
+ 5 APPPATH\Controllers\EbookController.php(271): view('/ebookshow/ebooksearchshow', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 08:02:19 --> Undefined variable $pager
+in APPPATH\Views\ebookshow\ebooksearchshow.php on line 216.
+ 1 APPPATH\Views\ebookshow\ebooksearchshow.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php', 216)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/ebookshow/ebooksearchshow', [...], true)
+ 5 APPPATH\Controllers\EbookController.php(271): view('/ebookshow/ebooksearchshow', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 08:02:25 --> Undefined variable $pager
+in APPPATH\Views\ebookshow\ebooksearchshow.php on line 216.
+ 1 APPPATH\Views\ebookshow\ebooksearchshow.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php', 216)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/ebookshow/ebooksearchshow', [...], true)
+ 5 APPPATH\Controllers\EbookController.php(271): view('/ebookshow/ebooksearchshow', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 08:05:24 --> Undefined variable $pager
+in APPPATH\Views\ebookshow\ebooksearchshow.php on line 216.
+ 1 APPPATH\Views\ebookshow\ebooksearchshow.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php', 216)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/ebookshow/ebooksearchshow', [...], true)
+ 5 APPPATH\Controllers\EbookController.php(271): view('/ebookshow/ebooksearchshow', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 08:06:05 --> Undefined variable $pager
+in APPPATH\Views\ebookshow\ebooksearchshow.php on line 216.
+ 1 APPPATH\Views\ebookshow\ebooksearchshow.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php', 216)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/ebookshow/ebooksearchshow', [...], true)
+ 5 APPPATH\Controllers\EbookController.php(271): view('/ebookshow/ebooksearchshow', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 08:08:32 --> Undefined variable $pager
+in APPPATH\Views\ebookshow\ebooksearchshow.php on line 216.
+ 1 APPPATH\Views\ebookshow\ebooksearchshow.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php', 216)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/ebookshow/ebooksearchshow', [...], true)
+ 5 APPPATH\Controllers\EbookController.php(276): view('/ebookshow/ebooksearchshow', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 08:10:03 --> Undefined variable $pager
+in APPPATH\Views\ebookshow\ebooksearchshow.php on line 216.
+ 1 APPPATH\Views\ebookshow\ebooksearchshow.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php', 216)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/ebookshow/ebooksearchshow', [...], true)
+ 5 APPPATH\Controllers\EbookController.php(276): view('/ebookshow/ebooksearchshow', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-04 09:08:04 --> Undefined variable $pager
+in APPPATH\Views\ebookshow\ebooksearchshow.php on line 216.
+ 1 APPPATH\Views\ebookshow\ebooksearchshow.php(216): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php', 216)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooksearchshow.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/ebookshow/ebooksearchshow', [...], true)
+ 5 APPPATH\Controllers\EbookController.php(276): view('/ebookshow/ebooksearchshow', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->search()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-04 09:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 12:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 12:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-04 12:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

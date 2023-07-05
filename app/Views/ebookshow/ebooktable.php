@@ -10,6 +10,8 @@
         <title>Ebook</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
 
+        <script src=" <?php echo base_url('public/assets/');?>/js/jquery/jquery-3.7.0.js"></script>
+        <script src=" <?php echo base_url('public/assets/');?>/js/jquery/main.js"></script>
     <!-- css link for code igniter -->
         <link href=" <?php echo base_url('public/assets/');?>css/styles.css" rel="stylesheet" />
 
@@ -162,16 +164,57 @@
                                 <div class="col-md-5 mx-auto">
                                     
 
-                                    <form action="<?php echo base_url('search')?>" method="get">
+                                    <form id="searchform" action="<?php echo base_url('search')?>" method="get">
                                     <div class="input-group">
 
-                                        <input class="form-control border-end-0 border rounded-pill" type="search"  id="example-search-input" name="search"/>
+                                        <input class="form-control border-end-0 border rounded-pill" type="search"  id="search" name="search"/>
                                         
                                         <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="submit"  id="btn">search</button>
                                                 
                                         
                                     </div>
                                     </form>
+
+                                        <!-- search option with ajax -->
+                                    <script>
+
+                                            $(document).ready(function(){
+                                                $('searchform').click(function(e){
+                                                    e.preventDefault();
+                                                    // alert('search');
+
+
+                                                    var searchdata = $('#search').val();
+
+                                                    // alert ('searchdata');
+                                                    console.log(searchdata);
+
+                                                    $.ajax({
+
+
+                                                        url : '<?php echo base_url('search')?>',
+                                                        type : 'GET',
+                                                        data : { data: searchdata},
+                                                        dataType : 'json',
+
+                                                        success : function(data){
+
+                                                            alert(data);
+                                                        }
+
+
+                                                    })
+
+
+
+
+
+                                                })
+                                            })
+
+
+
+                                    </script>
                                 </div>
                             </div>
 
@@ -204,8 +247,8 @@
                                                 <img height="60" width="60" src="<?php echo base_url('uploads/').$value['photo'];  ?>" alt="Image" >
                                             </td>
                                             <td>
-                                                <a class="btn btn-warning" href="<?php echo base_url('edit_ebook/'.$value['id'])?>">edit</a>
-                                                <a class="btn btn-danger"href="<?php echo base_url('delete_ebook/'.$value['id'])?>">delete</a></td>
+                                                <a class="btn btn-warning edit" id="edit"    value="<?= $value['id']?>" href="<?php echo base_url('edit_ebook/'.$value['id'])?>">edit</a>
+                                                <a class="btn btn-danger delete" id="delete"  value="<?= $value['id']?>" href="">delete</a></td>
                                             <td>
                                                 
                                             <?php endforeach; ?>
@@ -215,7 +258,92 @@
                                     </table>
                                     <?php echo $pager->links(); ?>  
                                         
+                                    <script>
+
+                                        $(document).ready(function() 
+                                        {
+
+
+                                            $(".delete").click(function(e) 
+                                            {
+                                                e.preventDefault();
+
+                                                alert('Are you sure you want to delete this');
+                                                    
+
+                                                var id = $(this).attr('value'); 
+
+                                                // console.log(id);
+
+                                                // alert(id);
+                                                
+
+                                                
                                         
+
+
+                                                $.ajax({
+                                                    
+                                                        url: "<?php echo base_url('delete_ebook/'.$value['id'])?>",
+                                                        
+                                                        type: 'GET',
+                                                        
+                                                       
+
+                                                    
+                                                        
+                                                        
+                                                        success: function(response){
+
+                                                           
+                                                            alert(response);
+
+                                                            window.location.reload();
+                                                            
+                                                        
+                                                        },
+                                                        
+
+                                                        });
+
+                                                        
+
+                                            });
+
+
+                                            $(" edit").click(function(event){
+
+                                                // event.preventDefault();
+
+                                                // alert('Are you sure you want to edit this');
+
+                                                var id = $(this).attr('value');
+
+                                                // alert (id);
+
+
+
+                                                $.ajax({
+
+                                                    url: "<?php echo base_url('edit_ebook/'.$value['id'])?>",
+                                                    type: 'GET',
+                                                    
+                                                    success: function (data) {
+
+                                                    //    alert(data); 
+                                                    //    view('ebookshow/edit_ebook');
+
+                                                    }
+
+                                                })
+
+                                            })
+
+
+
+                                        });
+
+                                        </script>
 
 
 
@@ -258,11 +386,13 @@
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        
+       
+        
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/chart-area-demo.js"></script>
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
+        <script src="js/datatables-simple-demo.js"></script> -->
     </body>
 </html>

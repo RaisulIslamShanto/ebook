@@ -39,6 +39,10 @@ $routes->get('/frontview', 'Home::frontview');
 $routes->get('/ebookname', 'Home::ebookname'); 
 $routes->get('/ebook', 'Home::ebook');
 
+$routes->get('/frontview/listajax', 'Home::listajax');
+
+
+
 
 $routes->get('/author', 'Home::author');
 
@@ -104,7 +108,7 @@ $routes->get('/delete_ebook/(:num)', 'EbookController::deleteebook/$1');
 $routes->get('/edit_ebook/(:num)', 'EbookController::editebook/$1');
 $routes->post('/edit_ebook/update/(:num)', 'EbookController::updateebook/$1');
 $routes->get('/search', 'EbookController::search');
-$routes->get('/search', 'EbookController::search');
+
 
 
 

@@ -156,18 +156,19 @@
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Name </label>
                                     <input type="text" class="form-control" id="name" name="name" >
-                                   
+                                    <span class="errorname text-danger"> </span>
                                 </div>
                                 
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">create by</label>
                                     <input type="text" class="form-control" id="create" name="create">
+                                    <span class="errorcreate text-danger"> </span>
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">created </label>
                                     <input type="text" class="form-control" id="created" name="created" >
-                                   
+                                    <span class="errorcreated text-danger"> </span>
                                 </div>
                                 <button  type="submit" id ="submit" name ="submit" class="btn btn-primary">Save</button>
                         </form>
@@ -205,35 +206,43 @@
                                             // console.log(data);
 
 
-                                            $.ajax({
+                                            $.ajax
+                                            ({
                                                 
                                                     url: "<?php echo base_url('addauthor')?>",
                                                     
                                                     type: 'POST',
                                                     
                                                     data: formData,
+
+                                                    
                                                     
                                                     processData : false,
 
                                                     contentType : false,
                                                     
-                                                    success: function(response){
+                                                    success: function(response)
 
-                                                        clearmyform();
-                                                         alert(response);
+                                                    {
 
-                                                       
-                                                    },
-                                                    
+                                                
+                                                        alert(response);
 
-                                                       });
-
-                                                       function clearmyform(){
                                                         $('#form')[0].reset();
-                                                       }
 
-                                        });
-                                    });
+                                                        
+                                                    }
+                                                        
+
+                                                        
+                                                       
+                                             })
+                                        })
+                                    });           
+
+                                                     
+                                        
+                                    
 
                     </script>
 
