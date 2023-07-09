@@ -167,8 +167,11 @@ class EbookController extends Controller
     public function deleteebook($id)
     {
         
+        // print_r($id);
+        // die();
+
          $deletecat = new EbookModel;
-           $del = $deletecat->delete($id);
+         $del = $deletecat->delete($id);
     
             if($del){
                 return 'Data successfully deleted';
@@ -211,8 +214,8 @@ public function updateebook($id)
 {
     
     
-         $updateebook = new EbookModel;
-          $ebook = $updateebook->find($id);
+     $updateebook = new EbookModel;
+     $ebook = $updateebook->find($id);
 
     // print_r($ebook['photo']);
     // die();
@@ -280,6 +283,7 @@ public function search(){
 
 
     
+    
 
         
 
@@ -291,20 +295,115 @@ public function search(){
 
 
 
+public function editwithajax($id){
 
 
+    print_r($id);
+    die();
+    $editebook = new EbookModel;
+    $data = $editebook->find($id);
 
 
+   
+     print_r($data);
+     die();
+    
 
-
-
-
-
-
-
+    return view('ebookshow/edit_ebook', ["ebookname"=>$data]); 
 
 
 }
+
+public function formsubmitwithajax($id)
+        
+        {
+
+            // print_r($id);
+            // die();
+            
+            $ebookModel = new EbookModel;
+            $ebook = $ebookModel->find($id);
+
+            // print_r($ebook);
+            // die();
+
+            $title = $this->request->getPost('title');
+            $user = $this->request->getPost('user');
+
+
+
+            $ebookData = [
+                
+                
+                'title' => $title,
+                'user' => $user,
+                
+                
+            ];
+        
+            // print_r($ebookData);
+    
+            $updatedata = $ebookModel->update($id,$ebookData);
+            
+          
+        
+            return json_encode($ebookData);
+
+            
+    
+            
+        }
+
+
+        
+            
+    
+
+        public function searchwithajax(){
+
+            // echo 'hi';
+            //      die();
+            
+                $ebookModel = new EbookModel;
+
+
+                $search = $this->request->getGet('data');
+                
+                //  print_r($search);
+                //  die();
+
+                $searchResults =  $ebookModel->search($search);
+        
+                // print_r($searchResults);
+                // die();
+
+               return json_encode($searchResults);
+        
+               
+                
+        
+            
+          
+          
+    
+
+            
+            
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
 
 
 

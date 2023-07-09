@@ -1,0 +1,27 @@
+INFO - 2023-07-09 03:12:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-09 04:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-09 06:45:05 --> Undefined variable $ebookname
+in APPPATH\Views\ebookshow\ebooktable.php on line 343.
+ 1 APPPATH\Views\ebookshow\ebooktable.php(343): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebookname', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooktable.php', 343)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooktable.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebooktable', [], true)
+ 5 APPPATH\Controllers\EbookController.php(159): view('ebookshow/ebooktable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->ebookformsubmit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-09 10:09:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-09 10:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-09 10:24:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-09 11:15:26 --> Undefined variable $value
+in APPPATH\Views\ebookshow\ebooktable.php on line 244.
+ 1 APPPATH\Views\ebookshow\ebooktable.php(244): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooktable.php', 244)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooktable.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebooktable', [], true)
+ 5 APPPATH\Controllers\EbookController.php(159): view('ebookshow/ebooktable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->ebookformsubmit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

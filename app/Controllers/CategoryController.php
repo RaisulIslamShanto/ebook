@@ -69,11 +69,13 @@ class CategoryController extends Controller
 
         $subcategories = $scmodel->where("cid", $user["id"])->find();
 
+        // echo "<pre>";
         // print_r($subcategories);
         // die();
 
         $users[$key]["subcategories"] = $subcategories;
          
+        // echo "<pre>";
         // print_r($users[$key]["subcategories"]);
         // die();
     }

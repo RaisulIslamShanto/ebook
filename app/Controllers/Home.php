@@ -102,7 +102,10 @@ class Home extends BaseController
         $ebookModel = new EbookModel;
 
         $ebookrow = $ebookModel->findAll();
+    
+        
 
+       
 
         $authorModel = new AuthorModel;
 

@@ -108,6 +108,13 @@ $routes->get('/delete_ebook/(:num)', 'EbookController::deleteebook/$1');
 $routes->get('/edit_ebook/(:num)', 'EbookController::editebook/$1');
 $routes->post('/edit_ebook/update/(:num)', 'EbookController::updateebook/$1');
 $routes->get('/search', 'EbookController::search');
+$routes->get('/searchwithajax', 'EbookController::searchwithajax');
+
+//ajax form submit
+
+$routes->post('/editwithajax/(:num)', 'EbookController::editwithajax/$1');
+$routes->post('/formsubmitwithajax/(:num)', 'EbookController::formsubmitwithajax/$1');
+
 
 
 

@@ -147,6 +147,7 @@
                                 <div class="card-body text-end">
 
                                     <a class="btn btn-primary" href="<?php echo base_url('ebookform') ?>">Add Ebook</a>
+                                    <a class="btn btn-primary" href="<?php echo base_url('ebooktable') ?>">Ebook list</a>
                                     <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     Add Ebook
                                     </button> -->
@@ -164,12 +165,13 @@
                                 <div class="col-md-5 mx-auto">
                                     
 
-                                    <form id="searchform" action="<?php echo base_url('search')?>" method="get">
+                                    <form  action="<?php// echo base_url('search')?>" method="get">
+
                                     <div class="input-group">
 
-                                        <input class="form-control border-end-0 border rounded-pill" type="search"  id="search" name="search"/>
+                                        <input class="form-control border-end-0 border rounded-pill" type="search"  id="title" name="title"/>
                                         
-                                        <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="submit"  id="btn">search</button>
+                                        <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="submit"  id="search">search</button>
                                                 
                                         
                                     </div>
@@ -179,27 +181,91 @@
                                     <script>
 
                                             $(document).ready(function(){
-                                                $('searchform').click(function(e){
+                                                $('#search').click(function(e){
                                                     e.preventDefault();
-                                                    // alert('search');
+                                                    
 
 
-                                                    var searchdata = $('#search').val();
+                                                    var searchdata = $('#title').val();
 
-                                                    // alert ('searchdata');
-                                                    console.log(searchdata);
+                                                    // alert (searchdata);
+                                                    // console.log(searchdata);
 
                                                     $.ajax({
 
 
-                                                        url : '<?php echo base_url('search')?>',
+                                                        url : '<?php echo base_url('searchwithajax')?>',
                                                         type : 'GET',
                                                         data : { data: searchdata},
                                                         dataType : 'json',
 
                                                         success : function(data){
+                                                            console.log(data);
+                                                            // alert(data);
 
-                                                            alert(data);
+                                                            $('#tablemain').hide();
+                                                            var table = $('<table class="table table-striped"></table>');
+        
+                                                           
+                                                            var headers = ['Id','Title', 'User', 'Photo' , 'Action'];
+                                                            var headerRow = $('<tr></tr>');
+                                                            
+                                                            for (var h = 0; h < headers.length; h++) {
+                                                                var headerCell = $('<th class="thead-dark"></th>').text(headers[h]);
+                                                                headerRow.append(headerCell);
+                                                            }
+
+                                                            table.append(headerRow);
+        
+
+                                                            for (var i = 0; i < data.length; i++) {
+                                                                var row = $('<tr></tr>');
+
+                                                                var idcell = $('<td></td>').text(data[i].id);
+                                                                row.append(idcell);
+                                                                
+                                                                var titleCell = $('<td></td>').text(data[i].title);
+                                                                row.append(titleCell);
+                                                                
+                                                                var userCell = $('<td></td>').text(data[i].user);
+                                                                row.append(userCell);
+                                                                
+                                                                
+                                                                
+                                                                var img = $('<img style="height:100px;width:100px;">').attr('src',"<?php echo base_url('uploads/');?>"+data[i].photo);
+
+                                                                var photoCell = $('<td></td>').html(img);
+
+                                                                row.append(photoCell);
+                                                                
+                                                                // var editbutton = $('.editme').show();
+                                                                // var deletebutton = $('.delete').show();
+                                                                
+                                                                // $('.delete').show();
+
+                                                                // var actionCell = $('<td></td>').html(editbutton);
+
+                                                                // row.append(actionCell);
+                                                                
+                                                                
+                                                                table.append(row);
+                                                            }
+                                                            
+                                                            
+                                                            var container = $('#tableContainer'); 
+                                                            container.append(table);
+
+
+
+
+
+
+
+
+
+
+
+
                                                         }
 
 
@@ -222,7 +288,7 @@
 
 
                        
-                                    <table class="table table-striped">
+                                    <table class="table table-striped" id="tablemain">
                                         <thead class="thead-dark">
                                             <tr>
                                             <th scope="col">#</th>
@@ -247,8 +313,17 @@
                                                 <img height="60" width="60" src="<?php echo base_url('uploads/').$value['photo'];  ?>" alt="Image" >
                                             </td>
                                             <td>
-                                                <a class="btn btn-warning edit" id="edit"    value="<?= $value['id']?>" href="<?php echo base_url('edit_ebook/'.$value['id'])?>">edit</a>
-                                                <a class="btn btn-danger delete" id="delete"  value="<?= $value['id']?>" href="">delete</a></td>
+                                                <!-- <a class="btn btn-warning edit" id="edit"    value="<?//= $value['id']?>" href="<?php// echo base_url('edit_ebook/'.$value['id'])?>">edit</a> -->
+
+
+                                                <a class="btn btn-primary editme"    href="<?php echo base_url('formsubmitwithajax/'.$value['id'])?>"  value="<?= $value['id']?>" >editme</a>
+
+                                                <!-- editwithajax -->
+                                                <button type="submit" class="btn btn-primary edit" data-bs-toggle="modal" data-bs-target="#exampleModal"  value="<?= $value['id']?>">
+                                                    Editme
+                                                </button>
+
+                                                <a class="btn btn-danger delete" id="delete"  value="<?= $value['id']?>" href="<?php echo base_url('delete_ebook/'.$value['id'])?>">delete</a></td>
                                             <td>
                                                 
                                             <?php endforeach; ?>
@@ -256,14 +331,72 @@
                                         </tbody>
                                         
                                     </table>
+
+                                    <div id="tableContainer" class="table table-striped"></div>
+
                                     <?php echo $pager->links(); ?>  
                                         
+
+                                    <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Update Ebook</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+
+                                                <div class="modal-body">
+
+                                                    <form action="" method="Post" enctype="multipart/form-data">
+
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label">Title</label>
+                                                                <input type="text" class="form-control" id="titlename" name="title" value="">
+                                                                
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label">User </label>
+                                                                <input type="text" class="form-control" id="user" name="user" value="">
+                                                                
+                                                            </div>
+                                                            <!-- <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label">Photo</label>
+                                                                <input type="file" class="form-control" id="photo" name="photo" value="">
+                                                                
+                                                            </div> -->
+
+
+
+                                    
+                                                        
+                                                        <button type="submit" id="update" class="btn btn-primary  update">update</button>
+                                                    </form>
+                                                </div>
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            
+
+
+
+
+
+
+
+
+
                                     <script>
 
                                         $(document).ready(function() 
                                         {
 
-
+                                            var editid;
                                             $(".delete").click(function(e) 
                                             {
                                                 e.preventDefault();
@@ -273,9 +406,9 @@
 
                                                 var id = $(this).attr('value'); 
 
-                                                // console.log(id);
+                                                console.log(id);
 
-                                                // alert(id);
+                                                alert(id);
                                                 
 
                                                 
@@ -284,13 +417,13 @@
 
                                                 $.ajax({
                                                     
-                                                        url: "<?php echo base_url('delete_ebook/'.$value['id'])?>",
+                                                        url: "delete_ebook/"+id,
                                                         
                                                         type: 'GET',
                                                         
                                                        
 
-                                                    
+                            
                                                         
                                                         
                                                         success: function(response){
@@ -310,35 +443,78 @@
 
                                             });
 
+                                            $('.edit').click(function(e){
+                                                e.preventDefault();
 
-                                            $(" edit").click(function(event){
+                                                 editid = $(this).attr('value');
 
-                                                // event.preventDefault();
+                                                // alert(id);
+                                                // console.log(id);
+    
+                                            })
 
-                                                // alert('Are you sure you want to edit this');
+                                           
+                                            $('.update').click(function(e){
 
-                                                var id = $(this).attr('value');
+                                                e.preventDefault();
 
-                                                // alert (id);
+                                                alert('Are you sure you want to update this');
 
+                                                
+                                                var id = editid;
+                                                
+                                                alert(id);
+                                                console.log(id);
+                                               
+                                                var data = {
 
+                                                    
+                                                    'title' : $('#titlename').val(),
+                                                    'user' : $('#user').val(),
+                                                    
+                                                    
+                                                }
+                                                
+                                                // alert(data.title);
+                                                // console.log(data);
+                                                
 
                                                 $.ajax({
 
-                                                    url: "<?php echo base_url('edit_ebook/'.$value['id'])?>",
-                                                    type: 'GET',
-                                                    
-                                                    success: function (data) {
+                                                   
+                                                        
+                                                        url: "formsubmitwithajax/"+id,
+                                                        
+                                                        type: 'POST',
+                                                        
+                                                        data: data,
 
-                                                    //    alert(data); 
-                                                    //    view('ebookshow/edit_ebook');
+                                                        dataType: 'json',
+                                                        
+                            
+                                                        
+                                                        success: function(response){
 
-                                                    }
+                                                            console.log(response.title);
 
-                                                })
 
-                                            })
+                                                            
+                                                            // alert(response.title);
+                                                            
+                                                            // $('#title').text(response.title);
+                                                            // $('#user').text(response.user);
 
+                                                            // window.location.reload();
+                                                        
+                                                        },
+                                                        
+
+                                                        });
+
+
+
+
+                                            });
 
 
                                         });

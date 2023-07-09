@@ -151,12 +151,13 @@
                                 <div class="card-body text-end">
 
                                     <a class="btn btn-primary" href="<?php echo base_url('ebookform') ?>">Add Ebook</a>
-                                    
+                                    <a class="btn btn-primary" href="<?php echo base_url('ebooktable') ?>">Ebook list</a>
                                 </div>
                                  
                                 
                                 <div class="card-body text-start">
-                                <form action="<?= base_url('edit_ebook/update/'.$ebookname['id']) ?>" method="Post" enctype="multipart/form-data">
+
+                                <form action="<?= base_url('edit_ebook/update/'.$ebookname['id']) ?>" method="Post"     enctype="multipart/form-data">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Title</label>
                                         <input type="text" class="form-control" id="title" name="title" value="<?= $ebookname['title']?>">
@@ -177,10 +178,10 @@
 
                                     
                                     
-                                    <button type="submit" name="update" class="btn btn-primary">update</button>
+                                    <button type="submit" name="update" class="btn btn-primary update">update</button>
                                 </form>
 
-                                        <div class="col-md-5">
+                                <div class="col-md-5">
                                         <img height="60" width="60" src="<?php echo base_url('uploads/').$ebookname['photo'];  ?>" alt="Image" >
                                         </div>
                                 </div>

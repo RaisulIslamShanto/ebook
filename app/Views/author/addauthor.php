@@ -154,6 +154,11 @@
                          
                         <form id="form" action =""  method="post">
                                 <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Image </label>
+                                    <input type="file" class="form-control" id="image" name="image" >
+                                    <span class="errorimg text-danger"> </span>
+                                </div>
+                                <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Name </label>
                                     <input type="text" class="form-control" id="name" name="name" >
                                     <span class="errorname text-danger"> </span>
@@ -167,9 +172,18 @@
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">created </label>
-                                    <input type="text" class="form-control" id="created" name="created" >
+                                    <input type="date" class="form-control" id="created" name="created" >
                                     <span class="errorcreated text-danger"> </span>
                                 </div>
+                                <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="status" name="status" value="1">
+                                        <label class="form-check-label" for="exampleCheck1">status</label>
+                                </div>
+                                <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="verified" name="verified" value="1">
+                                        <label class="form-check-label" for="exampleCheck1">verified</label>
+                                    </div>
+
                                 <button  type="submit" id ="submit" name ="submit" class="btn btn-primary">Save</button>
                         </form>
                         
