@@ -157,7 +157,8 @@
                                 
                                 <div class="card-body text-start">
 
-                                <form action="<?= base_url('edit_ebook/update/'.$ebookname['id']) ?>" method="Post"     enctype="multipart/form-data">
+                                <form action="<?= base_url('edit_ebook/update/'.$ebookname['id']) ?>" method="Post" enctype="multipart/form-data">
+                                    
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Title</label>
                                         <input type="text" class="form-control" id="title" name="title" value="<?= $ebookname['title']?>">
@@ -169,6 +170,7 @@
                                         
                                     </div>
                                     <div class="mb-3">
+
                                         <label for="exampleInputEmail1" class="form-label">Photo</label>
                                         <input type="file" class="form-control" id="photo" name="photo" value="<?= $ebookname['photo']?>">
                                         

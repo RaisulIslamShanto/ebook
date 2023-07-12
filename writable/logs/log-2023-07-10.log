@@ -1,0 +1,27 @@
+INFO - 2023-07-10 05:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 05:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 05:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 05:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 06:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-10 07:50:43 --> Undefined variable $title
+in APPPATH\Controllers\EbookController.php on line 401.
+ 1 APPPATH\Controllers\EbookController.php(401): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 401)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->loadwithajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-10 07:51:31 --> Undefined variable $title
+in APPPATH\Controllers\EbookController.php on line 401.
+ 1 APPPATH\Controllers\EbookController.php(401): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 401)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->loadwithajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-10 09:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-10 09:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-10 13:39:16 --> Too few arguments to function App\Controllers\EbookController::loadwithajax(), 0 passed in C:\xampp\htdocs\ebook\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\EbookController.php on line 395.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->loadwithajax()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

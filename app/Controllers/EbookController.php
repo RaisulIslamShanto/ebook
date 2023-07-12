@@ -181,7 +181,7 @@ class EbookController extends Controller
 
          //return view('category/add_category');
     
-         return redirect()->to(base_url('ebooktable'));
+        //  return redirect()->to(base_url('ebooktable'));
     }
        
 
@@ -259,13 +259,13 @@ public function search(){
 
         $searchResults =  $ebookModel->search($search);
 
-            $pager = \Config\Services::pager();
+        $pager = \Config\Services::pager();
 
             // $data['title'] = $ebookModel->paginate(2);
             // $data['pager'] = $ebookModel->pager;
 
             $data = [
-                'title' =>  $ebookModel->paginate(10),
+                'title' =>  $ebookModel->paginate(),
                 'pager' =>  $ebookModel->pager,
             ];
 
@@ -298,15 +298,15 @@ public function search(){
 public function editwithajax($id){
 
 
-    print_r($id);
-    die();
+    // print_r($id);
+    // die();
     $editebook = new EbookModel;
     $data = $editebook->find($id);
 
 
    
-     print_r($data);
-     die();
+    //  print_r($data);
+    //  die();
     
 
     return view('ebookshow/edit_ebook', ["ebookname"=>$data]); 
@@ -314,9 +314,7 @@ public function editwithajax($id){
 
 }
 
-public function formsubmitwithajax($id)
-        
-        {
+        public function formsubmitwithajax($id){
 
             // print_r($id);
             // die();
@@ -377,19 +375,116 @@ public function formsubmitwithajax($id)
                 // print_r($searchResults);
                 // die();
 
-               return json_encode($searchResults);
-        
-               
-                
-        
+               return json_encode($searchResults);  
             
-          
-          
+        }
+
+
+        public function loadwithajax(){
+
     
 
             
+             
+            $ebookModel = new EbookModel;
+            // $ebook = $ebookModel->findAll();
+
+            $data['ebook'] = $ebookModel->paginate();
+            $data['pager'] = $ebookModel->pager->links();
+
+
+
+            // echo'<pre>';
+            // print_r($ebook);
+            // die();
+
             
+
+
+           
+
+            
+            // echo "hi";
+            // die();
+
+            return json_encode($data);
+
+
         }
+
+       
+        public function editajax($id)
+        {
+            // echo "hi";
+            // die();
+            
+            $editebook = new EbookModel;
+            $data = $editebook->find($id);
+        
+            
+           
+            
+        
+            return json_encode($data); 
+           
+        }
+
+
+
+        public function updateebookajax($id){
+
+            // print_r($id);
+            // die();
+
+            $update = new EbookModel;
+
+            $ebook = $update->find($id);
+
+            // $data = $update->find($id);
+
+            // print_r($ebook);
+
+            // die();
+
+            $title = $this->request->getPost('titlename');
+            $user = $this->request->getPost('user');
+            $file = $this->request->getFile('photo');
+
+            if ($file->isValid() && !$file->hasMoved())
+            {
+                $old_photo = $ebook['photo'];    
+                if(file_exists("uploads/".$old_photo)){
+                    unlink("uploads/".$old_photo);
+                }
+                $photoName = $file->getRandomName();
+                $file->move('uploads/', $photoName);
+            }
+        
+
+            // print_r($title);
+            // die();
+
+            $ebookData = [
+                
+                
+                'title' => $title,
+                'user' => $user,
+                'photo' => $photoName,
+                
+                
+            ];
+
+            // $updatedata = $ebookModel->update($id,$ebookData);
+
+            $update->update($id,$ebookData);
+
+            return json_encode($ebookData);
+
+
+
+        }
+
+
 
 
 

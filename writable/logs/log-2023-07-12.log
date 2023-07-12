@@ -1,0 +1,126 @@
+CRITICAL - 2023-07-12 03:29:13 --> Undefined variable $catname
+in APPPATH\Views\ebookshow\ebooktable.php on line 379.
+ 1 APPPATH\Views\ebookshow\ebooktable.php(379): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $catname', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooktable.php', 379)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooktable.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebooktable', [], true)
+ 5 APPPATH\Controllers\EbookController.php(159): view('ebookshow/ebooktable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->ebookformsubmit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-12 05:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-12 05:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-12 05:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-12 05:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-12 07:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-12 07:51:46 --> Call to a member function isValid() on null
+in APPPATH\Controllers\EbookController.php on line 447.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->updateebookajax('64')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 08:12:37 --> Call to a member function isValid() on null
+in APPPATH\Controllers\EbookController.php on line 447.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->updateebookajax('65')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 09:31:59 --> Call to a member function isValid() on null
+in APPPATH\Controllers\EbookController.php on line 447.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->updateebookajax('65')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 09:47:08 --> Call to a member function isValid() on null
+in APPPATH\Controllers\EbookController.php on line 447.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->updateebookajax('65')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 09:49:11 --> Call to a member function isValid() on null
+in APPPATH\Controllers\EbookController.php on line 447.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->updateebookajax('65')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 09:54:27 --> Call to a member function isValid() on null
+in APPPATH\Controllers\EbookController.php on line 445.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->updateebookajax('65')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 10:02:41 --> Call to a member function isValid() on null
+in APPPATH\Controllers\EbookController.php on line 445.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->updateebookajax('65')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 11:06:08 --> Undefined variable $ebook
+in APPPATH\Controllers\EbookController.php on line 449.
+ 1 APPPATH\Controllers\EbookController.php(449): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ebook', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 449)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->updateebookajax('65')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 11:19:17 --> Undefined variable $photoName
+in APPPATH\Controllers\EbookController.php on line 472.
+ 1 APPPATH\Controllers\EbookController.php(472): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $photoName', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 472)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->updateebookajax('65')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-12 11:35:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-12 11:53:25 --> Undefined variable $authname
+in APPPATH\Views\ebookshow\ebooktable.php on line 384.
+ 1 APPPATH\Views\ebookshow\ebooktable.php(384): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authname', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooktable.php', 384)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooktable.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebooktable', [], true)
+ 5 APPPATH\Controllers\EbookController.php(159): view('ebookshow/ebooktable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->ebookformsubmit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-12 11:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-12 11:54:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-12 11:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-12 12:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-12 12:07:07 --> Undefined variable $authname
+in APPPATH\Views\ebookshow\ebooktable.php on line 384.
+ 1 APPPATH\Views\ebookshow\ebooktable.php(384): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authname', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooktable.php', 384)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\ebookshow\\ebooktable.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ebookshow/ebooktable', [], true)
+ 5 APPPATH\Controllers\EbookController.php(159): view('ebookshow/ebooktable', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->ebookformsubmit()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 12:08:06 --> Call to a member function isValid() on null
+in APPPATH\Controllers\EbookController.php on line 453.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->updateebookajax('65')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 12:09:07 --> Call to a member function isValid() on null
+in APPPATH\Controllers\EbookController.php on line 453.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->updateebookajax('65')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-12 12:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-12 12:11:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-12 12:11:53 --> Call to a member function isValid() on null
+in APPPATH\Controllers\EbookController.php on line 453.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->updateebookajax('65')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-12 12:12:19 --> Call to a member function isValid() on null
+in APPPATH\Controllers\EbookController.php on line 453.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->updateebookajax('65')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-12 12:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

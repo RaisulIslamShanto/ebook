@@ -100,7 +100,7 @@ $routes->post('/add_sub_category', 'SubcategoryController::addSubCategory');
 
 $routes->get('/ebook', 'EbookController::ebook');
 $routes->get('/ebookform', 'EbookController::ebookform');
-$routes->post('/ebookformsubmit', 'EbookController::addebook');
+$routes->post('/ebookformsubmit', 'EbookController::addebook');  
 $routes->get('/ebooktable', 'EbookController::ebookformsubmit');
 
 $routes->get('/delete_ebook/(:num)', 'EbookController::deleteebook/$1');
@@ -114,6 +114,10 @@ $routes->get('/searchwithajax', 'EbookController::searchwithajax');
 
 $routes->post('/editwithajax/(:num)', 'EbookController::editwithajax/$1');
 $routes->post('/formsubmitwithajax/(:num)', 'EbookController::formsubmitwithajax/$1');
+
+$routes->get('/loadwithajax', 'EbookController::loadwithajax');
+$routes->get('/editajax/(:num)', 'EbookController::editajax/$1');
+$routes->post('/updateebookajax/(:num)', 'EbookController::updateebookajax/$1');
 
 
 

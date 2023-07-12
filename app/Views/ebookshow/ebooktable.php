@@ -147,7 +147,7 @@
                                 <div class="card-body text-end">
 
                                     <a class="btn btn-primary" href="<?php echo base_url('ebookform') ?>">Add Ebook</a>
-                                    <a class="btn btn-primary" href="<?php echo base_url('ebooktable') ?>">Ebook list</a>
+                                    <a class="btn btn-primary " id="ebooklist" href="<?php echo base_url('ebooktable') ?>">Ebook list</a>
                                     <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     Add Ebook
                                     </button> -->
@@ -155,9 +155,10 @@
                                 </div>
                         </div>
 
+
  
 
-
+        
 
                             <!-- search -->
 
@@ -165,17 +166,17 @@
                                 <div class="col-md-5 mx-auto">
                                     
 
-                                    <form  action="<?php// echo base_url('search')?>" method="get">
+                                    <!-- <form  action="<?php// echo base_url('search')?>" method="get">
 
-                                    <div class="input-group">
+                                        <div class="input-group">
 
-                                        <input class="form-control border-end-0 border rounded-pill" type="search"  id="title" name="title"/>
-                                        
-                                        <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="submit"  id="search">search</button>
-                                                
-                                        
-                                    </div>
-                                    </form>
+                                            <input class="form-control border-end-0 border rounded-pill" type="search"  id="title" name="title"/>
+                                            
+                                            <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="submit"  id="search">search</button>
+                                                    
+                                            
+                                        </div>
+                                    </form> -->
 
                                         <!-- search option with ajax -->
                                     <script>
@@ -248,19 +249,18 @@
                                                                 // row.append(actionCell);
                                                                 
                                                                 
-                                                                table.append(row);
+
+                                                                // alert(data.pager);
+
                                                             }
                                                             
                                                             
+
                                                             var container = $('#tableContainer'); 
                                                             container.append(table);
+    
 
-
-
-
-
-
-
+                                                           
 
 
 
@@ -307,16 +307,16 @@
                                             <tr>
                                                 
                                             <th scope="row"><?= $value['id']?></th>
-                                            <td><?= $value['title'] ?></td>
-                                            <td><?= $value['user'] ?></td>
-                                            <td>
+                                                <td><?= $value['title'] ?></td>
+                                                <td><?= $value['user'] ?></td>
+                                                <td>
                                                 <img height="60" width="60" src="<?php echo base_url('uploads/').$value['photo'];  ?>" alt="Image" >
                                             </td>
                                             <td>
                                                 <!-- <a class="btn btn-warning edit" id="edit"    value="<?//= $value['id']?>" href="<?php// echo base_url('edit_ebook/'.$value['id'])?>">edit</a> -->
 
 
-                                                <a class="btn btn-primary editme"    href="<?php echo base_url('formsubmitwithajax/'.$value['id'])?>"  value="<?= $value['id']?>" >editme</a>
+                                                <!-- <a class="btn btn-primary editme"    href="<?php //echo base_url('formsubmitwithajax/'.$value['id'])?>"  value="<?//= $value['id']?>" >editme</a> -->
 
                                                 <!-- editwithajax -->
                                                 <button type="submit" class="btn btn-primary edit" data-bs-toggle="modal" data-bs-target="#exampleModal"  value="<?= $value['id']?>">
@@ -334,11 +334,15 @@
 
                                     <div id="tableContainer" class="table table-striped"></div>
 
-                                    <?php echo $pager->links(); ?>  
+                                    <?php  $pager->links(); ?>  
                                         
+                                    <div id="tableshow" class="table table-striped"></div> 
 
+                                    <div id="pagination">hh</div>  
+                                    
+                                    
                                     <!-- Modal -->
-                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                 <div class="modal-header">
@@ -346,33 +350,40 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
 
-                                                <div class="modal-body">
+                                                            <div class="modal-body">
 
-                                                    <form action="" method="Post" enctype="multipart/form-data">
+                                                                <form id="myform" action="" method="Post" enctype="multipart/form-data">
 
-                                                            <div class="mb-3">
-                                                                <label for="exampleInputEmail1" class="form-label">Title</label>
-                                                                <input type="text" class="form-control" id="titlename" name="title" value="">
-                                                                
+                                                                        <div class="mb-3">
+                                                                            <label for="exampleInputEmail1" class="form-label">Id</label>
+                                                                            <input type="text" class="form-control" id="id" name="id" value="">
+                                                                            
+                                                                        </div>
+                                                                        <div class="mb-3">
+                                                                            <label for="exampleInputEmail1" class="form-label">Title</label>
+                                                                            <input type="text" class="form-control" id="titlename" name="titlename" value="">
+                                                                            
+                                                                        </div>
+                                                                        <div class="mb-3">
+                                                                            <label for="exampleInputEmail1" class="form-label">User </label>
+                                                                            <input type="text" class="form-control" id="user" name="user" value="">
+                                                                            
+                                                                        </div>
+                                                                        <div class="mb-3">
+                                                                        <label for="exampleInputEmail1" class="form-label">Photo</label>
+                                                                        <input type="file" class="form-control" id="photo" name="photo" value="">
+                                                                        
+                                                                        </div>
+                                                                        
+                                                                        
+                                                                        
+
+
+                                                
+                                                                    
+                                                                    <button type="submit" id="updateme" class="btn btn-primary  update">update</button>
+                                                                </form>
                                                             </div>
-                                                            <div class="mb-3">
-                                                                <label for="exampleInputEmail1" class="form-label">User </label>
-                                                                <input type="text" class="form-control" id="user" name="user" value="">
-                                                                
-                                                            </div>
-                                                            <!-- <div class="mb-3">
-                                                                <label for="exampleInputEmail1" class="form-label">Photo</label>
-                                                                <input type="file" class="form-control" id="photo" name="photo" value="">
-                                                                
-                                                            </div> -->
-
-
-
-                                    
-                                                        
-                                                        <button type="submit" id="update" class="btn btn-primary  update">update</button>
-                                                    </form>
-                                                </div>
 
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -381,162 +392,7 @@
                                                 </div>
                                             </div>
                                             </div>
-                                            
-
-
-
-
-
-
-
-
-
-                                    <script>
-
-                                        $(document).ready(function() 
-                                        {
-
-                                            var editid;
-                                            $(".delete").click(function(e) 
-                                            {
-                                                e.preventDefault();
-
-                                                alert('Are you sure you want to delete this');
-                                                    
-
-                                                var id = $(this).attr('value'); 
-
-                                                console.log(id);
-
-                                                alert(id);
-                                                
-
-                                                
                                         
-
-
-                                                $.ajax({
-                                                    
-                                                        url: "delete_ebook/"+id,
-                                                        
-                                                        type: 'GET',
-                                                        
-                                                       
-
-                            
-                                                        
-                                                        
-                                                        success: function(response){
-
-                                                           
-                                                            alert(response);
-
-                                                            window.location.reload();
-                                                            
-                                                        
-                                                        },
-                                                        
-
-                                                        });
-
-                                                        
-
-                                            });
-
-                                            $('.edit').click(function(e){
-                                                e.preventDefault();
-
-                                                 editid = $(this).attr('value');
-
-                                                // alert(id);
-                                                // console.log(id);
-    
-                                            })
-
-                                           
-                                            $('.update').click(function(e){
-
-                                                e.preventDefault();
-
-                                                alert('Are you sure you want to update this');
-
-                                                
-                                                var id = editid;
-                                                
-                                                alert(id);
-                                                console.log(id);
-                                               
-                                                var data = {
-
-                                                    
-                                                    'title' : $('#titlename').val(),
-                                                    'user' : $('#user').val(),
-                                                    
-                                                    
-                                                }
-                                                
-                                                // alert(data.title);
-                                                // console.log(data);
-                                                
-
-                                                $.ajax({
-
-                                                   
-                                                        
-                                                        url: "formsubmitwithajax/"+id,
-                                                        
-                                                        type: 'POST',
-                                                        
-                                                        data: data,
-
-                                                        dataType: 'json',
-                                                        
-                            
-                                                        
-                                                        success: function(response){
-
-                                                            console.log(response.title);
-
-
-                                                            
-                                                            // alert(response.title);
-                                                            
-                                                            // $('#title').text(response.title);
-                                                            // $('#user').text(response.user);
-
-                                                            // window.location.reload();
-                                                        
-                                                        },
-                                                        
-
-                                                        });
-
-
-
-
-                                            });
-
-
-                                        });
-
-                                        </script>
-
-
-
-
-
-
-
-
-
-
-
-
-                        
-
-
-
-
                         
                     </div> 
                     
@@ -570,5 +426,434 @@
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script> -->
+
+
+
+
+
+
+
+<!-- loading with pagination -->
+        <script>
+
+        var siteurl = '<?php echo base_url('loadwithajax'); ?>';
+        $(document).ready(function() {
+            
+            function fetchall(page) {
+
+                url = siteurl +"?page="+page;
+
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+
+                            $('#tablemain').hide();
+                            // console.log(data);
+
+                            var table = $('<table class="table table-striped"></table>');
+
+                            
+                            var headers = ['Id','Title', 'User', 'Photo', 'Action'];
+                            var headerRow = $('<tr></tr>');
+                            
+                            for (var h = 0; h < headers.length; h++) {
+                                var headerCell = $('<th class="thead-dark"></th>').text(headers[h]);
+                                headerRow.append(headerCell);
+                            }
+
+                            table.append(headerRow);
+
+
+                            for (var i = 0; i < data.ebook.length; i++) {
+                                var row = $('<tr></tr>');
+
+                                var idcell = $('<td></td>').text(data.ebook[i].id);
+                                row.append(idcell);
+                                
+                                var titleCell = $('<td></td>').text(data.ebook[i].title);
+                                row.append(titleCell);
+                                
+                                var userCell = $('<td></td>').text(data.ebook[i].user);
+                                row.append(userCell);
+
+                                
+                                
+                                
+                                
+                                var img = $('<img style="height:100px;width:100px;">').attr('src',"<?php echo base_url('uploads/');?>"+data.ebook[i].photo);
+
+                                var photoCell = $('<td></td>').html(img);
+
+                            
+
+                                row.append(photoCell);
+                                
+                                // alert('hi');
+                                var actionCell = $('<td><button ebookid="'+data.ebook[i].id+'" type="button" class="btn btn-danger bg-danger deletebtn ">delete</button> <button type="button" ebookid="'+data.ebook[i].id+'" class="btn btn-primary bg-primary editmebtn">edit</button></td>')
+                                row.append(actionCell);
+
+                                
+                                table.append(row);
+
+
+                                $('#pagination').html(data.pager);
+
+
+
+
+                            }
+                            
+                            
+                            var container = $('#tableshow'); 
+                            container.append(table);
+
+                    }
+
+                    
+
+
+                    
+                    
+                });
+
+                    
+
+            }
+
+            
+            fetchall(1);
+
+            $('#pagination').on('click','a',function(e){
+
+                        e.preventDefault(); 
+
+                        $('#tableshow').empty();
+                        
+                        var pageno = $(this).attr('href'); 
+
+                        // var page = new URL(pageno).searchParams.get('page');
+
+                        var url = pageno;
+                        var pagePosition = url.indexOf('page=') + 5; 
+                        var page = url.substring(pagePosition); 
+                            // console.log(page);
+                        // alert(page);
+                        // console.log(page);
+
+
+
+                        // var pageNum = $(this).html().trim();
+
+                        // alert(pageNum);
+                        // console.log(pageNum);
+                        fetchall(page);
+
+                    });
+
+                    
+
+                    
+
+        });
+         </script>
+
+<!--  previous delete-->
+
+<script>
+
+        $(document).ready(function() 
+        {
+
+            var editid;
+            $(".delete").click(function(e) 
+            {
+                e.preventDefault();
+
+                alert('Are you sure you want to delete this');
+                    
+
+                var id = $(this).attr('value'); 
+
+                console.log(id);
+
+                alert(id);
+                
+
+                
+
+                $.ajax({
+                    
+                        url: "delete_ebook/"+id,
+                        
+                        type: 'GET',
+                        
+                        
+
+
+                        
+                        
+                        success: function(response){
+
+                            
+                            alert(response);
+
+                            window.location.reload();
+                            
+                        
+                        },
+                        
+
+                        });
+
+                        
+
+            });
+
+            $('.edit').click(function(e){
+                e.preventDefault();
+
+                    editid = $(this).attr('value');
+
+                // alert(id);
+                // console.log(id);
+
+            })
+
+            
+            $('update').click(function(e){
+
+                e.preventDefault();
+
+                alert('Are you sure you want to update this');
+
+                
+                var id = editid;
+                
+                alert(id);
+                console.log(id);
+                
+                var data = {
+
+                    
+                    'title' : $('#titlename').val(),
+                    'user' : $('#user').val(),
+                    
+                    
+                }
+                
+                // alert(data.title);
+                // console.log(data);
+                
+
+                $.ajax({
+
+                    
+                        
+                        url: "formsubmitwithajax/"+id,
+                        
+                        type: 'POST',
+                        
+                        data: data,
+
+                        dataType: 'json',
+                        
+
+                        
+                        success: function(response){
+
+                            console.log(response.title);
+
+
+                            
+                            // alert(response.title);
+                            
+                            // $('#title').text(response.title);
+                            // $('#user').text(response.user);
+
+                            // window.location.reload();
+                        
+                        },
+                        
+
+                        });
+
+
+
+
+            });
+
+
+        });
+
+        </script>
+
+<!-- delete and edit with ajax -->
+
+<script>
+
+$(document).ready(function(){
+
+   $('#tableshow').on('click','.deletebtn',function(e){
+
+       e.preventDefault();
+
+       // alert('hi');
+
+       var id = $(this).attr('ebookid'); 
+
+       console.log(id);
+
+       alert(id);
+
+       $.ajax({
+       
+       url: "delete_ebook/"+id,
+       
+       type: 'GET',
+       
+      
+
+       
+       
+       
+       success: function(response){
+
+          
+           alert(response);
+
+           // window.location.reload();
+           
+       
+       },
+       
+
+       });
+
+
+       
+
+
+   });
+
+   $('#tableshow').on('click','.editmebtn',function(e){
+
+            e.preventDefault();
+
+            // alert('hi');
+
+            var id = $(this).attr('ebookid'); 
+
+            // console.log(id);
+
+            // alert(id);
+
+            // var modal = $('.modal');
+            // modal.show();
+
+            $("#exampleModal").modal('show');
+
+            $.ajax({
+
+            url: "editajax/"+id,
+
+            type: 'GET',
+
+            dataType: 'json',
+            
+
+
+
+
+            success: function(response){
+
+            console.log(response);
+            
+                $("#id").val(response.id);
+                $("#titlename").val(response.title);
+                $("#user").val(response.user);
+                // $("#photo").val(response.photo);
+
+            },
+
+
+});
+
+});
+
+// updatewithajax
+
+    $('#updateme').on('click',function(e){
+
+            e.preventDefault();
+
+            // alert('updateme');
+
+            var formData = new FormData(document.getElementById("myform"));
+
+            // var formData = $('#myform').serialize();
+
+
+            var id = $('#id').val(); 
+            // var titlename = $('#titlename').val(); 
+            // var user = $('#user').val(); 
+
+           
+            
+             
+            // var formData = 'id='+id + '&titlename='+titlename + '&user='+user ;
+
+            console.log(formData);
+
+            // alert(user);
+
+            // var modal = $('.modal');
+            // modal.show();
+
+            $("#exampleModal").modal('hide');
+
+            $.ajax({
+
+            url: "updateebookajax/"+id,
+
+            data: formData,
+
+            processData : false,
+
+            contentType : false,
+
+            type: 'POST',
+
+            dataType: 'json',
+
+
+            success: function(response){
+
+            console.log(response);
+
+            alert ('updated successfully')
+
+                
+
+            },
+
+
+            });
+
+            });
+
+
+
+            });
+
+
+</script>
+
+
+
+
+
+
     </body>
 </html>
