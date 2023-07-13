@@ -45,6 +45,8 @@ $routes->get('/frontview/listajax', 'Home::listajax');
 
 
 $routes->get('/author', 'Home::author');
+$routes->get('/authordatawithajax', 'Home::authordatawithajax');
+
 
 // $routes->post('/author', 'Home::author');
 //  $routes->get('/category', 'Home::category');
@@ -96,6 +98,12 @@ $routes->post('/subcategoryview', 'SubcategoryController::addSubCategory');
 $routes->post('/add_sub_category', 'SubcategoryController::addSubCategory');
 
 
+// category with ajax request
+
+$routes->post('/addcategorywithajaxr', 'CategoryController::addcategorywithajaxm');
+
+
+
 // ebooks
 
 $routes->get('/ebook', 'EbookController::ebook');
@@ -118,6 +126,7 @@ $routes->post('/formsubmitwithajax/(:num)', 'EbookController::formsubmitwithajax
 $routes->get('/loadwithajax', 'EbookController::loadwithajax');
 $routes->get('/editajax/(:num)', 'EbookController::editajax/$1');
 $routes->post('/updateebookajax/(:num)', 'EbookController::updateebookajax/$1');
+$routes->get('/alistajax', 'EbookController::alistajax');
 
 
 

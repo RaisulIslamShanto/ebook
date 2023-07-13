@@ -9,6 +9,7 @@
         <meta name="author" content="" />
         <title>Ebook</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <script src=" <?php echo base_url('public/assets/');?>/js/jquery/jquery-3.7.0.js"></script>
 
     <!-- css link for code igniter -->
         <link href=" <?php echo base_url('public/assets/');?>css/styles.css" rel="stylesheet" />
@@ -163,7 +164,7 @@
                                                     All Category listings
                                     </button>
                                 </div>
-                                <table class="table">
+                                <table id=tablecat class="table">
                                     <thead class="thead-dark">
                                         <tr>
                                         
@@ -207,9 +208,78 @@
                                         
                                         
                                     </tbody>
-                        </table>
+                                </table>
+                                
+                                <table id=tablecategory class="table">
+
+                                    <thead>
+
+                                    </thead>
+                                    <tbody>
+
+
+                                    </tbody>
+                                    
+                                </table>
+                                
                             </div>   
                     </div>
+                    <script>
+                                    $(document).ready(function() {
+
+                                        $('save').click(function(e){
+                                            e.preventDefault();
+                                                                        
+                                            var formData = {
+
+
+                                            categoryname: $('#categoryname').val(),
+                                            searchable: $('#searchable').prop('checked') ? 1 : 0,
+                                            status: $('#status').prop('checked') ? 1 : 0
+                                            };
+
+                                            // console.log(formData);
+                                            // alert('hi');
+
+                                            $.ajax({
+
+                                            url: '<?= base_url('addcategorywithajaxr') ?>',
+                                            type: 'POST',
+                                            data: formData,
+
+                                            success: function(response) {
+                                               
+                                                console.log(response);
+                                                var responseData = JSON.parse(response);
+                                                 
+
+                                                
+                                                console.log(responseData.category_name); 
+
+                                                var thead = $('#tablecategory thead');
+                                                    // thead.empty();
+
+                                                    var row = $('<tr></tr>');
+                                                    row.append($('<td></td>').text(responseData.category_name));
+                                                   
+                                                    thead.append(row);
+                                                
+                                                 
+
+                                                
+                                                // alert ('data successfully inserted');
+                                            }
+                                            });
+
+
+
+                                        });
+
+                                    });
+
+
+
+                                </script>
 
 
 
@@ -228,6 +298,7 @@
 
 
                             <div class="card-body text-start">
+
                                 <form action="<?= base_url('addcategory') ?>" method="Post">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Name </label>
@@ -240,28 +311,31 @@
                                         <input type="checkbox" class="form-check-input" id="searchable" name="searchable" value="1">
                                         <label class="form-check-label" for="exampleCheck1" >searchable </label>
                                     </div>
+                                    
                                     <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="status" value="1">
+                                        <input type="checkbox" class="form-check-input" id="status" name="status" value="1">
                                         <label class="form-check-label" for="exampleCheck1">status</label>
                                     </div>
-                                    <button type="submit" name="save"class="btn btn-primary">Save</button>
+                                    <button type="submit" id="save" name="save"class="btn btn-primary">Save</button>
                                     
                                 </form>
 
+                                
+
                                 </div>
                                 
-                                <?php if (isset($_POST['save'])): ?>
+                                <?php// if (isset($_POST['save'])): ?>
 
 
 
-                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                 <strong>Success</strong>
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                </div> 
+                                </div>  -->
                                     
 
 
-                                <?php endif; ?>
+                                <?php// endif; ?>
                                     
                                    
                                 </div>
@@ -289,29 +363,9 @@
 <!-- Button trigger modal -->
 
 
-<!-- Modal -->
 
 
-
-                        <table class="table">
-                                    <thead class="thead-dark">
-                                        <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Handle</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        </tr>
-                                        
-                                    </tbody>
-                        </table>
+                        
 
                                     
                                    
@@ -338,12 +392,12 @@
                 <!-- footer end  -->
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/chart-area-demo.js"></script>
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
+        <script src="js/datatables-simple-demo.js"></script> -->
     </body>
 </html>

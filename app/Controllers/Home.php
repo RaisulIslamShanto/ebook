@@ -48,6 +48,23 @@ class Home extends BaseController
         
     }
 
+
+    public function authordatawithajax(){
+
+        $authorModel = new AuthorModel();
+
+        $users = $authorModel->findAll();
+        
+        // echo 'hi';
+        // print_r($users);
+
+        // die();
+
+        return json_encode($users);
+
+
+    }
+
     public function ebook()
     {
 
@@ -62,6 +79,7 @@ class Home extends BaseController
          return view('addauthor/addauthor');
         
     }
+
     public function store()
     {
         // echo "r";

@@ -161,7 +161,7 @@
                                     <thead class="thead-dark">
                                         <tr>
                                         
-                                        <a href="<?php echo base_url('subcategoryview')?>"><th scope="col">Article</th></a>  
+                                        <!-- <a href="<?php echo base_url('subcategoryview')?>"><th scope="col">Article</th></a>  
                                         
                                         </tr>
                                         <tr>
@@ -171,7 +171,7 @@
                                         </tr>
                                         <tr>
                                         
-                                        <th scope="col">Food</th>
+                                        <th scope="col">Food</th> -->
                                         
                                         </tr>
                                     </thead>
@@ -252,7 +252,7 @@
 
 
 
-                        <table class="table">
+                        <!-- <table class="table">
                                     <thead class="thead-dark">
                                         <tr>
                                         <th scope="col">#</th>
@@ -270,7 +270,7 @@
                                         </tr>
                                         
                                     </tbody>
-                        </table>
+                        </table> -->
 
                                     
                                    

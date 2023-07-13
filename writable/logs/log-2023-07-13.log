@@ -1,1 +1,154 @@
 INFO - 2023-07-13 03:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-13 07:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-13 07:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-13 07:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-13 08:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-13 09:59:13 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 09:59:14 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 09:59:14 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 09:59:15 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 09:59:15 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 09:59:40 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 10:02:47 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 10:03:12 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 10:03:12 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 10:03:14 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 10:03:37 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 10:03:38 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 10:03:38 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 10:03:40 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 10:03:45 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 10:03:46 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-13 10:04:57 --> Undefined variable $authoname
+in APPPATH\Controllers\EbookController.php on line 496.
+ 1 APPPATH\Controllers\EbookController.php(496): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $authoname', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\EbookController.php', 496)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-13 10:33:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-13 10:53:21 --> mysqli_sql_exception: Column 'searchable' cannot be null in C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ebook\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\ebook\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\ebook\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\ebook\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\ebook\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\ebook\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\ebook\app\Controllers\CategoryController.php(50): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\ebook\system\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+#9 C:\xampp\htdocs\ebook\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 C:\xampp\htdocs\ebook\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ebook\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-07-13 10:53:21 --> Column 'searchable' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (\'\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (\'\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (\'\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categorytable` (`category_name`, `searchable`, `status`) VALUES (:category_name:, :searchable:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\CategoryController.php(50): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

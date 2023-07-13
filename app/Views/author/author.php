@@ -13,6 +13,7 @@
     <!-- css link for code igniter -->
         <link href=" <?php echo base_url('public/assets/');?>css/styles.css" rel="stylesheet" />
 
+        <script src=" <?php echo base_url('public/assets/');?>/js/jquery/jquery-3.7.0.js"></script>
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
@@ -158,58 +159,129 @@
 
                                 </div>
                                 
-                            </div>
+                        </div>
 
- 
-
-                        
-
-
-
-
-
-
-
-
-
-
-
-                        <table class="table table-striped table-dark">
+                        <!-- <table class="table table-striped table-dark">
                        
                                 <thead>
                                     <tr>
-                                    <th scope="col">#</th>
-                                    
-                                    <th scope="col">Name</th>
-                                    
-                                    <th scope="col">Create by</th>
-                                    <th scope="col">Created</th>
+                                        <th scope="col">#</th>
+                                        
+                                        <th scope="col">Name</th>
+                                        
+                                        <th scope="col">Create by</th>
+                                        <th scope="col">Created</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                     <?php foreach($user as $value):?>
-                                    <tr>
-                                    <th scope="row"><?= $value['id'] ?></th>
-                                  
-                                    <td><?= $value['name'] ?></td>
+                                            <tr>
+                                                
+                                                <th scope="row"><?= $value['id'] ?></th>
+                                            
+                                                <td><?= $value['name'] ?></td>
 
-                                    <td><?= $value['create'] ?></td>
-                                    
-                                    
-                                    
-                                    <td><?= $value['created'] ?></td>
-                                    
-                                    </tr>
-                                    <tr>
+                                                <td><?= $value['create'] ?></td>
+                                                
+                                                
+                                                
+                                                <td><?= $value['created'] ?></td>
+                                            
+                                            </tr>
+                                            
                                     <?php endforeach;?>
                                     </tr>
                                   
                                 </tbody>
-                        </table>
+                        </table> -->
                        
+                        
+
+                        <table id="tablea" class="table table-striped table-dark">
+                       
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        
+                                        <th scope="col">Name</th>
+                                        
+                                        <th scope="col">Create by</th>
+                                        <th scope="col">Created</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody">
+                                    
+                                    
+                                  
+                                </tbody>
+                        </table>
+
+<script>
+
+$(document).ready(function(){
+
+   function showauthordata(){
 
 
+        // alert('hi');
+
+        $.ajax({
+
+            url :'authordatawithajax/',
+            dataType : 'json',
+            success: function(data){
+
+                console.log(data[0].name);
+
+                var output = "";
+
+                // for(var i = 0; i < data.length; i++){
+
+                //     // console.log(data[i].name);
+
+                //     // output += "<tr><td>"+data[i].id+"</td><td>"+data[i].name+"</td><td>"+data[i].create+"</td><td>"+data[i].created+"</td></tr>"
+                //     // console.log(output);
+
+                    
+                // }
+                
+                    var tbody = $('#tbody');
+
+                    // data.forEach(function(data) {
+                    // var row = $('<tr></tr>');
+                    // row.append($('<td></td>').text(data.id));
+                    // row.append($('<td></td>').text(data.name));
+                    // row.append($('<td></td>').text(data.create));
+                    // row.append($('<td></td>').text(data.created));
+                    // tbody.append(row);
+                    // });
+
+                    $.each(data, function(index, data) {
+                    var row = $('<tr></tr>');
+                    row.append($('<td></td>').text(data.id));
+                    row.append($('<td></td>').text(data.name));
+                    row.append($('<td></td>').text(data.create));
+                    row.append($('<td></td>').text(data.created));
+                    tbody.append(row);
+                    });
+
+
+
+
+            }
+
+            
+        });
+
+
+   }
+
+   showauthordata();
+
+});
+
+</script>
 
 
 

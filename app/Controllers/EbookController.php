@@ -484,6 +484,19 @@ public function editwithajax($id){
 
         }
 
+        public function alistajax(){
+
+            $alist = new AuthorModel;
+            $authorname = $alist->findAll();
+
+            // echo"<pre>";
+            // print_r($authorname);
+            // die();
+
+            return json_encode($authorname);
+
+        }
+
 
 
 

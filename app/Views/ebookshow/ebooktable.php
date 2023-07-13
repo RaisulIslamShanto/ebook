@@ -375,6 +375,22 @@
                                                                         
                                                                         </div>
                                                                         
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmail1" class="form-label">Author </label>
+                                                                        <!-- <input type="text" class="form-control" id="author" name="" value=""> -->
+                                                                        <select class="form-control" name="authorname" id="authorname" >
+                                                                            
+                                                                            
+                                                                           
+                                                                            
+                                                                            
+                                                                            <!-- <option id="author"  value=""> a</option> -->
+                                                                            
+                                                                                
+                                                                           
+
+                                                                        </select>
+                                                                    </div>
 
                                                                         
 
@@ -450,7 +466,7 @@
                     success: function(data) {
 
                             $('#tablemain').hide();
-                            // console.log(data);
+                            console.log(data);
 
                             var table = $('<table class="table table-striped"></table>');
 
@@ -525,7 +541,7 @@
             
             fetchall(1);
 
-            $('#pagination').on('click','a',function(e){
+$('#pagination').on('click','a',function(e){
 
                         e.preventDefault(); 
 
@@ -552,41 +568,42 @@
 
                     });
 
+                    
                     $('#tableshow').on('click','.deletebtn',function(e){
 
-e.preventDefault();
+                    e.preventDefault();
 
-// alert('hi');
+                    // alert('hi');
 
-var id = $(this).attr('ebookid'); 
+                    var id = $(this).attr('ebookid'); 
 
-console.log(id);
+                    console.log(id);
 
-alert(id);
+                    alert(id);
 
-$.ajax({
+                    $.ajax({
 
-url: "delete_ebook/"+id,
+                    url: "delete_ebook/"+id,
 
-type: 'GET',
-
-
+                    type: 'GET',
 
 
 
 
-success: function(response){
-
-   
-    alert(response);
-
-    // window.location.reload();
-    
-
-},
 
 
-});
+                    success: function(response){
+
+                    
+                        alert(response);
+
+                        // window.location.reload();
+                        
+
+                    },
+
+
+                    });
 
 
 
@@ -703,11 +720,48 @@ $('#updateme').on('click',function(e){
 
 });
                     
+$('#authorname').on('click',function(e){
+
+    e.preventDefault();
+
+    $.ajax({
+
+        url : 'alistajax/',
+        type : 'GET',
+        DataType : 'json',
+        success: function(data){
+
+            alert('hi');
+            console.log(data);
+
+            var dropdown = $('#authorname');
+            dropdown.empty();
+
+            data.forEach(function(data) {
+                dropdown.append($('<option></option>').val(data.name).text(data.name));
+            });
+
+
+        }
+
+
+
+
+
+    });
+
+
+
+
+
+});
+
+
 
 
                     
 
-        });
+});
          </script>
 
 <!--  previous delete-->

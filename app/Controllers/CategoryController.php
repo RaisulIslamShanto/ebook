@@ -39,8 +39,8 @@ class CategoryController extends Controller
         $categoryData = [
 
             'category_name' => $name,
-            'searchable' => $searchable ? 1 : 0,
-            'status' => $status ? 1 : 0,
+            'searchable' => $searchable ,
+            'status' => $status ,
         ];
 
         // print_r($categoryData);
@@ -234,6 +234,59 @@ class CategoryController extends Controller
         return view('category/category',['user'=>$users]);
 
 }
+
+
+public function addcategorywithajaxm()
+{
+
+
+        $categoryModel = new CategoryModel;
+    
+        $name = $this->request->getPost('categoryname');
+        $searchable = $this->request->getPost('searchable');
+        $status = $this->request->getPost('status');
+        
+
+        $categoryData = [
+
+            'category_name' => $name,
+            'searchable' => $searchable,
+            'status' => $status,
+        ];
+
+        // print_r($categoryData);
+        // die();
+
+
+        $categoryModel->insert($categoryData);
+
+        return json_encode($categoryData);
+
+        
+
+  
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
