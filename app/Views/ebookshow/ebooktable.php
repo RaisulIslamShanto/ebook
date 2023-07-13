@@ -375,7 +375,7 @@
                                                                         
                                                                         </div>
                                                                         
-                                                                        
+
                                                                         
 
 
@@ -434,7 +434,7 @@
 
 
 <!-- loading with pagination -->
-        <script>
+     <script>
 
         var siteurl = '<?php echo base_url('loadwithajax'); ?>';
         $(document).ready(function() {
@@ -552,7 +552,158 @@
 
                     });
 
+                    $('#tableshow').on('click','.deletebtn',function(e){
+
+e.preventDefault();
+
+// alert('hi');
+
+var id = $(this).attr('ebookid'); 
+
+console.log(id);
+
+alert(id);
+
+$.ajax({
+
+url: "delete_ebook/"+id,
+
+type: 'GET',
+
+
+
+
+
+
+success: function(response){
+
+   
+    alert(response);
+
+    // window.location.reload();
+    
+
+},
+
+
+});
+
+
+
+
+
+});
+
+$('#tableshow').on('click','.editmebtn',function(e){
+
+     e.preventDefault();
+
+     // alert('hi');
+
+     var id = $(this).attr('ebookid'); 
+
+     // console.log(id);
+
+     // alert(id);
+
+     // var modal = $('.modal');
+     // modal.show();
+
+     $("#exampleModal").modal('show');
+
+     $.ajax({
+
+     url: "editajax/"+id,
+
+     type: 'GET',
+
+     dataType: 'json',
+     
+
+
+
+
+     success: function(response){
+
+     console.log(response);
+     
+         $("#id").val(response.id);
+         $("#titlename").val(response.title);
+         $("#user").val(response.user);
+         // $("#photo").val(response.photo);
+
+     },
+
+
+ });
+
+});
+
+// updatewithajax
+
+$('#updateme').on('click',function(e){
+
+     e.preventDefault();
+
+     // alert('updateme');
+
+     var formData = new FormData(document.getElementById("myform"));
+
+     // var formData = $('#myform').serialize();
+
+
+     var id = $('#id').val(); 
+     // var titlename = $('#titlename').val(); 
+     // var user = $('#user').val(); 
+
+    
+     
+      
+     // var formData = 'id='+id + '&titlename='+titlename + '&user='+user ;
+
+     console.log(formData);
+
+     // alert(user);
+
+     // var modal = $('.modal');
+     // modal.show();
+
+     $("#exampleModal").modal('hide');
+
+     
+
+     $.ajax({
+
+     url: "updateebookajax/"+id,
+
+     data: formData,
+
+     processData : false,
+
+     contentType : false,
+
+     type: 'POST',
+
+     dataType: 'json',
+
+
+     success: function(response){
+
+         console.log(response);
+
+         alert ('updated successfully')
+        
+         $('#tableshow').empty();
+         fetchall(1);
+
+     },
+
+
+     });
+
+});
                     
+
 
                     
 
@@ -691,164 +842,7 @@
 
 <!-- delete and edit with ajax -->
 
-<script>
 
-$(document).ready(function(){
-
-   $('#tableshow').on('click','.deletebtn',function(e){
-
-       e.preventDefault();
-
-       // alert('hi');
-
-       var id = $(this).attr('ebookid'); 
-
-       console.log(id);
-
-       alert(id);
-
-       $.ajax({
-       
-       url: "delete_ebook/"+id,
-       
-       type: 'GET',
-       
-      
-
-       
-       
-       
-       success: function(response){
-
-          
-           alert(response);
-
-           // window.location.reload();
-           
-       
-       },
-       
-
-       });
-
-
-       
-
-
-   });
-
-   $('#tableshow').on('click','.editmebtn',function(e){
-
-            e.preventDefault();
-
-            // alert('hi');
-
-            var id = $(this).attr('ebookid'); 
-
-            // console.log(id);
-
-            // alert(id);
-
-            // var modal = $('.modal');
-            // modal.show();
-
-            $("#exampleModal").modal('show');
-
-            $.ajax({
-
-            url: "editajax/"+id,
-
-            type: 'GET',
-
-            dataType: 'json',
-            
-
-
-
-
-            success: function(response){
-
-            console.log(response);
-            
-                $("#id").val(response.id);
-                $("#titlename").val(response.title);
-                $("#user").val(response.user);
-                // $("#photo").val(response.photo);
-
-            },
-
-
-});
-
-});
-
-// updatewithajax
-
-    $('#updateme').on('click',function(e){
-
-            e.preventDefault();
-
-            // alert('updateme');
-
-            var formData = new FormData(document.getElementById("myform"));
-
-            // var formData = $('#myform').serialize();
-
-
-            var id = $('#id').val(); 
-            // var titlename = $('#titlename').val(); 
-            // var user = $('#user').val(); 
-
-           
-            
-             
-            // var formData = 'id='+id + '&titlename='+titlename + '&user='+user ;
-
-            console.log(formData);
-
-            // alert(user);
-
-            // var modal = $('.modal');
-            // modal.show();
-
-            $("#exampleModal").modal('hide');
-
-            $.ajax({
-
-            url: "updateebookajax/"+id,
-
-            data: formData,
-
-            processData : false,
-
-            contentType : false,
-
-            type: 'POST',
-
-            dataType: 'json',
-
-
-            success: function(response){
-
-            console.log(response);
-
-            alert ('updated successfully')
-
-                
-
-            },
-
-
-            });
-
-            });
-
-
-
-            });
-
-
-</script>
 
 
 

@@ -213,6 +213,7 @@
                                     </div>
 
                                     <div class="mb-3">
+
                                         <label for="exampleInputEmail1" class="form-label">Photo</label>
                                         <input type="file" class="form-control" id="photo" name="photo" value="">
                                         
@@ -274,7 +275,7 @@
                                                             });
 
                                                             function clearForm(){
-                                                                $('#myform')[0].reset();}
+                                                                $('#myform')[0].reset(); }
 
                                                 });
                                             });
