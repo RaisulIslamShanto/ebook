@@ -151,11 +151,11 @@
                             
                         <div class="card mb-4">
                                 <div class="card-body text-end">
-                                <a class="nav-link "  href="<?php echo base_url('aform')?>">
+                                    <a class="nav-link "  href="<?php echo base_url('aform')?>">
 
-                                    <div class="sb-nav-link-icon btn btn-primary">
-                                        Add Author
-                                </a>
+                                        <div class="sb-nav-link-icon btn btn-primary">
+                                            Add Author
+                                    </a>
 
                                 </div>
                                 
@@ -232,9 +232,9 @@ $(document).ready(function(){
             dataType : 'json',
             success: function(data){
 
-                console.log(data[0].name);
+                // console.log(data[0].name);
 
-                var output = "";
+                
 
                 // for(var i = 0; i < data.length; i++){
 

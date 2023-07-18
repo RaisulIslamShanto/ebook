@@ -150,11 +150,11 @@
                             
                         <div class="card mb-4">
                                 <div class="card-body text-end">
-                                <a class="nav-link "  href="<?php echo base_url('aform')?>">
+                                    <a class="nav-link "  href="<?php echo base_url('aform')?>">
 
-                                    <div class="sb-nav-link-icon btn btn-primary">
-                                        Add Author
-                                </a>
+                                        <div class="sb-nav-link-icon btn btn-primary">
+                                            Add Author
+                                    </a>
 
                                 </div>
                                 
@@ -186,6 +186,7 @@
                                     <th scope="col">Created</th>
                                     </tr>
                                 </thead>
+                                
                                 <tbody>
                                     <tr>
                                     <?php foreach($author as $value):?>
@@ -206,6 +207,7 @@
                                   
                                 </tbody>
                         </table>
+
                         <?php echo $pager->links(); ?>
                                 
 

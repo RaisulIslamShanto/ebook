@@ -26,7 +26,6 @@ class CategoryController extends Controller
     if ($this->request->getMethod() === 'post') 
     {
 
-        // Retrieve the category name from the form
         $name = $this->request->getPost('categoryname');
         $searchable = $this->request->getPost('searchable');
         $status = $this->request->getPost('status');
@@ -35,12 +34,11 @@ class CategoryController extends Controller
         // echo  $searchable;
         // die();
 
-        // Insert the category into the database
         $categoryData = [
 
             'category_name' => $name,
-            'searchable' => $searchable ,
-            'status' => $status ,
+            'searchable' => $searchable,
+            'status' => $status,
         ];
 
         // print_r($categoryData);
@@ -51,7 +49,7 @@ class CategoryController extends Controller
 
         
 
-        }
+    }
 
     $categoryModel = new CategoryModel();
 
@@ -148,8 +146,6 @@ class CategoryController extends Controller
 
 
 
-
-
 // delete category
 
     public function deletecategory($id)
@@ -201,18 +197,6 @@ class CategoryController extends Controller
 }
    
 
-
-
-
-
-
-
-
-
-
-
-
-
     public function addSubCategory()
 {
     
@@ -260,16 +244,90 @@ public function addcategorywithajaxm()
 
         $categoryModel->insert($categoryData);
 
-        return json_encode($categoryData);
-
-        
-
-  
-    
+        return json_encode($categoryData);   
 
 }
 
+public function getCategories()
+    {
+        $categoryModel = new CategoryModel();
 
+        $users = $categoryModel->findAll();
+    
+        foreach ($users as $key => $user){
+    
+            $scmodel = new SubCategoryModel;
+    
+            $subcategories = $scmodel->where("cid", $user["id"])->find();
+    
+            // print_r($subcategories);
+            // die();
+    
+            $users[$key]["subcategories"] = $subcategories;
+             
+            // print_r($users[$key]["subcategories"]);
+            // die();
+        }
+
+        // print_r($users);
+        // die();
+        
+        return $this->response->setJSON($users);
+    }
+
+public function deletecategorywithajax($id){
+
+    
+    $deletecat = new CategoryModel;
+    $deletecat->delete($id);
+
+    return ("data deleted");
+
+}
+
+public function editcategorywithajax($id){
+
+    
+    $editcat = new CategoryModel;
+    $editvalue= $editcat->find($id);
+
+    // print_r($editvalue);
+    // die();
+    return $this->response->setJSON($editvalue);
+
+}
+
+public function updatecatwithajax($id){
+
+    // print_r($id);
+    // die();
+
+    $name = $this->request->getPost('categoryname');
+
+    // echo $name;
+    // die();
+    $updatecat = new CategoryModel;
+
+
+    $updatevalue = $updatecat->find($id);
+
+    
+
+    $data = [
+
+        'category_name' =>$name,
+    ];
+
+    
+    $updatecat->update($id,$data);
+
+
+
+    // print_r($editvalue);
+    // die();
+    return json_encode($data);
+
+}
 
 
 

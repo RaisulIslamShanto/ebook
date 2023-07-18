@@ -58,7 +58,7 @@ class EbookController extends Controller
     $ebookModel = new EbookModel;
 
     
-    if ($this->request->getMethod() === 'post') 
+    if ($this->request->getMethod() === 'post')
     {
 
         // echo "hello";
@@ -420,8 +420,9 @@ public function editwithajax($id){
             
             $editebook = new EbookModel;
             $data = $editebook->find($id);
-        
             
+            print_r($data);
+            die();
            
             
         

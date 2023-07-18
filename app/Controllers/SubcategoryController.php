@@ -59,6 +59,8 @@ class SubcategoryController extends Controller
 
         $subcatModel->insert($subcategoryData);
 
+
+
         // print_r($catid);
         // die();
         
@@ -112,9 +114,7 @@ class SubcategoryController extends Controller
     }
 
 
-
-
-
+    // echo '<pre>';
     // print_r($users);
     // die();  
 
@@ -124,6 +124,8 @@ class SubcategoryController extends Controller
 
            
 }
+
+
 
 
 public function view(){

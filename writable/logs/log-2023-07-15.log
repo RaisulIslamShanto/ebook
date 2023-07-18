@@ -1,0 +1,47 @@
+INFO - 2023-07-15 04:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-15 04:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-15 05:30:10 --> Undefined variable $value
+in APPPATH\Views\category\add_category.php on line 298.
+ 1 APPPATH\Views\category\add_category.php(298): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 298)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(92): view('category/add_category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-15 06:27:09 --> Undefined variable $successMessage
+in APPPATH\Views\category\subcategoryview.php on line 197.
+ 1 APPPATH\Views\category\subcategoryview.php(197): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $successMessage', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php', 197)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/subcategoryview', [...], true)
+ 5 APPPATH\Controllers\CategoryController.php(195): view('category/subcategoryview', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('26')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-15 06:28:59 --> Undefined variable $successMessage
+in APPPATH\Views\category\subcategoryview.php on line 197.
+ 1 APPPATH\Views\category\subcategoryview.php(197): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $successMessage', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php', 197)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/subcategoryview', [...], true)
+ 5 APPPATH\Controllers\CategoryController.php(195): view('category/subcategoryview', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('26')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-15 06:29:03 --> Undefined variable $successMessage
+in APPPATH\Views\category\subcategoryview.php on line 197.
+ 1 APPPATH\Views\category\subcategoryview.php(197): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $successMessage', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php', 197)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\subcategoryview.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/subcategoryview', [...], true)
+ 5 APPPATH\Controllers\CategoryController.php(195): view('category/subcategoryview', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('26')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-15 10:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

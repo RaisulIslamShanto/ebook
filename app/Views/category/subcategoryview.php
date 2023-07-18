@@ -12,6 +12,7 @@
 
     <!-- css link for code igniter -->
         <link href=" <?php echo base_url('public/assets/');?>css/styles.css" rel="stylesheet" />
+        <script src=" <?php echo base_url('public/assets/');?>/js/jquery/jquery-3.7.0.js"></script>
 
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
@@ -115,7 +116,7 @@
 
 <!-- for the menu items -->
 
-                            <div class="sb-sidenav-menu-heading">Menu items</div>
+                    <div class="sb-sidenav-menu-heading">Menu items</div>
                             <a class="nav-link" href="<?php echo base_url('author')?>">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Author
@@ -141,7 +142,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Category Page</h1>
+                        <h1 class="mt-4">SubCategory Page</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Category Page</li>
                         </ol>
@@ -189,7 +190,7 @@
 
                     <div class="col-md-6">
 
-                    <?php if(isset($_POST['save'])): ?>
+                            <?php if(isset($_POST['save'])): ?>
 
 
 
@@ -208,13 +209,14 @@
                             <div class="card-body text-end">
                                 <a class="btn btn-primary"  href="<?php echo base_url('addcategory')?>">Add root category
                                 </a>
-                                <a class="btn btn-primary"  href="<?php echo base_url('add_sub_category')?>">Add subcategory
-                                </a>
+                                <!-- <a class="btn btn-primary"  href="<?php echo base_url('add_sub_category')?>">Add subcategory
+                                </a> -->
                                 
                                 <!-- form of category submittion -->
 
 
                                 <div class="card-body text-start">
+
                                 <form action="<?= base_url('subcategoryview') ?>" method="Post">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Name </label>
@@ -223,18 +225,59 @@
 
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Subcategory </label>
-                                        <input type="text" class="form-control" id="name" name="subcategoryname" value="">
+                                        <label for="exampleInputEmail1" class="form-label" >Subcategory</label>
+                                        <input type="text" class="form-control" id="subcategoryname" name="subcategoryname" value="">
                                         
                                     </div>
             
 
-                                    <button type="submit" name="save"class="btn btn-primary">Save</button>
+                                    <button type="submit" id=saveSubcategory name="save"class="btn btn-primary">Save</button>
                                     <!-- <button type="submit" name="delete"class="btn btn-danger">delete</button> -->
                                 </form>
 
                                 </div>
 
+                                <script>
+
+                                    $(document).ready(function() {
+
+                                        $('saveSubcategory').click(function(e){
+                                            e.preventDefault();
+                                                                        
+                                            var formData = {
+
+                                                categoryname: $('#subcategoryname').val(),
+                                            
+                                            };
+
+                                            console.log(formData);
+                                            alert('hi');
+
+                                            $.ajax({
+
+                                            url: '<?= base_url('subcategoryview/(:num)') ?>',
+                                            type: 'POST',
+                                            data: formData,
+
+                                                success: function(response) {
+                                               
+                                                console.log(response);
+
+                                                alert('subcategory succesfully inserted');
+                                                
+                                               
+                                            }
+                                            });
+
+
+
+                                        });
+
+                                    });
+
+
+
+                                </script>
                                     
                                    
                                 </div>
@@ -297,12 +340,12 @@
                 <!-- footer end  -->
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/chart-area-demo.js"></script>
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-        <script src="js/datatables-simple-demo.js"></script>
+        <script src="js/datatables-simple-demo.js"></script> -->
     </body>
 </html>

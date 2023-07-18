@@ -1,0 +1,109 @@
+CRITICAL - 2023-07-16 07:02:54 --> Undefined variable $value
+in APPPATH\Views\category\add_category.php on line 259.
+ 1 APPPATH\Views\category\add_category.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 259)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(90): view('category/add_category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 07:04:26 --> Undefined variable $value
+in APPPATH\Views\category\add_category.php on line 259.
+ 1 APPPATH\Views\category\add_category.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 259)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(90): view('category/add_category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 07:07:44 --> Undefined variable $value
+in APPPATH\Views\category\add_category.php on line 259.
+ 1 APPPATH\Views\category\add_category.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 259)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(90): view('category/add_category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 07:20:36 --> Undefined variable $value
+in APPPATH\Views\category\add_category.php on line 259.
+ 1 APPPATH\Views\category\add_category.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 259)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\SubcategoryController.php(123): view('category/add_category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\SubcategoryController->addSubCategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubcategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 07:22:33 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\CategoryController.php on line 181.
+ 1 APPPATH\Controllers\CategoryController.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 181)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('49')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 07:22:34 --> Undefined variable $value
+in APPPATH\Views\category\add_category.php on line 259.
+ 1 APPPATH\Views\category\add_category.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 259)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(90): view('category/add_category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 07:22:40 --> Undefined variable $value
+in APPPATH\Views\category\add_category.php on line 259.
+ 1 APPPATH\Views\category\add_category.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php', 259)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ebook\\app\\Views\\category\\add_category.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('category/add_category', [], true)
+ 5 APPPATH\Controllers\CategoryController.php(90): view('category/add_category', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->addcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 07:52:49 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\CategoryController.php on line 181.
+ 1 APPPATH\Controllers\CategoryController.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 181)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('51')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 09:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 11:49:50 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\CategoryController.php on line 181.
+ 1 APPPATH\Controllers\CategoryController.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 181)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('62')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 11:51:27 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\CategoryController.php on line 181.
+ 1 APPPATH\Controllers\CategoryController.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 181)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('62')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 11:59:23 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\CategoryController.php on line 181.
+ 1 APPPATH\Controllers\CategoryController.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 181)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('65')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 12:03:30 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\CategoryController.php on line 181.
+ 1 APPPATH\Controllers\CategoryController.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ebook\\app\\Controllers\\CategoryController.php', 181)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CategoryController->subcategoryview('66')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

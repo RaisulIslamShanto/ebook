@@ -166,7 +166,7 @@
                                 <div class="col-md-5 mx-auto">
                                     
 
-                                    <!-- <form  action="<?php// echo base_url('search')?>" method="get">
+                                    <!-- <form  action="<?//php// echo base_url('search')?>" method="get">
 
                                         <div class="input-group">
 
@@ -313,7 +313,7 @@
                                                 <img height="60" width="60" src="<?php echo base_url('uploads/').$value['photo'];  ?>" alt="Image" >
                                             </td>
                                             <td>
-                                                <!-- <a class="btn btn-warning edit" id="edit"    value="<?//= $value['id']?>" href="<?php// echo base_url('edit_ebook/'.$value['id'])?>">edit</a> -->
+                                                <!-- <a class="btn btn-warning edit" id="edit"    value="<?//= $value['id']?>" href="<?//php echo base_url('edit_ebook/'.$value['id'])?>">edit</a> -->
 
 
                                                 <!-- <a class="btn btn-primary editme"    href="<?php //echo base_url('formsubmitwithajax/'.$value['id'])?>"  value="<?//= $value['id']?>" >editme</a> -->
@@ -507,7 +507,7 @@
                                 row.append(photoCell);
                                 
                                 // alert('hi');
-                                var actionCell = $('<td><button ebookid="'+data.ebook[i].id+'" type="button" class="btn btn-danger bg-danger deletebtn ">delete</button> <button type="button" ebookid="'+data.ebook[i].id+'" class="btn btn-primary bg-primary editmebtn">edit</button></td>')
+                                var actionCell = $('<td><button ebookid="'+data.ebook[i].id+'" type="button" class="btn btn-danger bg-danger deletebtn ">delete</button> <button type="button" ebookid="'+data.ebook[i].id+'"class="btn btn-primary bg-primary editmebtn">edit</button></td>')
                                 row.append(actionCell);
 
                                 
@@ -569,7 +569,7 @@ $('#pagination').on('click','a',function(e){
                     });
 
                     
-                    $('#tableshow').on('click','.deletebtn',function(e){
+$('#tableshow').on('click','.deletebtn',function(e){
 
                     e.preventDefault();
 
@@ -755,6 +755,8 @@ $('#authorname').on('click',function(e){
 
 
 });
+
+
 
 
 

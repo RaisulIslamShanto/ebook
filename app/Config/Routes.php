@@ -92,15 +92,22 @@ $routes->get('/add_sub_category', 'CategoryController::addSubCategory');
 
 
 $routes->get('/subcategoryview/(:num)', 'CategoryController::subcategoryview/$1');
+$routes->post('/subcategoryview/(:num)', 'CategoryController::subcategoryview/$1');
 $routes->post('/subcategoryview', 'SubcategoryController::addSubCategory');
-// $routes->get('/ebook/addcategory', 'SubcategoryController::view');
+
 
 $routes->post('/add_sub_category', 'SubcategoryController::addSubCategory');
 
-
 // category with ajax request
 
+$routes->get('/addcategorywithajaxr', 'CategoryController::addcategorywithajaxm');
 $routes->post('/addcategorywithajaxr', 'CategoryController::addcategorywithajaxm');
+$routes->get('/getCategories', 'CategoryController::getCategories');
+$routes->get('/deletecategorywithajax(:num)', 'CategoryController::deletecategorywithajax/$1');
+$routes->post('/editcategorywithajax(:num)', 'CategoryController::editcategorywithajax/$1');
+$routes->post('/updatecatwithajax(:num)', 'CategoryController::updatecatwithajax/$1');
+
+
 
 
 

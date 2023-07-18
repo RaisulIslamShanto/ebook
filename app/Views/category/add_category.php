@@ -65,7 +65,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Category Page
                             </a>
-                            <div class="sb-sidenav-menu-heading"> Ebook Interface</div>
+                            <div class="sb-sidenav-menu-heading">Ebook Interface</div>
 
 
                             <!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -164,12 +164,9 @@
                                                     All Category listings
                                     </button>
                                 </div>
-                                <table id=tablecat class="table">
+                                <table  class="table">
                                     <thead class="thead-dark">
-                                        <tr>
                                         
-                                        
-                                        </tr>
 
                                         <tr>
                                         
@@ -178,10 +175,10 @@
                                         <tr>
                                            
                                             
-                                           <th> <a href=""> 
+                                            <th> <a href=""> 
                                             </a></th>
                                                 
-                                            <th><?= $sl++ ?> <a href="<?php echo base_url('subcategoryview/'.$value['id'])?>"> 
+                                            <th><?= $sl++ ?> <a class="catnam" href="<?php echo base_url('subcategoryview/'.$value['id'])?>"> 
                                             <?= $value['category_name'] ?></a>
                                             <ul>
                                                 
@@ -196,8 +193,8 @@
                                        
                                         
                                         
-                                        <td><a href="<?php echo base_url('edit_category/'.$value['id'])?>">edit</a></td>
-                                        <td><a href="<?php echo base_url('delete_category/'.$value['id'])?>">delete</a></td>
+                                            <td><a href="<?php echo base_url('edit_category/'.$value['id'])?>">edit</a></td>
+                                            <td><a href="<?php echo base_url('delete_category/'.$value['id'])?>">delete</a></td>
                                         
                                         </tr>
                                     
@@ -224,21 +221,81 @@
                                 
                             </div>   
                     </div>
+                                                
+
                     <script>
+
+                                                
+                                                            //     for (var i = 0; i < response.length; i++) {
+                                                            //     var categoryName = response[i].category_name;
+                                                            //     var row = '<tr><td><a href="#" class="Category">' + categoryName + '</a><td><a href="#" class="deleteCategory">Delete</a></td><td> <a href="#" class="editCategory">Edit</a></td></tr>';
+                                                            //     $('#tablecategory thead').append(row);
+                                                            // }
+
                                     $(document).ready(function() {
 
-                                        $('save').click(function(e){
+                                       
+    
+                                                function fetchCategories() 
+                                                {
+                                                
+                                                    $.ajax({
+                                                        url: 'getCategories',
+                                                        type: 'GET',
+                                                        success: function(response) 
+                                                        {
+                                                            $('#editform').hide();
+                                                            // console.log(response);
+                                                            $('#tablecategory thead').empty();
+
+        
+                                                                for (var i = 0; i < response.length; i++) {
+                                                                    var category = response[i];
+                                                                    var categoryName = category.category_name;
+                                                                    var subcategories = category.subcategories;
+
+                                                                   
+                                                                    var row = '<tr><td><a href="" class="Category">' + categoryName + '</a></td><td> <button type="button"   catid="'+response[i].id+'"class="editCategory">Edit</button></td><td> <button type="button" catid="'+response[i].id+'" class="deleteCategory">Delete</button></td></tr>';
+
+                                                                   
+                                                                    $('#tablecategory thead').append(row);
+
+                                                                    
+                                                                    for (var j = 0; j < subcategories.length; j++) {
+                                                                        var subcategory = subcategories[j];
+                                                                        var subcategoryName = subcategory.subcategoryname;
+
+                                                                        
+                                                                        var subcategoryRow = '<tr><td><ul><li>' + subcategoryName + '</ul></li></td></tr>';
+
+                                                                        
+                                                                        $('#tablecategory thead').append(subcategoryRow);
+                                                                    }
+                                                                }
+                                                            },
+                                                        
+                                                        });
+                                                        
+                                                }
+                                            
+
+                                                
+                                                fetchCategories();
+
+
+                                        $('#save').click(function(e){
                                             e.preventDefault();
                                                                         
                                             var formData = {
 
-
                                             categoryname: $('#categoryname').val(),
                                             searchable: $('#searchable').prop('checked') ? 1 : 0,
                                             status: $('#status').prop('checked') ? 1 : 0
-                                            };
 
-                                            // console.log(formData);
+                                            };
+                                            var categoryname =  formData.categoryname;
+
+                                            // console.log(categoryname);
                                             // alert('hi');
 
                                             $.ajax({
@@ -250,24 +307,18 @@
                                             success: function(response) {
                                                
                                                 console.log(response);
-                                                var responseData = JSON.parse(response);
-                                                 
+
+                                               
+                                                
+
+                                                // Clear the input field
+                                                $('#categoryname').val('');
+
+                                                fetchCategories();
+                                                // fetchCategories();
+                                                alert('data successfully sent');
 
                                                 
-                                                console.log(responseData.category_name); 
-
-                                                var thead = $('#tablecategory thead');
-                                                    // thead.empty();
-
-                                                    var row = $('<tr></tr>');
-                                                    row.append($('<td></td>').text(responseData.category_name));
-                                                   
-                                                    thead.append(row);
-                                                
-                                                 
-
-                                                
-                                                // alert ('data successfully inserted');
                                             }
                                             });
 
@@ -275,11 +326,114 @@
 
                                         });
 
+                                        $('#tablecategory').on('click','.deleteCategory',function(e){
+                                            e.preventDefault();
+
+                                            var id = $(this).attr('catid');
+
+                                            alert(id);
+                                            $.ajax({
+
+                                                url: '<?= base_url('deletecategorywithajax') ?>'+id,
+                                                type: 'GET',
+                                                
+
+                                                success: function(response) {
+                                                
+                                                    console.log(response);
+
+                                                    fetchCategories();
+                                                   
+                                                    alert('data successfully deleted');
+
+                                                    
+                                                }
+                                                });
+                                           
+                                        });
+                                        
+                                        $('#tablecategory').on('click','.editCategory',function(e){
+                                            e.preventDefault();
+                                            $('#editform').show();
+                                            var id = $(this).attr('catid');
+
+                                            alert(id);
+
+                                            $.ajax({
+
+                                                url: '<?= base_url('editcategorywithajax') ?>'+id,
+                                                type: 'POST',
+                                                
+
+                                                success: function(response) {
+                                                
+                                                    console.log(response.id);
+
+                                                    $('#categoryidu').val(response.id);
+                                                    $('#categorynameu').val(response.category_name);
+
+
+
+
+                                                    // fetchCategories();
+                                                   
+                                                    // alert('data edited successfully');
+
+                                                    
+                                                }
+                                                });
+                                           
+                                        });
+                                        
+
+                                        $('#catUpdate').on('click',function(e){
+                                            e.preventDefault();
+
+                                            
+                                           var id = $('#categoryidu').val();
+                                           var categoryname = $('#categorynameu').val();
+                                             
+
+
+                                            // alert(categoryname);
+
+                                            $.ajax({
+
+                                                url: '<?= base_url('updatecatwithajax') ?>'+id,
+                                                type: 'POST',
+                                                data: {'categoryname': categoryname},
+                                                dataType: 'json',
+
+                                                success: function(response) {
+                                                
+                                                    console.log(response.category_name);
+
+                                                    var category = response.category_name;
+                                                    
+                                                    
+
+                                                    // fetchCategories();
+                                                   
+                                                    alert(category+' edited successfully');
+
+                                                    fetchCategories();
+                                                }
+                                                });
+                                           
+                                        });
+
                                     });
+                                            
+
+
+                                    
 
 
 
-                                </script>
+
+
+
+                     </script>
 
 
 
@@ -288,20 +442,24 @@
                     
 
                         <div class="card mb-4">
+                            
                             <div class="card-body text-end">
                                 <a class="btn btn-primary"  href="<?php echo base_url('addcategory')?>">Add root category
                                 </a>
-                                <a class="btn btn-primary"  href="<?php echo base_url('add_sub_category')?>">Add subcategory
-                                </a>
+                                <!-- <a class="btn btn-primary"  href="">Add subcategory
+                                </a> -->
                                 
                                 <!-- form of category submittion -->
 
 
                             <div class="card-body text-start">
 
-                                <form action="<?= base_url('addcategory') ?>" method="Post">
+                                <form id="" action="<?= base_url('addcategory') ?>" method="Post">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Name </label>
+
+                                        
+
                                         <input type="text" class="form-control" id="categoryname" 
                                         name ="categoryname">
                                         
@@ -309,22 +467,24 @@
                                     
                                     <div class="mb-3 form-check">
                                         <input type="checkbox" class="form-check-input" id="searchable" name="searchable" value="1">
-                                        <label class="form-check-label" for="exampleCheck1" >searchable </label>
+                                        <label class="form-check-label" for="exampleCheck1" >searchable</label>
                                     </div>
-                                    
+
                                     <div class="mb-3 form-check">
                                         <input type="checkbox" class="form-check-input" id="status" name="status" value="1">
                                         <label class="form-check-label" for="exampleCheck1">status</label>
                                     </div>
-                                    <button type="submit" id="save" name="save"class="btn btn-primary">Save</button>
+                                    <button type="submit" id="save" name="save" class="btn btn-primary">Save</button>
                                     
                                 </form>
 
                                 
 
-                                </div>
+                            </div>
+                            
+                            
                                 
-                                <?php// if (isset($_POST['save'])): ?>
+                                <?//php// if (isset($_POST['save'])): ?>
 
 
 
@@ -335,13 +495,61 @@
                                     
 
 
-                                <?php// endif; ?>
+                                <?//php// endif; ?>
                                     
                                    
                                 </div>
+
+                                
+
                             </div> 
+                            <div id="editform" class="col-md-6">
+  <!-- message show  -->
+                                    <div class="card mb-4">
+                                        <!-- updateform -->
+                                        <div class="card-body text-end">
+                                            <a class="btn btn-primary" href="
+                                                        <?php echo base_url('addcategory')?>">Add root category </a>
+                                        <!-- <a class="btn btn-primary"  href="">Add subcategory
+                                                                    </a> -->
+                                        <!-- form of category submittion -->
+                                            <div  class="card-body text-start">
+                                                <form id=updateformcategory action="
+                                                            <?= base_url('addcategory') ?>" method="Post">
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                                                    <input type="text" class="form-control" id="categoryidu" 
+                                                    name ="categoryidu">
+                                                    <input type="text" class="form-control" id="categorynameu" name="categorynameu">
+                                                </div>
+                                                <!-- <div class="mb-3 form-check">
+                                                    <input type="checkbox" class="form-check-input" id="searchable" name="searchable" value="1">
+                                                    <label class="form-check-label" for="exampleCheck1">searchable </label>
+                                                </div>
+                                                <div class="mb-3 form-check">
+                                                    <input type="checkbox" class="form-check-input" id="status" name="status" value="1">
+                                                    <label class="form-check-label" for="exampleCheck1">status</label>
+                                                </div> -->
+                                                <button type="submit" id="catUpdate" name="Update" class="btn btn-primary">Update</button>
+                                                </form>
+                                            </div>
+
+
+
+
+
+
+
+                                            <?//php// if (isset($_POST['save'])): ?>
+                                            <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert"><strong>Success</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>  -->
+                                            <?//php// endif; ?>
+                                        </div>
+                                     </div>
+                                    </div>
+                                    </div>
                         </div>
-                    </div>
+                         
+                        
                 </div>
 
 
