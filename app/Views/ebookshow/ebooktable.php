@@ -378,13 +378,13 @@
                                                                     <div class="mb-3">
                                                                         <label for="exampleInputEmail1" class="form-label">Author </label>
                                                                         <!-- <input type="text" class="form-control" id="author" name="" value=""> -->
-                                                                        <select class="form-control" name="authorname" id="authorname" >
+                                                                        <select class="form-control" name="authorlist" id="authorlist">
                                                                             
                                                                             
                                                                            
                                                                             
                                                                             
-                                                                            <!-- <option id="author"  value=""> a</option> -->
+                                                                            
                                                                             
                                                                                 
                                                                            
@@ -720,27 +720,35 @@ $('#updateme').on('click',function(e){
 
 });
                     
-$('#authorname').on('click',function(e){
+$('#authorlist').on('click',function(e){
 
     e.preventDefault();
 
+    // alert('hi');
     $.ajax({
 
         url : 'alistajax/',
         type : 'GET',
-        DataType : 'json',
+        // DataType : 'json',
         success: function(data){
 
-            alert('hi');
-            console.log(data);
+           console.log(data);
+        //    alert(data);
+        
+            var dropdown = $('#authorlist');
+            // dropdown.empty();
 
-            var dropdown = $('#authorname');
-            dropdown.empty();
-
-            data.forEach(function(data) {
-                dropdown.append($('<option></option>').val(data.name).text(data.name));
-            });
-
+            for (var i = 0; i < data.length; i++) {
+               
+                
+                
+                var name = data[i].name;
+                console.log(name);
+                var id = data[i].id;
+                var option = $('<option></option>').text(name).val(id)
+                dropdown.append(option);
+            }
+           
 
         }
 

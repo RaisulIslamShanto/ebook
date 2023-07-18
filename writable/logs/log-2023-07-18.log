@@ -5,3 +5,27 @@ in APPPATH\Controllers\CategoryController.php on line 319.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-18 11:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-18 11:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-18 11:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-18 13:34:41 --> Call to undefined method App\Models\Authormodel::pluck
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\EbookController.php(492): CodeIgniter\Model->__call('pluck', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 13:35:51 --> Call to undefined method App\Models\Authormodel::pluck
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\EbookController.php(492): CodeIgniter\Model->__call('pluck', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-18 13:35:57 --> Call to undefined method App\Models\Authormodel::pluck
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\EbookController.php(492): CodeIgniter\Model->__call('pluck', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->alistajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

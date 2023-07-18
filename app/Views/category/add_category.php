@@ -290,6 +290,8 @@
 
                                             categoryname: $('#categoryname').val(),
                                             searchable: $('#searchable').prop('checked') ? 1 : 0,
+
+                                            
                                             status: $('#status').prop('checked') ? 1 : 0
 
                                             };
@@ -414,7 +416,7 @@
 
                                                     // fetchCategories();
                                                    
-                                                    alert(category+' edited successfully');
+                                                    alert(category+'edited successfully');
 
                                                     fetchCategories();
                                                 }
@@ -456,7 +458,7 @@
 
                                 <form id="" action="<?= base_url('addcategory') ?>" method="Post">
                                     <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Name </label>
+                                        <label for="exampleInputEmail1" class="form-label">Name</label>
 
                                         
 

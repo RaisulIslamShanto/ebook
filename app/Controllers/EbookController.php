@@ -421,12 +421,12 @@ public function editwithajax($id){
             $editebook = new EbookModel;
             $data = $editebook->find($id);
             
-            print_r($data);
-            die();
+            // print_r($data);
+            // die();
            
             
         
-            return json_encode($data); 
+            return json_encode($data);  
            
         }
 
@@ -489,10 +489,12 @@ public function editwithajax($id){
 
             $alist = new AuthorModel;
             $authorname = $alist->findAll();
-
+            
             // echo"<pre>";
             // print_r($authorname);
             // die();
+
+
 
             return json_encode($authorname);
 
