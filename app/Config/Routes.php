@@ -134,6 +134,7 @@ $routes->get('/loadwithajax', 'EbookController::loadwithajax');
 $routes->get('/editajax/(:num)', 'EbookController::editajax/$1');
 $routes->post('/updateebookajax/(:num)', 'EbookController::updateebookajax/$1');
 $routes->get('/alistajax', 'EbookController::alistajax');
+$routes->get('/catlist', 'EbookController::catlistm');
 
 
 

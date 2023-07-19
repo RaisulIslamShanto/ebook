@@ -485,6 +485,7 @@ public function editwithajax($id){
 
         }
 
+
         public function alistajax(){
 
             $alist = new AuthorModel;
@@ -497,6 +498,20 @@ public function editwithajax($id){
 
 
             return json_encode($authorname);
+
+        }
+
+        public function catlistm() {
+
+            $catmodel = new CategoryModel;
+
+            $catlist = $catmodel->findAll();
+
+            // echo "<pre>";
+            // print_r($catlist);
+            // die();
+
+            return json_encode($catlist);
 
         }
 

@@ -379,19 +379,17 @@
                                                                         <label for="exampleInputEmail1" class="form-label">Author </label>
                                                                         <!-- <input type="text" class="form-control" id="author" name="" value=""> -->
                                                                         <select class="form-control" name="authorlist" id="authorlist">
-                                                                            
-                                                                            
-                                                                           
-                                                                            
-                                                                            
-                                                                            
-                                                                            
-                                                                                
-                                                                           
 
                                                                         </select>
                                                                     </div>
 
+                                                                    <div class="mb-3">
+                                                                        <label for="exampleInputEmail1" class="form-label">Category </label>
+                                                                        <!-- <input type="text" class="form-control" id="author" name="" value=""> -->
+                                                                        <select class="form-control" name="catlist" id="catlist">
+
+                                                                        </select>
+                                                                    </div>
                                                                         
 
 
@@ -708,7 +706,7 @@ $('#updateme').on('click',function(e){
 
          console.log(response);
 
-         alert ('updated successfully')
+         alert('updated successfully')
         
          $('#tableshow').empty();
          fetchall(1);
@@ -727,25 +725,25 @@ $('#authorlist').on('click',function(e){
     // alert('hi');
     $.ajax({
 
-        url : 'alistajax/',
+        url : 'alistajax',
         type : 'GET',
-        // DataType : 'json',
+        DataType : 'json',
         success: function(data){
-
+        //    console.log(jQuery.type( data ));
            console.log(data);
         //    alert(data);
-        
+            var data = jQuery.parseJSON(data);
             var dropdown = $('#authorlist');
-            // dropdown.empty();
+            dropdown.empty();
 
             for (var i = 0; i < data.length; i++) {
                
-                
-                
+                // alert(data.length);
                 var name = data[i].name;
-                console.log(name);
+                // console.log(name);
+
                 var id = data[i].id;
-                var option = $('<option></option>').text(name).val(id)
+                var option = $('<option></option>').text(name).val(id);
                 dropdown.append(option);
             }
            
@@ -763,6 +761,54 @@ $('#authorlist').on('click',function(e){
 
 
 });
+
+$('#catlist').on('click',function(event){
+
+    event.preventDefault();
+
+    $.ajax({
+
+        url:'catlist', 
+        type: 'get',
+        
+        dataType:'json',
+
+        success: function(res){
+
+            console.log(res);
+
+            var catlist = $('#catlist');
+            catlist.empty();
+
+            for ( var i=0; i<res.length; i++ ) {
+
+                var catname = res[i].category_name;
+                var catid = res[i].id;
+                // console.log(catname);
+
+                var category = $('<option>').text(catname).val(id);
+
+                catlist.append(category);
+            }
+
+
+            
+
+
+
+
+
+        }
+        
+
+
+
+
+
+
+
+    });
+})
 
 
 
@@ -803,12 +849,7 @@ $('#authorlist').on('click',function(e){
                         url: "delete_ebook/"+id,
                         
                         type: 'GET',
-                        
-                        
-
-
-                        
-                        
+   
                         success: function(response){
 
                             
