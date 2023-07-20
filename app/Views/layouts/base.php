@@ -18,7 +18,7 @@
         <link href=" <?php echo base_url('public/assets/');?>css/styles.css" rel="stylesheet" />
 
         <script src=" <?php echo base_url('public/assets/');?>/js/jquery/jquery-3.7.0.js"></script>
-        <script src=" <?php echo base_url('public/assets/');?>/js/jquery/js/main.js"></script>
+        
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
@@ -118,4 +118,41 @@
                                     </div>
                                 </nav>
                             </div>
-               
+               <!-- header end -->
+
+               <!-- render section -->
+
+
+
+
+            <?= $this->renderSection('content') ?>
+
+
+
+
+
+
+
+
+
+
+                <!-- footer -->
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- footer end  -->
+            </div>
+        </div>
+       
+    </body>
+</html>

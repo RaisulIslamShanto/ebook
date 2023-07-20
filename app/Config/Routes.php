@@ -144,6 +144,43 @@ $routes->get('/catlist', 'EbookController::catlistm');
 
 
 
+// Variant
+
+
+
+// $routes->get('/', 'Home::author');
+
+$routes->get('language', 'VariantHomeController::language');
+$routes->get('general', 'VariantHomeController::general');
+
+// language controller
+$routes->get('general', 'languageController::');
+$routes->post('addlanguage', 'VariantHomeController::addlanguage');
+$routes->post('lanfile', 'VariantHomeController::addlanguagefile');
+$routes->post('makedefault', 'VariantHomeController::makedefault');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

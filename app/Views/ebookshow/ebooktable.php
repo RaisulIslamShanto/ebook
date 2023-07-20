@@ -326,8 +326,9 @@
                                                 <a class="btn btn-danger delete" id="delete"  value="<?= $value['id']?>" href="<?php echo base_url('delete_ebook/'.$value['id'])?>">delete</a></td>
                                             <td>
                                                 
-                                            <?php endforeach; ?>
                                             </tr>
+                                            
+                                            <?php endforeach; ?>
                                         </tbody>
                                         
                                     </table>

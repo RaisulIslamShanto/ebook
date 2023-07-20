@@ -1,0 +1,137 @@
+CRITICAL - 2023-07-19 11:18:52 --> Invalid file: ".php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('', [], true)
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('language/language', [], true)
+ 4 APPPATH\Controllers\VariantHomeController.php(21): view('language/language', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VariantHomeController->language()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-19 11:20:16 --> Invalid file: ".php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('', [], true)
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('language/language', [], true)
+ 4 APPPATH\Controllers\VariantHomeController.php(21): view('language/language', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VariantHomeController->language()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-19 11:20:38 --> Too few arguments to function CodeIgniter\View\View::extend(), 0 passed in C:\xampp\htdocs\variant\app\Views\language\language.php on line 4 and exactly 1 expected
+in SYSTEMPATH\View\View.php on line 365.
+ 1 APPPATH\Views\language\language.php(4): CodeIgniter\View\View->extend()
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\language\\language.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('language/language', [], true)
+ 5 APPPATH\Controllers\VariantHomeController.php(21): view('language/language', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VariantHomeController->language()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-19 11:20:44 --> Too few arguments to function CodeIgniter\View\View::extend(), 0 passed in C:\xampp\htdocs\variant\app\Views\language\language.php on line 4 and exactly 1 expected
+in SYSTEMPATH\View\View.php on line 365.
+ 1 APPPATH\Views\language\language.php(4): CodeIgniter\View\View->extend()
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\language\\language.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('language/language', [], true)
+ 5 APPPATH\Controllers\VariantHomeController.php(21): view('language/language', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VariantHomeController->language()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-19 11:21:27 --> Too few arguments to function CodeIgniter\View\View::extend(), 0 passed in C:\xampp\htdocs\variant\app\Views\language\language.php on line 4 and exactly 1 expected
+in SYSTEMPATH\View\View.php on line 365.
+ 1 APPPATH\Views\language\language.php(4): CodeIgniter\View\View->extend()
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\language\\language.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('language/language', [], true)
+ 5 APPPATH\Controllers\VariantHomeController.php(21): view('language/language', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VariantHomeController->language()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-19 11:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-19 11:27:51 --> Undefined variable $catname
+in APPPATH\Views\language\language.php on line 264.
+ 1 APPPATH\Views\language\language.php(264): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $catname', 'C:\\xampp\\htdocs\\variant\\app\\Views\\language\\language.php', 264)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\language\\language.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('language/language', [], true)
+ 5 APPPATH\Controllers\VariantHomeController.php(21): view('language/language', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VariantHomeController->language()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-19 11:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-19 11:42:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-19 11:42:51 --> syntax error, unexpected token "endforeach", expecting end of file
+in APPPATH\Views\language\language.php on line 280.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('language/language', [], true)
+ 3 APPPATH\Controllers\VariantHomeController.php(21): view('language/language', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VariantHomeController->language()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-19 11:43:39 --> syntax error, unexpected token "endforeach", expecting end of file
+in APPPATH\Views\language\language.php on line 284.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('language/language', [], true)
+ 3 APPPATH\Controllers\VariantHomeController.php(21): view('language/language', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VariantHomeController->language()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-19 11:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-19 11:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-19 11:55:48 --> syntax error, unexpected token "endforeach", expecting end of file
+in APPPATH\Views\language\language.php on line 283.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('language/language', [], true)
+ 3 APPPATH\Controllers\VariantHomeController.php(21): view('language/language', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VariantHomeController->language()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-19 11:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-19 11:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-19 12:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-19 12:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-19 12:08:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-19 12:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-19 13:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-19 13:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-19 13:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-19 13:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-19 13:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-19 13:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-19 13:37:27 --> Undefined variable $users
+in APPPATH\Controllers\VariantHomeController.php on line 30.
+ 1 APPPATH\Controllers\VariantHomeController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'C:\\xampp\\htdocs\\variant\\app\\Controllers\\VariantHomeController.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VariantHomeController->general()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-19 13:39:43 --> Undefined variable $user
+in APPPATH\Views\general\general.php on line 152.
+ 1 APPPATH\Views\general\general.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\variant\\app\\Views\\general\\general.php', 152)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\general\\general.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('general/general', [], true)
+ 5 APPPATH\Controllers\VariantHomeController.php(30): view('general/general')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VariantHomeController->general()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-19 13:40:01 --> Undefined variable $user
+in APPPATH\Views\general\general.php on line 183.
+ 1 APPPATH\Views\general\general.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\variant\\app\\Views\\general\\general.php', 183)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\general\\general.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('general/general', [], true)
+ 5 APPPATH\Controllers\VariantHomeController.php(30): view('general/general')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VariantHomeController->general()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

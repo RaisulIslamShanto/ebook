@@ -37,6 +37,8 @@ class Home extends BaseController
        
         
     }
+
+    
     public function author()
     {
 
