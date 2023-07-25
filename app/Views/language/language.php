@@ -4,37 +4,14 @@
 <?= $this->section('content') ?> 
 
 <!-- for the menu items -->
-
-                            <div class="sb-sidenav-menu-heading">Menu items</div>
-                            <a class="nav-link" href="<?php echo base_url('language')?>">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Language 
-                            </a>
-                            <a class="nav-link" href="<?php echo base_url('general')?>">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                               General 
-                            </a>
-                            <a class="nav-link" href="<?php echo base_url('ebook')?>">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Setting 
-                            </a>
-                        </div>
-                    </div>
-
-
-                    <!-- <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
-                    </div> -->
-                </nav>
-            </div>
-            <div id="layoutSidenav_content">
+<div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Language Page</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Language Page</li>
-                        </ol>
+                        </ol>              
+                          
 
                         <!-- main part  -->
                             
@@ -248,6 +225,10 @@
         var id = $(this).attr('value');
         alert(id);
 
+        var allbutton =$('.def');
+        allbutton.css('color', 'white');
+        var button = $(this);
+        button.css('color', 'black');
        
         
         
@@ -262,6 +243,10 @@
             success: function (response) {
                 
                 alert(response.message);
+
+
+
+
             },
         });
     });

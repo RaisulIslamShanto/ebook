@@ -151,16 +151,42 @@ $routes->get('/catlist', 'EbookController::catlistm');
 // $routes->get('/', 'Home::author');
 
 $routes->get('language', 'VariantHomeController::language');
-$routes->get('general', 'VariantHomeController::general');
+// $routes->get('general', 'VariantHomeController::general');
 
 // language controller
-$routes->get('general', 'languageController::');
+
 $routes->post('addlanguage', 'VariantHomeController::addlanguage');
 $routes->post('lanfile', 'VariantHomeController::addlanguagefile');
 $routes->post('makedefault', 'VariantHomeController::makedefault');
 
 
+// general controller
+$routes->get('general', 'GeneralController::general');
 
+$routes->post('generalsetting', 'GeneralController::generalsetting');
+$routes->post('logoform', 'GeneralController::logoform');
+$routes->post('consetting', 'GeneralController::consetting');
+$routes->post('smediasetting', 'GeneralController::smediasetting');
+$routes->post('cookies', 'GeneralController::cookies');
+$routes->post('custom', 'GeneralController::custom');
+
+$routes->post('recaptcha', 'GeneralController::recaptcha');
+$routes->get('editrecaptcha/(:num)', 'GeneralController::recaptcha/$1');
+$routes->post('/editrecaptcha/update/(:num)', 'GeneralController::recaptcha/$1');
+
+$routes->post('maintenance', 'GeneralController::maintenance');
+
+// variant categories
+$routes->get('variantcategories', 'VcategoriesController::variantcategories');
+$routes->get('deletecategory/(:num)', 'VcategoriesController::deletecategory/$1');
+$routes->get('editcategory/(:num)', 'VcategoriesController::editcategory/$1');
+$routes-get('updatecategory/(:num)', 'VcategoriesController::updatecategory/$1');
+$routes->get('addvcategory', 'VcategoriesController::addvcategory');
+$routes->post('addvarcategoryform', 'VcategoriesController::addvarcategoryform');
+
+// post page
+$routes->get('postformate', 'PostController::postformate');
+$routes->get('article', 'PostController::article');
 
 
 

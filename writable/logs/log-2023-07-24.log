@@ -1,0 +1,196 @@
+CRITICAL - 2023-07-24 03:58:51 --> Class "App\Models\GeneralPageModel\LogoModel" not found
+in APPPATH\Controllers\GeneralController.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GeneralController->general()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GeneralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 04:00:18 --> Class "App\Models\GeneralPageModel\LogoModel" not found
+in APPPATH\Controllers\GeneralController.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GeneralController->general()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GeneralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 06:51:11 --> Undefined variable $cattable
+in APPPATH\Views\addpost\addpost.php on line 44.
+ 1 APPPATH\Views\addpost\addpost.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cattable', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\addpost.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\addpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/addpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(19): view('addpost/addpost')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->postpage()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 07:31:44 --> Undefined variable $lanName
+in APPPATH\Views\addpost\articlepage.php on line 36.
+ 1 APPPATH\Views\addpost\articlepage.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lanName', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\articlepage.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\articlepage.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/articlepage', [], true)
+ 5 APPPATH\Controllers\PostController.php(26): view('addpost/articlepage')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->article()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-24 09:34:59 --> mysqli_sql_exception: Column 'editorlan' cannot be null in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `la...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `la...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `la...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `la...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\VariantHomeController.php(52): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\VariantHomeController->addlanguage()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-07-24 09:34:59 --> Column 'editorlan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `languagetable` (`languageName`, `shortForm`, `languageCode`, `order`, `editorlan`, `status`) VALUES (\'\', \'\', \'\', \'\', NULL, 0)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `languagetable` (`languageName`, `shortForm`, `languageCode`, `order`, `editorlan`, `status`) VALUES (\'\', \'\', \'\', \'\', NULL, 0)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `languagetable` (`languageName`, `shortForm`, `languageCode`, `order`, `editorlan`, `status`) VALUES (\'\', \'\', \'\', \'\', NULL, 0)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `languagetable` (`languageName`, `shortForm`, `languageCode`, `order`, `editorlan`, `status`) VALUES (:languageName:, :shortForm:, :languageCode:, :order:, :editorlan:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VariantHomeController.php(52): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VariantHomeController->addlanguage()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 11:53:16 --> Class "App\Models\EbookModel" not found
+in APPPATH\Controllers\EbookController.php on line 173.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\EbookController->deleteebook('1')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EbookController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 12:07:47 --> Class "App\Models\GeneralPageModel\VariantCategoryModel" not found
+in APPPATH\Controllers\VcategoriesController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 12:25:11 --> Undefined variable $cattable
+in APPPATH\Views\variantcategory\editCategory.php on line 44.
+ 1 APPPATH\Views\variantcategory\editCategory.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cattable', 'C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\editCategory.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\editCategory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/editCategory', [], true)
+ 5 APPPATH\Controllers\VcategoriesController.php(92): view('variantcategory/editCategory', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->editcategory('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 12:25:52 --> Undefined variable $value
+in APPPATH\Views\variantcategory\editCategory.php on line 45.
+ 1 APPPATH\Views\variantcategory\editCategory.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\editCategory.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\editCategory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/editCategory', [], true)
+ 5 APPPATH\Controllers\VcategoriesController.php(92): view('variantcategory/editCategory', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->editcategory('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 12:26:58 --> Undefined variable $sl
+in APPPATH\Views\variantcategory\editCategory.php on line 96.
+ 1 APPPATH\Views\variantcategory\editCategory.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sl', 'C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\editCategory.php', 96)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\editCategory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/editCategory', [], true)
+ 5 APPPATH\Controllers\VcategoriesController.php(92): view('variantcategory/editCategory', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->editcategory('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 12:27:15 --> Cannot access offset of type string on string
+in APPPATH\Views\variantcategory\editCategory.php on line 97.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/editCategory', [], true)
+ 4 APPPATH\Controllers\VcategoriesController.php(92): view('variantcategory/editCategory', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->editcategory('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 12:28:06 --> Cannot access offset of type string on string
+in APPPATH\Views\variantcategory\editCategory.php on line 97.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/editCategory', [], true)
+ 4 APPPATH\Controllers\VcategoriesController.php(92): view('variantcategory/editCategory', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->editcategory('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 12:35:00 --> Cannot access offset of type string on string
+in APPPATH\Views\variantcategory\editCategory.php on line 97.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/editCategory', [], true)
+ 4 APPPATH\Controllers\VcategoriesController.php(92): view('variantcategory/editCategory', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->editcategory('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 12:49:49 --> Cannot access offset of type string on string
+in APPPATH\Views\variantcategory\editCategory.php on line 38.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/editCategory', [], true)
+ 4 APPPATH\Controllers\VcategoriesController.php(92): view('variantcategory/editCategory', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->editcategory('3')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 12:54:40 --> Cannot access offset of type string on string
+in APPPATH\Views\variantcategory\editCategory.php on line 38.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/editCategory', [], true)
+ 4 APPPATH\Controllers\VcategoriesController.php(95): view('variantcategory/editCategory', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->editcategory('3')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 13:05:42 --> Undefined variable $key
+in APPPATH\Controllers\VcategoriesController.php on line 94.
+ 1 APPPATH\Controllers\VcategoriesController.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $key', 'C:\\xampp\\htdocs\\variant\\app\\Controllers\\VcategoriesController.php', 94)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->editcategory('2')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 13:08:03 --> Cannot access offset of type string on string
+in APPPATH\Views\variantcategory\editCategory.php on line 38.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/editCategory', [], true)
+ 4 APPPATH\Controllers\VcategoriesController.php(102): view('variantcategory/editCategory', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->editcategory('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 14:07:50 --> Call to undefined function Config\post()
+in APPPATH\Config\Routes.php on line 183.
+ 1 SYSTEMPATH\Router\RouteCollection.php(267): require()
+ 2 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 14:09:55 --> Call to undefined function Config\post()
+in APPPATH\Config\Routes.php on line 183.
+ 1 SYSTEMPATH\Router\RouteCollection.php(267): require()
+ 2 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-24 14:10:47 --> Call to undefined function Config\get()
+in APPPATH\Config\Routes.php on line 183.
+ 1 SYSTEMPATH\Router\RouteCollection.php(267): require()
+ 2 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

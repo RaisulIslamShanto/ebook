@@ -16,8 +16,10 @@
 
     <!-- css link for code igniter -->
         <link href=" <?php echo base_url('public/assets/');?>css/styles.css" rel="stylesheet" />
+        
 
         <script src=" <?php echo base_url('public/assets/');?>/js/jquery/jquery-3.7.0.js"></script>
+        <script src=" <?php echo base_url('public/assets/');?>js/scripts.js"></script>
         
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
@@ -121,7 +123,34 @@
                <!-- header end -->
 
                <!-- render section -->
+               <div class="sb-sidenav-menu-heading">Menu items</div>
+                            <a class="nav-link" href="<?php echo base_url('language')?>">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Language 
+                            </a>
+                            <a class="nav-link" href="<?php echo base_url('general')?>">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                               General 
+                            </a>
+                            <a class="nav-link" href="<?php echo base_url('variantcategories') ?>">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Categories 
+                            </a>
+                            <a class="nav-link" href="<?php echo base_url('postformate') ?>">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Add Post 
+                            </a>
+                        </div>
+                    </div>
 
+
+                    <!-- <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Start Bootstrap
+                    </div> -->
+                </nav>
+            </div>
+            
 
 
 
@@ -153,6 +182,6 @@
                 <!-- footer end  -->
             </div>
         </div>
-       
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     </body>
 </html>

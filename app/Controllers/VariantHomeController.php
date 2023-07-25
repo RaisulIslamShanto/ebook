@@ -4,6 +4,7 @@
 namespace App\Controllers;
 
 use App\Models\LanguageModel;
+use App\Models\LanFileModel;
 
 
 
@@ -35,7 +36,7 @@ class VariantHomeController extends BaseController{
         $languageCode = $this->request->getPost('languageCode');
         $order = $this->request->getPost('order');
         $editorlan = $this->request->getPost('editorlan');
-        $status = 1;
+        $status = 0;
 
         $data = [
             'languageName' => $languageName,
@@ -60,22 +61,30 @@ class VariantHomeController extends BaseController{
         // echo "hi";
         // die();
 
-        $lanModel = new LanguageModel;
+        $lanModel = new LanFileModel();
+
+        // if ($lanModel){
+        //     echo "hi";
+        //     die();
+        // }
 
         $lanfile = $this->request->getFile('lanfile');
         
-        $fileName =  $lanfile->getRandomName();
+        $fileName = $lanfile->getRandomName();
         $lanfile->move('uploads/', $fileName);
 
         
 
         $lanfile = [
 
-            'lanfile' => $fileName,
-            
+            'lanFile' => $fileName,    
+
         ];
 
         $landata = $lanModel->insert($lanfile);
+
+
+
         
         return $this->response->setJSON(['status' => 'success', 'message' => 'File inserted successfully.']);
                 
@@ -90,15 +99,25 @@ class VariantHomeController extends BaseController{
         // print_r($id);
         // die();
 
-        $language = new LanguageModel();
-        $lanName = $language->find($id);
+        $tableName = 'languagetable'; 
+        
+        // Load the database
+        // $db = db_connect();
+
+        $langModel = new LanguageModel;
+        
+        
+        $langModel->query("UPDATE $tableName SET status = 0");
+
+        
+        $lanName = $langModel->find($id);
 
         // print_r($lanName);
         // die();
 
-        $status = ['status' => 0];
+        $status = ['status' => 1];
 
-        $language->update($id,$status);
+        $langModel->update($id,$status);
 
         
         $sl=1;
@@ -107,19 +126,7 @@ class VariantHomeController extends BaseController{
     }
 
 
-
-
-
-
-
-    public function general()
-    {
-
-       
-
-        return view('general/general');
-        
-    }
+    
 
 
 }
