@@ -1,0 +1,232 @@
+CRITICAL - 2023-07-25 03:34:58 --> Call to undefined function Config\get()
+in APPPATH\Config\Routes.php on line 183.
+ 1 SYSTEMPATH\Router\RouteCollection.php(267): require()
+ 2 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 03:34:59 --> Call to undefined function Config\get()
+in APPPATH\Config\Routes.php on line 183.
+ 1 SYSTEMPATH\Router\RouteCollection.php(267): require()
+ 2 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 05:11:57 --> syntax error, unexpected single-quoted string "Slug", expecting "]"
+in APPPATH\Controllers\PostController.php on line 40.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\variant\\app\\Controllers\\PostController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\PostController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\PostController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\PostController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 05:37:59 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\PostController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->articleform()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 05:44:26 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\PostController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->articleform()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 05:50:25 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\PostController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->articleform()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 05:56:00 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\PostController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->articleform()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 06:08:33 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\PostController.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->articleform()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 06:11:04 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\PostController.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->articleform()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 06:24:22 --> mysqli_sql_exception: Column 'Featured' cannot be null in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\PostController.php(82): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\PostController->articleform()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-07-25 06:24:22 --> Column 'Featured' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `articletable` (`title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`) VALUES (\'a\', \'a\', \'a\', \'a\', \'hide\', NULL, NULL, \'1\', \'1\', \'1\', \'a\', \'a\', \'a\', \'a\', \'1690266262_0a6c4872ed276b9b0076.jpg\', \'1690266262_814415c7f6c2c596f542.pdf\', \'Arabic\', \'Travel\', \'Football\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `articletable` (`title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`) VALUES (\'a\', \'a\', \'a\', \'a\', \'hide\', NULL, NULL, \'1\', \'1\', \'1\', \'a\', \'a\', \'a\', \'a\', \'1690266262_0a6c4872ed276b9b0076.jpg\', \'1690266262_814415c7f6c2c596f542.pdf\', \'Arabic\', \'Travel\', \'Football\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `articletable` (`title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`) VALUES (\'a\', \'a\', \'a\', \'a\', \'hide\', NULL, NULL, \'1\', \'1\', \'1\', \'a\', \'a\', \'a\', \'a\', \'1690266262_0a6c4872ed276b9b0076.jpg\', \'1690266262_814415c7f6c2c596f542.pdf\', \'Arabic\', \'Travel\', \'Football\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `articletable` (`title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`) VALUES (:title:, :Slug:, :Summary:, :Keywords:, :visibility:, :Featured:, :Breaking:, :Slider:, :Recommended:, :Registered:, :tags:, :OptionalUrl:, :ImageUrl:, :ImageDescription:, :AdditionalImages:, :Files:, :language:, :category:, :subcategory:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\PostController.php(82): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->articleform()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 06:50:46 --> Undefined variable $cattable
+in APPPATH\Views\addpost\allpost.php on line 44.
+ 1 APPPATH\Views\addpost\allpost.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cattable', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\allpost.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\allpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/allpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(29): view('addpost/allpost')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->allpost()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 06:52:38 --> Undefined variable $value
+in APPPATH\Views\addpost\allpost.php on line 104.
+ 1 APPPATH\Views\addpost\allpost.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\allpost.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\allpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/allpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(29): view('addpost/allpost')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->allpost()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 07:16:28 --> mysqli_sql_exception: Column 'datePublished' cannot be null in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\PostController.php(93): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\PostController->articleform()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-07-25 07:16:28 --> Column 'datePublished' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `articletable` (`title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`, `datePublished`) VALUES (\'s\', \'s\', \'s\', \'s\', \'show\', \'1\', \'1\', \'1\', \'1\', \'1\', \'s\', \'s\', \'s\', \'s\', \'1690269388_0f717d352e383d5cb0df.jpg\', \'1690269388_74fe09d4f8ff18fae67c.pdf\', \'English\', \'Fashion\', \'Cricket\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `articletable` (`title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`, `datePublished`) VALUES (\'s\', \'s\', \'s\', \'s\', \'show\', \'1\', \'1\', \'1\', \'1\', \'1\', \'s\', \'s\', \'s\', \'s\', \'1690269388_0f717d352e383d5cb0df.jpg\', \'1690269388_74fe09d4f8ff18fae67c.pdf\', \'English\', \'Fashion\', \'Cricket\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `articletable` (`title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`, `datePublished`) VALUES (\'s\', \'s\', \'s\', \'s\', \'show\', \'1\', \'1\', \'1\', \'1\', \'1\', \'s\', \'s\', \'s\', \'s\', \'1690269388_0f717d352e383d5cb0df.jpg\', \'1690269388_74fe09d4f8ff18fae67c.pdf\', \'English\', \'Fashion\', \'Cricket\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `articletable` (`title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`, `datePublished`) VALUES (:title:, :Slug:, :Summary:, :Keywords:, :visibility:, :Featured:, :Breaking:, :Slider:, :Recommended:, :Registered:, :tags:, :OptionalUrl:, :ImageUrl:, :ImageDescription:, :AdditionalImages:, :Files:, :language:, :category:, :subcategory:, :datePublished:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\PostController.php(93): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->articleform()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 10:47:16 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\PostController.php(124): CodeIgniter\HTTP\Files\UploadedFile->move('galleryuploads/', '1690282036_c076951dd1e1bc507436')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->galleryform()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 11:27:35 --> Invalid file: "addpost/sortListPage.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('addpost/sortListPage.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/sortListPage', [], true)
+ 3 APPPATH\Controllers\PostController.php(173): view('addpost/sortListPage')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->sortedListpage()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 12:15:11 --> Class "App\Controllers\RecapModel" not found
+in APPPATH\Controllers\GeneralController.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GeneralController->general()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GeneralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 12:16:50 --> Class "App\Models\GeneralPageModel\RecapModel" not found
+in APPPATH\Controllers\GeneralController.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GeneralController->general()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GeneralController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 12:18:00 --> Cannot access offset of type string on string
+in APPPATH\Views\general\general.php on line 213.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('general/general', [], true)
+ 4 APPPATH\Controllers\GeneralController.php(39): view('general/general', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GeneralController->general()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GeneralController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 13:14:42 --> Undefined array key "title"
+in APPPATH\Views\general\general.php on line 233.
+ 1 APPPATH\Views\general\general.php(233): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\general\\general.php', 233)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\general\\general.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('general/general', [], true)
+ 5 APPPATH\Controllers\GeneralController.php(43): view('general/general', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GeneralController->general()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GeneralController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-25 14:01:21 --> mysqli_sql_exception: Column 'status' cannot be null in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\GeneralController.php(269): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\GeneralController->maintenance()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GeneralController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-07-25 14:01:22 --> Column 'status' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `maintenancetable` (`status`) VALUES (NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `maintenancetable` (`status`) VALUES (NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `maintenancetable` (`status`) VALUES (NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `maintenancetable` (`status`) VALUES (:status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\GeneralController.php(269): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GeneralController->maintenance()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GeneralController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 14:23:08 --> Undefined array key "status"
+in APPPATH\Controllers\GeneralController.php on line 47.
+ 1 APPPATH\Controllers\GeneralController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\variant\\app\\Controllers\\GeneralController.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GeneralController->general()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GeneralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-25 14:25:44 --> Undefined array key "status"
+in APPPATH\Controllers\GeneralController.php on line 47.
+ 1 APPPATH\Controllers\GeneralController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\variant\\app\\Controllers\\GeneralController.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GeneralController->general()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GeneralController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

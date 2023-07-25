@@ -114,10 +114,11 @@
     $('#updatevarcategory').on('submit', function (e){
         e.preventDefault();
 
-       alert('hi');
+    //    alert('hi');
        var id = $('.categoryid').attr('catid');
-    //    alert(id);
-       console.log(id);
+       
+       alert(id);
+        console.log(id);
         var formData = $(this).serializeArray();
 
         $.ajax({

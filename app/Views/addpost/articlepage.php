@@ -17,10 +17,11 @@
 
                         <div class="card-body text-end">
 
-                            <a class="btn btn-primary mb-4" href="<?php echo base_url('postformate') ?>">Posts</a>
+                            <a class="btn btn-primary mb-4" href="<?php echo base_url('allpost') ?>">Posts</a>
+                            <a class="btn btn-primary mb-4" href="<?php echo base_url('postformate') ?>">Add Post</a>
     
                         </div>
-                        <form id="articleForm">
+                        <form id="articleform">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="card">
@@ -29,7 +30,7 @@
                                             
                                                 <div class="form-group">
                                                     <label class="form-label">Title</label>
-                                                    <input type="text" class="form-control" id="languageName" name="languageName">
+                                                    <input type="text" class="form-control" id="languageName" name="title">
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="form-label">Slug</label>
@@ -142,6 +143,10 @@
                                     <div class="card mt-4">
                                         <div class="card-body">
                                             <h5 class="">Publish</h5>
+                                            <div class="form-group">
+                                                <label for="">Date Published</label>
+                                                <input  name="datePublished" type="date" class="form-control" >
+                                            </div>
                                             <button type="submit" class="btn btn-primary mt-4">Save as Draft</button>
                                             <button type="submit" class="btn btn-primary mt-4">Submit</button>
                                         </div>
@@ -157,16 +162,20 @@
     $(document).ready(function(){
 
         // 1st form
-    $('#lanform').on('submit', function (e){
+    $('#articleform').on('submit', function (e){
         e.preventDefault();
 
-    //    alert('hi');
-        var formData = $(this).serializeArray();
-
+       alert('hi');
+        // var formData = $(this).serializeArray();
+        var formData = new FormData(this);
+        console.log(formData);
+        
         $.ajax({
             type: 'POST',
-            url: 'addlanguage', 
+            url: 'articleform', 
             data: formData,
+            contentType: false,
+            processData: false,
             dataType: 'json',
             success: function (response) {
                 
@@ -175,6 +184,7 @@
             
         });
     });
+
 
 //    pdf form
     $('#lanpdfile').on('submit', function(e){

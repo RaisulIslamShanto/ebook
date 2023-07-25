@@ -19,7 +19,6 @@ class VcategoriesController extends BaseController{
         // echo '<pre>';
         // print_r($cattable);
         // die();
-
         $sl=1;
 
         return view('variantcategory/variantcategory',['cattable'=>$cattable, 'sl'=>$sl]);
@@ -66,13 +65,13 @@ class VcategoriesController extends BaseController{
     
     public function deletecategory($id)
     {
+
         $VariantCategoryModel = new VariantCategoryModel();
         $catdeleted = $VariantCategoryModel->delete($id);
+        
         // echo '<pre>';
         // print_r($catdeleted);
         // die();
-        
-        
 
         return view('variantcategory/variantcategory');
         
@@ -80,7 +79,6 @@ class VcategoriesController extends BaseController{
 
     public function editcategory($id)
     {
-        
         
         $VariantCategoryModel = new VariantCategoryModel;
         $data = $VariantCategoryModel->where('id',$id)->findAll();
@@ -91,11 +89,8 @@ class VcategoriesController extends BaseController{
     public function updatecategory($id)
     {
     
-    
      $VariantCategoryModel = new VariantCategoryModel;
      $catrow = $VariantCategoryModel->find($id);
-
-    
 
     $data = [
 
@@ -110,10 +105,8 @@ class VcategoriesController extends BaseController{
         'showOnMenu' => $this->request->getPost('showOnMenu'),    
         'showOnHomePage' => $this->request->getPost('showOnHomePage'),   
     ];
-
     
     $VariantCategoryModel->update($id,$data);
-
 
     return view('variantcategory/variantcategory'); 
    

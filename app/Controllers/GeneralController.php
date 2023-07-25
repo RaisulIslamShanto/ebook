@@ -11,6 +11,8 @@ use App\Models\GeneralPageModel\SocialmediaModel;
 use App\Models\GeneralPageModel\CustomModel;
 use App\Models\GeneralPageModel\CookiesModel;
 use App\Models\GeneralPageModel\LogoModel;
+use App\Models\GeneralPageModel\RecapModel;
+use App\Models\GeneralPageModel\MaintenanceModel;
 
 
 
@@ -30,7 +32,28 @@ class GeneralController extends BaseController{
         // print_r($logoformdata);
         // die();
 
-        return view('general/general',["lanName"=>$lanName,"logodata"=>$logoformdata]);
+        $recaptchamodel = new RecapModel();
+        $data = $recaptchamodel->where('id',1)->findall();
+
+        $MaintenanceModel = new MaintenanceModel();
+        $maindata = $MaintenanceModel->where('id',3)->findall();
+
+        // echo "<pre>";
+        // print_r($maindata);
+        // die();
+        
+
+        
+         $statusValue = $maindata['status'];
+
+         echo "<pre>";
+        print_r($statusValue);
+        die();
+        
+        // return view('your_edit_view', $data);
+
+
+        return view('general/general',["lanName"=>$lanName,"logodata"=>$logoformdata,"recap"=>$data,"statusValue"=>$statusValue]);
         
     }
 
@@ -182,8 +205,6 @@ class GeneralController extends BaseController{
         return $this->response->setJSON(['status' => 'success', 'message' => 'Form inserted successfully.']);
     }
     
-
-
     public function recaptcha()
     {
 
@@ -204,55 +225,50 @@ class GeneralController extends BaseController{
     }
     
     public function editrecaptcha($id)
-{
+    {
     
     $recaptchamodel = new RecapModel();
     $data = $recaptchamodel->find($id);
 
     return view('general/general', ["recaptcha"=>$data]); 
    
-}
+    }
 
 
-
-public function updaterecaptcha($id)
-{
-    
+    public function updaterecaptcha($id)
+    {
     
     $recaptchamodel = new RecapModel();
     $data = $recaptchamodel->find($id);
 
-   
     $data = [
-
         'siteKey' => $this->request->getPost('siteKey'),
-        'secretKey' => $this->request->getPost('secretKey'),
-        
+        'secretKey' => $this->request->getPost('secretKey'),   
     ];
 
-    
     $updateebook->update($id,$data);
 
     return json_encode($data);
      
-   
-}
+    }
 
     
     public function maintenance()
     {
 
-        $siteKey = $this->request->getPost('siteKey');
-        $secretKey = $this->request->getPost('secretKey');
+        $title = $this->request->getPost('title');
+        $description = $this->request->getPost('description');
         $status = $this->request->getPost('status');
        
         $data = [
 
-            'siteKey' => $siteKey,
-            'secretKey' => $secretKey,    
+            'title' => $title,
+            'description' => $description,    
             'status' => $status,    
         ];
 
+        // print_r($data);
+        // die();
         $MaintenanceModel = new MaintenanceModel();
 
         $MaintenanceModel->insert($data);

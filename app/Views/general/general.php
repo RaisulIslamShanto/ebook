@@ -209,13 +209,15 @@
         <h5 class="card-title">Google reCAPTCHA</h5>
           <div class="form-group">
             <label class="form-label">site key</label>
-            <input class="form-control" name="siteKey" type="text">
+            <?php foreach ($recap as $value) :?>
+            <input class="form-control" name="siteKey" type="text" value="<?php echo $value['siteKey']?>">
           </div>
           <div class="form-group">
             <label class="form-label">Secret Key</label>
-            <input class="form-control" name="secretKey" type="password">
+            <input class="form-control" name="secretKey" type="password" value="<?php echo $value['secretKey']?>">
           </div><br>
         <button type="submit" class="btn btn-primary mt-4">Save Changes</button>
+        <?php endforeach ?>
       </form>
       </div>
     </div>
@@ -225,26 +227,27 @@
       <div class="card-body">
         <form id="maintenance" >
         <h5 class="card-title">Maintenance Mode</h5>
+        <?php foreach($maindata as $value)?>
             <div class="form-group mb-4">
             <label class="form-label">Title</label>
-            <input class="form-control" name="title" type="text">
+            <input class="form-control" name="title" type="text" value="<?= $value['title']?>">
             </div>
             <div class="form-group">
-            <label class="form-label">Description </label>
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="description" name="description" style="height: 100px"></textarea>
-                <label for="floatingTextarea2"></label>
-            </div>
+            <label class="form-label">Description</label>
+              <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" value="" id="description" name="description" style="height: 100px"><?= $value['description']?></textarea>
+                  <label for="floatingTextarea2"></label>
+              </div>
             </div>
             </div>
             <div class="form-group">
-            <label class="form-check-label  " for="inlineRadio">status</label>
+            <label class="form-check-label" for="inlineRadio">status</label>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="enable" id="inlineRadio1" value="1">
+                  <input class="form-check-input" type="radio" name="status" id="inlineRadio1" value="enable"<?php if ($statusValue === 'enable') echo 'checked'; ?>>
                   <label class="form-check-label" for="inlineRadio1">enable</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="enable" id="inlineRadio2" value="0">
+                  <input class="form-check-input" type="radio" name="status" id="inlineRadio2" value="disable"<?php if ($statusValue === 'disable') echo 'checked'; ?>>
                   <label class="form-check-label" for="inlineRadio2">disable</label>
                 </div>
                 <br>
