@@ -29,6 +29,7 @@
                                             <h5 class="card-title">Post Details</h5>
                                             
                                                 <div class="form-group">
+                                                    <input type="text" name ="type" value="gallery">
                                                     <label class="form-label">Title</label>
                                                     <input type="text" class="form-control" id="languageName" name="title">
                                                 </div>
@@ -119,16 +120,18 @@
                                             <div class="form-group">
                                                 <label for="">Language</label>
                                                 <select class="form-control" name="language" id="">
-                                                    <option value="English">English</option>
-                                                    <option value="Arabic">Arabic</option>
+                                                <?php foreach ($lantable as $value):?>
+                                                    <option value="<?= $value['languageName']?>"><?= $value['languageName']?></option>
+                                    
+                                                <?php endforeach ?>
                                                 </select>
                                             </div> 
                                             <div class="form-group">
                                                 <label for="">Category</label>
                                                 <select class="form-control" name="category" id="">
-                                                    <option value="Fashion">Fashion</option>
-                                                    <option value="Sports">Sports</option>
-                                                    <option value="Travel">Travel</option>
+                                                <?php foreach ($cattable as $value):?>
+                                                    <option value="<?= $value['parentCat']?>"><?= $value['parentCat']?></option>
+                                                <?php endforeach ?>
                                                 </select>
                                             </div> 
                                             <div class="form-group">

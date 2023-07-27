@@ -69,47 +69,57 @@ class VcategoriesController extends BaseController{
         $VariantCategoryModel = new VariantCategoryModel();
         $catdeleted = $VariantCategoryModel->delete($id);
         
-        // echo '<pre>';
-        // print_r($catdeleted);
-        // die();
-
-        return view('variantcategory/variantcategory');
+        $VariantCategoryModel = new VariantCategoryModel();
+        $cattable = $VariantCategoryModel->findAll();
+        
+        $sl=1;
+        
+        return view('variantcategory/variantcategory',['cattable'=>$cattable, 'sl'=>$sl]);
         
     }
 
     public function editcategory($id)
     {
         
-        $VariantCategoryModel = new VariantCategoryModel;
+        $VariantCategoryModel = new VariantCategoryModel();
         $data = $VariantCategoryModel->where('id',$id)->findAll();
     
         return view('variantcategory/editCategory', ['catdata'=>$data]); 
        
     }
-    public function updatecategory($id)
+
+    public function updatevarcategory($id)
     {
-    
+       
      $VariantCategoryModel = new VariantCategoryModel;
      $catrow = $VariantCategoryModel->find($id);
 
-    $data = [
+        $data = [
 
-        'language' => $this->request->getPost('language'),
-        'parentCat' => $this->request->getPost('parentCat'),
-        'catname' => $this->request->getPost('catname'),   
-        'slug' => $this->request->getPost('slug'),    
-        'description' => $this->request->getPost('description'),    
-        'keywords' => $this->request->getPost('keywords'),   
-        'color' => $this->request->getPost('color'),    
-        'order' => $this->request->getPost('order'),    
-        'showOnMenu' => $this->request->getPost('showOnMenu'),    
-        'showOnHomePage' => $this->request->getPost('showOnHomePage'),   
-    ];
-    
-    $VariantCategoryModel->update($id,$data);
+            'language' => $this->request->getPost('language'),
+            'parentCat' => $this->request->getPost('parentCat'),
+            'catname' => $this->request->getPost('catname'),   
+            'slug' => $this->request->getPost('slug'),    
+            'description' => $this->request->getPost('description'),    
+            'keywords' => $this->request->getPost('keywords'),   
+            'color' => $this->request->getPost('color'),    
+            'order' => $this->request->getPost('order'),    
+            'showOnMenu' => $this->request->getPost('showOnMenu'),    
+            'showOnHomePage' => $this->request->getPost('showOnHomePage'),   
+        ];
+        
+        $VariantCategoryModel->update($id,$data);
 
-    return view('variantcategory/variantcategory'); 
-   
+        // return $this->response->setJSON(['status' => 'success', 'message' => 'Form updated successfully.']);
+
+        $VariantCategoryModel = new VariantCategoryModel();
+        $cattable = $VariantCategoryModel->findAll();
+        
+        $sl=1;
+        
+        
+        return view('variantcategory/variantcategory',['cattable'=>$cattable, 'sl'=>$sl]);
+
     }
 
     

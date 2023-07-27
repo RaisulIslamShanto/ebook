@@ -10,10 +10,11 @@ use CodeIgniter\Model;
 class SortedListModel extends Model{
 
 
-    protected $table = 'sortedlisttable'; 
+    protected $table = 'articletable'; 
     protected $primaryKey = 'id';
     protected $allowedFields = 
-    ['title',
+    ['type',
+    'title',
     'Slug',
     'Summary',
     'Keywords',

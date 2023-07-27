@@ -31,8 +31,9 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Post Details</h5>
                                         <?php foreach($catdata as $value):?>
-                                        <form id="updatevarcategory">
+                                        <form id="updatevarcategory" method="Post" action="<?= base_url('updatevarcategory/'.$value['id'])?>">
                                             <div class="form-group">
+                                                <input type="number" value="<?= $value['id']?>">
                                                 <label class="form-label">Title</label>
                                                 <select class="form-control"  name="language" id="language">
                                                     <option value="English"><?= $value['language']?></option>
@@ -111,19 +112,19 @@
     $(document).ready(function(){
 
         // 1st form
-    $('#updatevarcategory').on('submit', function (e){
+    $('updatevarcategory').on('submit', function (e){
         e.preventDefault();
 
     //    alert('hi');
-       var id = $('.categoryid').attr('catid');
+        var id = $('.categoryid').attr('catid');
        
-       alert(id);
+        alert(id);
         console.log(id);
         var formData = $(this).serializeArray();
 
         $.ajax({
             type: 'POST',
-            url: 'updatecategory'+id, 
+            url: 'updatevarcategory'+id, 
             data: formData,
             dataType: 'json',
             success: function (response) {

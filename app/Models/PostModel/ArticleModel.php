@@ -13,7 +13,8 @@ class ArticleModel extends Model{
     protected $table = 'articletable'; 
     protected $primaryKey = 'id';
     protected $allowedFields = 
-    ['title',
+    ['type',
+    'title',
     'Slug',
     'Summary',
     'Keywords',

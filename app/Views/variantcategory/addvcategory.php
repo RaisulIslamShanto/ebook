@@ -39,18 +39,20 @@
                                                 </select>
                                             </div>
                                             <div class="form-group">
-                                                <label class="form-label">Slug</label>
+                                                <label class="form-label">Parent Category</label>
                                                 <select class="form-control"  name="parentCat" >
                                                     <option value="Fashion">Fashion</option>
                                                     <option value="Sports">Sports</option>
+                                                    <option value="Travel">Travel</option>
+                                                    <option value="Video">Video</option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
-                                                <label class="form-label">Summary and Description (Meta Tag)</label>
+                                                <label class="form-label">Category Name</label>
                                                 <input type="text" class="form-control"  name="catname">
                                             </div>
                                             <div class="form-group">
-                                                <label class="form-label">Keywords </label>
+                                                <label class="form-label">slug </label>
                                                 <input type="text" class="form-control"  name="slug">
                                             </div>
                                             <div class="form-group">

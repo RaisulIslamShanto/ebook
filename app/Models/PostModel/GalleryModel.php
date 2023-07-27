@@ -10,10 +10,11 @@ use CodeIgniter\Model;
 class GalleryModel extends Model{
 
 
-    protected $table = 'gallerytable'; 
+    protected $table = 'articletable'; 
     protected $primaryKey = 'id';
     protected $allowedFields = 
-    ['title',
+    ['type',
+    'title',
     'Slug',
     'Summary',
     'Keywords',

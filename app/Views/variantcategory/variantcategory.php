@@ -142,7 +142,7 @@
     });
 
 //    pdf form
-    $('#lanpdfile').on('submit', function(e){
+    $('.  delete').on('click', function(e){
         e.preventDefault();
 
                 alert('hi');

@@ -180,23 +180,36 @@ $routes->post('maintenance', 'GeneralController::maintenance');
 $routes->get('variantcategories', 'VcategoriesController::variantcategories');
 $routes->get('deletecategory/(:num)', 'VcategoriesController::deletecategory/$1');
 $routes->get('editcategory/(:num)', 'VcategoriesController::editcategory/$1');
-$routes->post('updatecategory/(:num)', 'VcategoriesController::updatecategory/$1');
+$routes->post('updatevarcategory/(:num)', 'VcategoriesController::updatevarcategory/$1');
 $routes->get('addvcategory', 'VcategoriesController::addvcategory');
 $routes->post('addvarcategoryform', 'VcategoriesController::addvarcategoryform');
 
 // post page
 $routes->get('postformate', 'PostController::postformate');
 $routes->get('allpost', 'PostController::allpost');
+$routes->get('deletepost/(:num)', 'PostController::deletepost/$1');
+$routes->get('editpost/(:num)', 'PostController::editpost/$1');
+$routes->post('updatevarpost/(:num)', 'PostController::updatevarpost/$1');
+
+
+//articlepage
 $routes->get('article', 'PostController::article');
 $routes->post('articleform', 'PostController::articleform');
-
-
+//gallerypage
 $routes->get('gallery', 'PostController::gallery');
 $routes->post('galleryform', 'PostController::galleryform');
-
-
+//sortedlistpage
 $routes->get('sortedListpage', 'PostController::sortedListpage');
 $routes->post('sortedListForm', 'PostController::sortedListForm');
+//video
+$routes->get('videopage', 'PostController::videopage');
+$routes->post('videoform', 'PostController::videoform');
+//audio
+$routes->get('audiopage', 'PostController::audiopage');
+$routes->post('audioform', 'PostController::audioform');
+//trivia quize
+$routes->get('quizepage', 'PostController::quizepage');
+$routes->post('quizeform', 'PostController::quizeform');
 
 
 

@@ -1,0 +1,118 @@
+CRITICAL - 2023-07-27 03:41:26 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\PostController.php(299): CodeIgniter\HTTP\Files\UploadedFile->move('articleuploads/', '1690429286_201f4086c84c4223534d')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->videoform()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 03:42:56 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\PostController.php(299): CodeIgniter\HTTP\Files\UploadedFile->move('articleuploads/', '1690429376_d0d0c1b3b288ee5f37d7')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->videoform()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 03:48:45 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\PostController.php(299): CodeIgniter\HTTP\Files\UploadedFile->move('articleuploads/', '1690429725_95fc5b9f505646b64977')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->videoform()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 03:57:18 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\PostController.php(299): CodeIgniter\HTTP\Files\UploadedFile->move('articleuploads/', '1690430238_3a739755601f880e70c8')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->videoform()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-27 04:00:30 --> mysqli_sql_exception: Column 'visibility' cannot be null in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\PostController.php(334): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\PostController->videoform()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-07-27 04:00:30 --> Column 'visibility' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`, `datePublished`) VALUES (\'Video\', \'Video\', \'\', \'\', \'\', NULL, NULL, NULL, NULL, NULL, NULL, \'\', \'\', \'\', \'\', \'1690430430_0b3912dcfe1b98702833.mp4\', \'1690430430_e39f0d1c990ff5cfaf9d.pdf\', \'Bangla\', \'Fashion\', \'Cricket\', \'2023-07-01\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`, `datePublished`) VALUES (\'Video\', \'Video\', \'\', \'\', \'\', NULL, NULL, NULL, NULL, NULL, NULL, \'\', \'\', \'\', \'\', \'1690430430_0b3912dcfe1b98702833.mp4\', \'1690430430_e39f0d1c990ff5cfaf9d.pdf\', \'Bangla\', \'Fashion\', \'Cricket\', \'2023-07-01\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`, `datePublished`) VALUES (\'Video\', \'Video\', \'\', \'\', \'\', NULL, NULL, NULL, NULL, NULL, NULL, \'\', \'\', \'\', \'\', \'1690430430_0b3912dcfe1b98702833.mp4\', \'1690430430_e39f0d1c990ff5cfaf9d.pdf\', \'Bangla\', \'Fashion\', \'Cricket\', \'2023-07-01\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`, `datePublished`) VALUES (:type:, :title:, :Slug:, :Summary:, :Keywords:, :visibility:, :Featured:, :Breaking:, :Slider:, :Recommended:, :Registered:, :tags:, :OptionalUrl:, :ImageUrl:, :ImageDescription:, :AdditionalImages:, :Files:, :language:, :category:, :subcategory:, :datePublished:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\PostController.php(334): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->videoform()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-27 04:01:28 --> mysqli_sql_exception: Column 'Featured' cannot be null in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\PostController.php(334): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\PostController->videoform()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-07-27 04:01:28 --> Column 'Featured' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`, `datePublished`) VALUES (\'Video\', \'Video\', \'\', \'\', \'\', \'show\', NULL, NULL, NULL, NULL, NULL, \'\', \'\', \'\', \'\', \'1690430488_d67e919a9ae0fa268b55.mp4\', \'1690430488_fc1ed9a839288c113c28.pdf\', \'Bangla\', \'Fashion\', \'Cricket\', \'2023-07-31\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`, `datePublished`) VALUES (\'Video\', \'Video\', \'\', \'\', \'\', \'show\', NULL, NULL, NULL, NULL, NULL, \'\', \'\', \'\', \'\', \'1690430488_d67e919a9ae0fa268b55.mp4\', \'1690430488_fc1ed9a839288c113c28.pdf\', \'Bangla\', \'Fashion\', \'Cricket\', \'2023-07-31\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`, `datePublished`) VALUES (\'Video\', \'Video\', \'\', \'\', \'\', \'show\', NULL, NULL, NULL, NULL, NULL, \'\', \'\', \'\', \'\', \'1690430488_d67e919a9ae0fa268b55.mp4\', \'1690430488_fc1ed9a839288c113c28.pdf\', \'Bangla\', \'Fashion\', \'Cricket\', \'2023-07-31\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language`, `category`, `subcategory`, `datePublished`) VALUES (:type:, :title:, :Slug:, :Summary:, :Keywords:, :visibility:, :Featured:, :Breaking:, :Slider:, :Recommended:, :Registered:, :tags:, :OptionalUrl:, :ImageUrl:, :ImageDescription:, :AdditionalImages:, :Files:, :language:, :category:, :subcategory:, :datePublished:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\PostController.php(334): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->videoform()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 04:14:16 --> The original file is not a valid file.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(137): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+ 2 APPPATH\Controllers\PostController.php(299): CodeIgniter\HTTP\Files\UploadedFile->move('articleuploads/', '1690431256_e8206e2909ebbed60b3d')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->videoform()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 05:54:23 --> Undefined variable $cattable
+in APPPATH\Views\addpost\allpost.php on line 44.
+ 1 APPPATH\Views\addpost\allpost.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cattable', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\allpost.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\allpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/allpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(58): view('addpost/allpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->allpost()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 07:55:43 --> syntax error, unexpected token ";"
+in APPPATH\Views\addpost\allpost.php on line 97.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/allpost', [], true)
+ 3 APPPATH\Controllers\PostController.php(61): view('addpost/allpost', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->deletepost('5')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -44,16 +44,16 @@ class GeneralController extends BaseController{
         
 
         
-         $statusValue = $maindata['status'];
+        $statusValue = $maindata[0]['status'];
 
-         echo "<pre>";
-        print_r($statusValue);
-        die();
+        // echo "<pre>";
+        // print_r($statusValue);
+        // die();
         
         // return view('your_edit_view', $data);
 
 
-        return view('general/general',["lanName"=>$lanName,"logodata"=>$logoformdata,"recap"=>$data,"statusValue"=>$statusValue]);
+        return view('general/general',["lanName"=>$lanName,"logodata"=>$logoformdata,"recap"=>$data,"statusValue"=>$statusValue,"maindata"=>$maindata]);
         
     }
 

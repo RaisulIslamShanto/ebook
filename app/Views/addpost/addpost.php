@@ -74,7 +74,7 @@
                             <div class="col-md-3 mb-3">
                                 <div class="card">
                                     <div class="card-body text-center">
-                                    <a href="<?php echo base_url('gallery')?>">
+                                    <a href="<?php echo base_url('videopage')?>">
                                         <div class="item">
                                             <div class="item-icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#1abc9c" class="bi bi-play-circle" viewBox="0 0 16 16">
@@ -92,7 +92,7 @@
                             <div class="col-md-3 mb-3">
                                 <div class="card">
                                     <div class="card-body text-center">
-                                    <a href="<?php echo base_url('gallery')?>">
+                                    <a href="<?php echo base_url('audiopage')?>">
                                         <div class="item">
                                             <div class="item-icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#1abc9c" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
@@ -111,7 +111,7 @@
                             <div class="col-md-3 mb-3">
                                 <div class="card">
                                     <div class="card-body text-center">
-                                    <a href="<?php echo base_url('gallery')?>">
+                                    <a href="<?php echo base_url('quizepage')?>">
                                         <div class="item">
                                             <div class="item-icon">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#1abc9c" class="bi bi-ui-checks-grid" viewBox="0 0 16 16">
