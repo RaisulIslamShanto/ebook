@@ -116,3 +116,87 @@ in APPPATH\Views\addpost\allpost.php on line 97.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 12:16:26 --> Undefined variable $cattable
+in APPPATH\Controllers\PostController.php on line 69.
+ 1 APPPATH\Controllers\PostController.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cattable', 'C:\\xampp\\htdocs\\variant\\app\\Controllers\\PostController.php', 69)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('6')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 12:18:27 --> Undefined variable $lantable
+in APPPATH\Views\addpost\editpost.php on line 122.
+ 1 APPPATH\Views\addpost\editpost.php(122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lantable', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 122)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(69): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 12:45:02 --> Undefined array key "datePublished"
+in APPPATH\Views\addpost\editpost.php on line 151.
+ 1 APPPATH\Views\addpost\editpost.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datePublished"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 151)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(75): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 12:46:33 --> Undefined array key "datePublished"
+in APPPATH\Views\addpost\editpost.php on line 151.
+ 1 APPPATH\Views\addpost\editpost.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datePublished"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 151)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(75): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 12:47:25 --> Undefined array key "datePublished"
+in APPPATH\Views\addpost\editpost.php on line 151.
+ 1 APPPATH\Views\addpost\editpost.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datePublished"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 151)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(75): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 12:48:28 --> Undefined array key "datePublished"
+in APPPATH\Views\addpost\editpost.php on line 151.
+ 1 APPPATH\Views\addpost\editpost.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datePublished"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 151)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(75): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 12:49:46 --> Undefined array key "datePublished"
+in APPPATH\Views\addpost\editpost.php on line 151.
+ 1 APPPATH\Views\addpost\editpost.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datePublished"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 151)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(75): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-27 12:56:20 --> Undefined array key "datePublished"
+in APPPATH\Views\addpost\editpost.php on line 152.
+ 1 APPPATH\Views\addpost\editpost.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datePublished"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 152)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(79): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

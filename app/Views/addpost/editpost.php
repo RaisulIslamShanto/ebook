@@ -24,26 +24,28 @@
                         <form id="articleform">
                             <div class="row">
                                 <div class="col-md-8">
+
+                                
                                     <div class="card">
                                         <div class="card-body">
+                                            <input type="hidden" name ="type" value="article">
                                             <h5 class="card-title">Post Details</h5>
-                                            
+                                                <?php foreach($data as $value):?>
                                                 <div class="form-group">
-                                                    <input type="text" name ="type" value="article">
                                                     <label class="form-label">Title</label>
-                                                    <input type="text" class="form-control" id="languageName" name="title">
+                                                    <input type="text" class="form-control" id="languageName" name="title" value="<?= $value['title']?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="form-label">Slug</label>
-                                                    <input type="text" class="form-control" id="shortForm" name="Slug">
+                                                    <input type="text" class="form-control" id="shortForm" name="Slug" value="<?= $value['Slug']?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="form-label">Summary Description</label>
-                                                    <input type="text" class="form-control" id="languageCode" name="Summary">
+                                                    <input type="text" class="form-control" id="languageCode" name="Summary" value="<?= $value['Summary']?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="form-label">Keywords</label>
-                                                    <input type="text" class="form-control" id="order" name="Keywords">
+                                                    <input type="text" class="form-control" id="order" name="Keywords" value="<?= $value['Keywords']?>">
                                                 </div>
                                                 
                                 
@@ -72,11 +74,11 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">tags</label>
-                                                    <textarea class="form-control" name="tags" id="tags" cols="30" rows="3"></textarea>
+                                                    <textarea class="form-control" name="tags" id="tags" cols="30" rows="3"><?= $value['tags']?></textarea>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Optional Url</label>
-                                                    <input class="form-control" name="OptionalUrl" type="text">
+                                                    <input class="form-control" name="OptionalUrl" type="text" value="<?= $value['OptionalUrl']?>">
                                                 </div> 
                                         </div>
                                     </div>
@@ -87,11 +89,11 @@
                                             <h5 class="">Image</h5>
                                             <div class="form-group">
                                                 <label for="">or Add Image Url</label>
-                                                <input class="form-control" name="ImageUrl" type="text">
+                                                <input class="form-control" name="ImageUrl" type="text" value="<?= $value['ImageUrl']?>">
                                             </div> 
                                             <div class="form-group">
                                                 <label for="">Image Description</label>
-                                                <input class="form-control" name="ImageDescription" type="text">
+                                                <input class="form-control" name="ImageDescription" type="text" value="<?= $value['ImageDescription']?>">
                                             </div> 
                                         </div>
                                     </div>
@@ -100,7 +102,7 @@
                                         <div class="card-body">
                                             <h5 class="">Additional Images</h5>
                                             <div class="form-group">
-                                                <input type="file" name="AdditionalImages" class="form-control" >
+                                                <input type="file" name="AdditionalImages" class="form-control" value="<?= $value['AdditionalImages']?>">
                                             </div> 
                                         </div>
                                     </div>
@@ -108,7 +110,7 @@
                                         <div class="card-body">
                                             <h5 class="">Files</h5>
                                             <div class="form-group">
-                                                <input  name="Files" type="file" class="form-control" >
+                                                <input  name="Files" type="file" class="form-control" value="<?= $value['Files']?>">
                                             </div> 
                                         </div>
                                     </div>
@@ -147,12 +149,14 @@
                                         <div class="card-body">
                                             <h5 class="">Publish</h5>
                                             <div class="form-group">
+                                                    
                                                 <label for="">Date Published</label>
-                                                <input  name="datePublished" type="date" class="form-control" >
+                                                <input  name="datePublished" type="date" class="form-control" value="">
                                             </div>
                                             <button type="submit" class="btn btn-primary mt-4">Save as Draft</button>
                                             <button type="submit" class="btn btn-primary mt-4">Submit</button>
                                         </div>
+                                        <?php endforeach ?>
                                     </div>
                                 </div>
                             </div>   

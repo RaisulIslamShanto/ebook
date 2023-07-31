@@ -2,7 +2,10 @@
 
 <!-- headerpart -->
 <?= $this->section('content') ?> 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css" integrity="sha512-ngQ4IGzHQ3s/Hh8kMyG4FC74wzitukRMIcTOoKT3EyzFZCILOPF0twiXOQn75eDINUfKBYmzYn2AA8DkAk8veQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote.min.js" integrity="sha512-6rE6Bx6fCBpRXG/FWpQmvguMWDLWMQjPycXMr35Zx/HRD9nwySZswkkLksgyQcvrpYMx0FELLJVBvWFtubZhDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- for the menu items -->
 <div id="layoutSidenav_content">
                 <main>
@@ -26,10 +29,10 @@
                                 <div class="col-md-8">
                                     <div class="card">
                                         <div class="card-body">
+                                            <input type="hidden" name ="type" value="gallery">
                                             <h5 class="card-title">Post Details</h5>
                                             
                                                 <div class="form-group">
-                                                    <input type="text" name ="type" value="gallery">
                                                     <label class="form-label">Title</label>
                                                     <input type="text" class="form-control" id="languageName" name="title">
                                                 </div>
@@ -80,12 +83,41 @@
                                                 </div> 
                                         </div>
                                     </div>
+                                    <!-- content part -->
+                                    <div id="content" class="card mt-4">
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="">#1</label>  
+                                                    <button class="btn btn-danger">X</button>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="">Title</label>
+                                                    <input class="form-control" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="">Image</label>
+                                                    <input class="form-control dropify" type="file">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="">Content</label>
+                                                    <textarea class="form-control" name="" id="summernote" cols="10" rows="10"></textarea>
+                                                </div>
+                                            </form>
+
+                                        </div>
+
+                                    </div>
+
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card">
                                         <div class="card-body">
                                             <h5 class="">Image</h5>
-                                            
+                                            <div class="form-group">
+                                                <label for="">Add Image</label>
+                                                <input type="file" class="dropify" data-height="300" />
+                                            </div> 
                                             <div class="form-group">
                                                 <label for="">or Add Image Url</label>
                                                 <input class="form-control" name="ImageUrl" type="text">
@@ -165,6 +197,8 @@
 <script>
     $(document).ready(function(){
 
+        $('#summernote').summernote();
+        $('.dropify').dropify();
         // 1st form
     $('#galleryform').on('submit', function (e){
         e.preventDefault();

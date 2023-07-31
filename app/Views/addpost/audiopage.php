@@ -26,10 +26,10 @@
                                 <div class="col-md-8">
                                     <div class="card">
                                         <div class="card-body">
+                                            <input type="hidden"  name="type" value="audio">
                                             <h5 class="card-title">Post Details</h5>
                                             
                                                 <div class="form-group">
-                                                    <input type="text"  name="type" value="audio">
                                                     <label class="form-label">Title</label>
                                                     <input type="text" class="form-control" id="languageName" name="title">
                                                 </div>
@@ -84,7 +84,11 @@
                                 <div class="col-md-4">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="">Video</h5>
+                                            <h5 class="">Audio</h5>
+                                            <div class="form-group">
+                                                <label for="">Add Audio</label>
+                                                <audio id="audio" controls  height="100" width="300"  alt="Image">
+                                            </div> 
                                             <div class="form-group">
                                                 <label for="">or Add video Url</label>
                                                 <input class="form-control" name="ImageUrl" type="text">
@@ -100,7 +104,7 @@
                                         <div class="card-body">
                                             <h5 class="">Add Audio</h5>
                                             <div class="form-group">
-                                                <input type="file" name="AdditionalImages" class="form-control" >
+                                                <input id="input" type="file" name="AdditionalImages" class="form-control" >
                                             </div> 
                                         </div>
                                     </div>
@@ -186,6 +190,16 @@
             },
             
         });
+    });
+
+// audio show 
+
+$("#input").on("change", function() {
+        var media = URL.createObjectURL(this.files[0]);
+        var audio = $("#audio");
+        audio.attr("src", media);
+        audio.css("display", "block");
+        audio[0].play();
     });
 
 

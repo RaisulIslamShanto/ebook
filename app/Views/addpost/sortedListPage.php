@@ -2,7 +2,8 @@
 
 <!-- headerpart -->
 <?= $this->section('content') ?> 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js" integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- for the menu items -->
 <div id="layoutSidenav_content">
                 <main>
@@ -21,15 +22,15 @@
                             <a class="btn btn-primary mb-4" href="<?php echo base_url('postformate') ?>">Add Post</a>
     
                         </div>
-                        <form id="sortedListForm">
+                        <form id="sortedListForm" >
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="card">
                                         <div class="card-body">
+                                            <input type="hidden" name='type' value="Sorted">
                                             <h5 class="card-title">Post Details</h5>
                                             
                                                 <div class="form-group">
-                                                    <input type="text" name='type' value="Sorted">
                                                     <label class="form-label">Title</label>
                                                     <input type="text" class="form-control" id="languageName" name="title">
                                                 </div>
@@ -80,12 +81,105 @@
                                                 </div> 
                                         </div>
                                     </div>
+                                    <!-- content part -->
+                                    <div id="content" class="card mt-4">
+                                        <div class="card-body">
+                                            <form>
+                                                
+                                                <div class="form-group">
+                                                    <label for="">#1</label>  
+                                                    <button type="button" class="btn btn-danger delete">X</button>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="">Title</label>
+                                                    <input class="form-control" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="">Image</label>
+                                                    <input class="form-control" type="file">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="">Content</label>
+                                                    <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
+                                                </div>
+
+                                        
+
+                                            </form>
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button id="addContent" type="button" class="btn btn-sm btn-secondary mt-4">Add Content</button>
+                                    </div>
+                                    <!-- add content script -->
+                                    <script>
+                                        $('document').ready(function(){
+                                                var id = 1;
+                                                var content =
+
+                                                 `<div id="content" class="card mt-4">
+                                                        <div class="card-body">
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="">#id++</label> 
+                                                                    <button type="button"  class="btn btn-sm btn-danger delete text-right">X</button> 
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">Title</label>
+                                                                    <input class="form-control" type="text">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">Image</label>
+                                                                    <input class="form-control" type="file">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">Content</label>
+                                                                    <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
+                                                                </div>
+
+                                                        
+
+                                                            </form>
+
+
+                                                        </div>
+
+                                                    </div>`;
+                                                    
+
+                                            $('#addContent').click(function(){
+
+                                                // alert('hi');
+                                                $('#content').append(content);
+
+                                            });
+                                            $('#content').on("click",'.delete', function(e){
+
+                                                alert('hi');
+                                                
+                                                $(e.target).parent().parent().parent().parent().remove();
+                                            });
+
+
+                                        });
+
+
+                                    </script>
+                                
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card">
                                         <div class="card-body">
                                             <h5 class="">Image</h5>
                                             
+                                            <div class="form-group">
+                                                <label for="">Add Image</label>
+                                                <input type="file" class="dropify" data-height="300" />
+                                            </div> 
                                             <div class="form-group">
                                                 <label for="">or Add Image Url</label>
                                                 <input class="form-control" name="ImageUrl" type="text">
@@ -164,6 +258,7 @@
 <script>
     $(document).ready(function(){
 
+    $('.dropify').dropify();
         // 1st form
     $('#sortedListForm').on('submit', function (e){
         e.preventDefault();
@@ -188,6 +283,11 @@
         });
     });
 
+   
+                                                   
+                                                 
+                                               
+          
 
 //    pdf form
     $('#lanpdfile').on('submit', function(e){

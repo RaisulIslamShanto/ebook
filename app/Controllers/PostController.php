@@ -60,35 +60,54 @@ class PostController extends BaseController{
         return view('addpost/allpost',['articledata'=>$articlerow,'cattable'=>$cattable,'sl'=>$sl]);
     }
 
-    public function editcategory($id)
+    public function editpost($id)
     {
         
         $ArticleModel = new ArticleModel;
         $articlerow = $ArticleModel->where('id',$id)->findAll();
-    
-        return view('addpost/editpost',['articledata'=>$articlerow,'cattable'=>$cattable,'sl'=>$sl]);
+
+
+        $LanguageModel = new LanguageModel();
+        $languagetable = $LanguageModel->findAll();
+
+        $CategoryModel = new VariantCategoryModel();
+        $categoryTable = $CategoryModel->findAll();
+
+        return view('addpost/editpost',['lantable' => $languagetable, 'cattable' => $categoryTable, 'data'=>$articlerow]);
+        
            
     }
 
-    public function updatevarcategory($id)
+    public function updatepost($id)
     {
        
      $VariantCategoryModel = new VariantCategoryModel;
      $catrow = $VariantCategoryModel->find($id);
 
-        $data = [
-
-            'language' => $this->request->getPost('language'),
-            'parentCat' => $this->request->getPost('parentCat'),
-            'catname' => $this->request->getPost('catname'),   
-            'slug' => $this->request->getPost('slug'),    
-            'description' => $this->request->getPost('description'),    
-            'keywords' => $this->request->getPost('keywords'),   
-            'color' => $this->request->getPost('color'),    
-            'order' => $this->request->getPost('order'),    
-            'showOnMenu' => $this->request->getPost('showOnMenu'),    
-            'showOnHomePage' => $this->request->getPost('showOnHomePage'),   
-        ];
+     $data = [
+   
+        'type'=>$this->request->getPost('type'),
+        'title'=>$this->request->getPost('title'),
+        'Slug'=>$this->request->getPost('Slug'),
+        'Summary'=>$this->request->getPost('Summary'),
+        'Keywords'=>$this->request->getPost('Keywords'),
+        'visibility'=>$this->request->getPost('visibility'),
+        'Featured'=>$this->request->getPost('Featured'),
+        'Breaking'=>$this->request->getPost('Breaking'),
+        'Slider'=>$this->request->getPost('Slider'),
+        'Recommended'=>$this->request->getPost('Recommended'),
+        'Registered'=>$this->request->getPost('Registered'),
+        'tags'=>$this->request->getPost('tags'),
+        'OptionalUrl'=>$this->request->getPost('OptionalUrl'),
+        'ImageUrl'=>$this->request->getPost('ImageUrl'),
+        'ImageDescription'=>$this->request->getPost('ImageDescription'),
+        'AdditionalImages'=>$fileNameAdditionalImages,
+        'Files'=>$fileNameFiles,
+        'language'=>$this->request->getPost('language'),
+        'category'=>$this->request->getPost('category'),
+        'subcategory'=>$this->request->getPost('subcategory'),   
+        'datePublished'=>$this->request->getPost('datePublished')   
+       ];
         
         $VariantCategoryModel->update($id,$data);
 
