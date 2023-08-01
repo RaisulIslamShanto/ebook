@@ -162,3 +162,120 @@ FROM `languagetable`', [], false)
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VariantHomeController))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 07:33:02 --> Undefined variable $value
+in APPPATH\Views\addpost\editpost.php on line 24.
+ 1 APPPATH\Views\addpost\editpost.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(78): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('14')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 07:41:16 --> Undefined variable $fileNameAdditionalImages
+in APPPATH\Controllers\PostController.php on line 106.
+ 1 APPPATH\Controllers\PostController.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fileNameAdditionalImages', 'C:\\xampp\\htdocs\\variant\\app\\Controllers\\PostController.php', 106)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->updatepost('14')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 07:42:46 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\PostController.php on line 93.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->updatepost('14')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 07:44:28 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\PostController.php on line 93.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->updatepost('14')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 07:46:06 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\PostController.php on line 93.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->updatepost('14')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 07:47:30 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\PostController.php on line 93.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->updatepost('14')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 08:05:32 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\PostController.php on line 97.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->updatepost('16')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 09:14:18 --> Call to a member function isValid() on null
+in APPPATH\Controllers\PostController.php on line 93.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->updatepost('16')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 09:15:41 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\PostController.php on line 98.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->updatepost('16')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 09:21:32 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\PostController.php on line 98.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->updatepost('16')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 10:04:30 --> Undefined variable $statusValue
+in APPPATH\Views\variantcategory\editCategory.php on line 79.
+ 1 APPPATH\Views\variantcategory\editCategory.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $statusValue', 'C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\editCategory.php', 79)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\editCategory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/editCategory', [], true)
+ 5 APPPATH\Controllers\VcategoriesController.php(87): view('variantcategory/editCategory', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->editcategory('8')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 10:23:24 --> Undefined variable $data
+in APPPATH\Controllers\PostController.php on line 72.
+ 1 APPPATH\Controllers\PostController.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\variant\\app\\Controllers\\PostController.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('6')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 10:37:08 --> Undefined array key "datePublished"
+in APPPATH\Views\addpost\editpost.php on line 155.
+ 1 APPPATH\Views\addpost\editpost.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datePublished"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 155)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(90): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 10:39:33 --> Undefined array key "datePublished"
+in APPPATH\Views\addpost\editpost.php on line 155.
+ 1 APPPATH\Views\addpost\editpost.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datePublished"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 155)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(90): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-31 11:12:16 --> Undefined variable $articledata
+in APPPATH\Views\addpost\allpost.php on line 93.
+ 1 APPPATH\Views\addpost\allpost.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $articledata', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\allpost.php', 93)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\allpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/allpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(165): view('addpost/allpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->updatepost('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

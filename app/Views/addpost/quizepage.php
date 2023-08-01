@@ -9,6 +9,7 @@
 <!-- for the menu items -->
 <!-- for the menu items -->
 <div id="layoutSidenav_content">
+    
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Add Quize </h1>
@@ -233,7 +234,9 @@
 
                 <!-- footer  -->
 <script>
+    
     $(document).ready(function(){
+        
         $('.summernote').summernote();
         $('.summernote2').summernote();
         $('.dropify').dropify();
@@ -322,14 +325,14 @@
             },
         });
     });
-
+            let id=1;
             var question =
 
-                ` <div id="question" class="card mt-4">
+                                    `<div id="question" class="card mt-4">
                                         <div class="card-body">
                                             <form>   
                                                 <div class="form-group">
-                                                    <label for="">#1</label>  
+                                                    <label >${++id}</label>  
                                                     <button type="button" class="btn btn-danger deleteQ">X</button>
                                                 </div>
                                                 <div class="form-group">
@@ -348,13 +351,13 @@
                                         </div>
 
                                     </div>`;
-        
+                                    var sl=1;
                                     var result = 
                                     `<div id="result" class="card mt-4">
                                         <div class="card-body">
                                             <form>   
                                                 <div class="form-group">
-                                                    <label for="">#1</label>  
+                                                    <label for="">#${++sl}</label>  
                                                     <button type="button" class="btn btn-danger deleteR">X</button>
                                                 </div>
                                                 <div class="form-group">
@@ -403,9 +406,6 @@
 
         $(e.target).parent().parent().parent().parent().remove();
         });
-
-
-
 
 
     });

@@ -25,7 +25,7 @@
                         </div>
 
                         <div class=" mb-4">
-                                <div class=" text-start">
+                                <div class="text-start">
                                     
                                     <div class="d-flex gap-3">
                                         <div>
@@ -94,13 +94,14 @@
                                             <tr>
                                                 
                                             <td><?= $sl++. '#' ?></td>
+                                            
                                             <td>
                                                 <?php if(strpos($value['AdditionalImages'],"mp4") == true){?>
                                                     <video controls  height="60" width="60" src="<?php echo base_url('articleuploads/').$value['AdditionalImages']; ?>" alt="Image"><?= "....."?><?= $value['title'] ?>
-                                                    <?php  }elseif((strpos($value['AdditionalImages'],"jpg") == true)){?>
+                                                <?php  }elseif((strpos($value['AdditionalImages'],"jpg") == true)){?>
                                                     <img height="60" width="60" src="<?php echo base_url('articleuploads/').$value['AdditionalImages'];  ?>" alt="Image"><?= "....."?><?= $value['title'] ?> 
                                                 <?php }elseif(strpos($value['AdditionalImages'],"mp3") == true){?>
-                                                <audio controls  height="60" width="60" src="<?php echo base_url('articleuploads/').$value['AdditionalImages'];  ?>" alt="Image"><?= "....."?><?= $value['title'] ?> 
+                                                    <audio controls  height="60" width="60" src="<?php echo base_url('articleuploads/').$value['AdditionalImages'];  ?>" alt="Image"><?= "....."?><?= $value['title'] ?> 
                                                 <?php
                                                  }
                                                 ?>   

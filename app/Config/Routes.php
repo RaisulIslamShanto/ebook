@@ -189,7 +189,7 @@ $routes->get('postformate', 'PostController::postformate');
 $routes->get('allpost', 'PostController::allpost');
 $routes->get('deletepost/(:num)', 'PostController::deletepost/$1');
 $routes->get('editpost/(:num)', 'PostController::editpost/$1');
-$routes->post('updatevarpost/(:num)', 'PostController::updatevarpost/$1');
+$routes->post('updatepost/(:num)', 'PostController::updatepost/$1');
 
 
 //articlepage

@@ -29,7 +29,6 @@ class VariantHomeController extends BaseController{
     }
 
     public function addlanguage(){
-
        
         $languageName = $this->request->getPost('languageName');
         $shortForm = $this->request->getPost('shortForm');
@@ -83,9 +82,6 @@ class VariantHomeController extends BaseController{
 
         $landata = $lanModel->insert($lanfile);
 
-
-
-        
         return $this->response->setJSON(['status' => 'success', 'message' => 'File inserted successfully.']);
                 
 
@@ -94,11 +90,9 @@ class VariantHomeController extends BaseController{
     public function makedefault()
     {
 
-
         $id = $this->request->getPost('id');
         // print_r($id);
         // die();
-
         $tableName = 'languagetable'; 
         
         // Load the database
@@ -119,7 +113,6 @@ class VariantHomeController extends BaseController{
 
         $langModel->update($id,$status);
 
-        
         $sl=1;
         return $this->response->setJSON(['status' => 'success', 'message' => 'default set successfully.']);
         

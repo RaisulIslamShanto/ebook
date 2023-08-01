@@ -33,7 +33,7 @@
                                         <?php foreach($catdata as $value):?>
                                         <form id="updatevarcategory" method="Post" action="<?= base_url('updatevarcategory/'.$value['id'])?>">
                                             <div class="form-group">
-                                                <input type="number" value="<?= $value['id']?>">
+                                                <input type="hidden" value="<?= $value['id']?>">
                                                 <label class="form-label">Title</label>
                                                 <select class="form-control"  name="language" id="language">
                                                     <option value="English"><?= $value['language']?></option>
@@ -76,21 +76,21 @@
 
                                             <label class="form-check-label" for="inlineRadio1">Show on Menu</label>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="showOnMenu" id="inlineRadio1" value="Yes">
+                                                <input class="form-check-input" type="radio" name="showOnMenu" id="inlineRadio1" value="Yes" <?php if ($menuValue === 'Yes') echo 'checked'; ?>>
                                                 <label class="form-check-label" for="inlineRadio1">Yes</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="showOnMenu" id="inlineRadio2" value="No">
+                                                <input class="form-check-input" type="radio" name="showOnMenu" id="inlineRadio2" value="No" <?php if ($menuValue === 'No') echo 'checked'; ?>>
                                                 <label class="form-check-label" for="inlineRadio2">No</label>
                                             </div>
                                             <br>
                                             <label class="form-check-label" for="inlineRadio1">Show on HomePage</label>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="showOnHomePage" id="a" value="Yes">
+                                                <input class="form-check-input" type="radio" name="showOnHomePage" id="a" value="Yes"<?php if ($homepageValue === 'Yes') echo 'checked'; ?>>
                                                 <label class="form-check-label" for="inlineRadio1">Yes</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="showOnHomePage" id="b" value="No">
+                                                <input class="form-check-input" type="radio" name="showOnHomePage" id="b" value="No" <?php if ($homepageValue === 'No') echo 'checked'; ?>>
                                                 <label class="form-check-label" for="inlineRadio2">No</label>
                                             </div><br>
                                             <button type="submit" class="btn btn-primary mt-4 categoryid" catid="<?= $value['id']?>">Update Category</button>

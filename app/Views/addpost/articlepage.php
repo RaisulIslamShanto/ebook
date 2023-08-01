@@ -7,6 +7,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css" integrity="sha512-ngQ4IGzHQ3s/Hh8kMyG4FC74wzitukRMIcTOoKT3EyzFZCILOPF0twiXOQn75eDINUfKBYmzYn2AA8DkAk8veQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote.min.js" integrity="sha512-6rE6Bx6fCBpRXG/FWpQmvguMWDLWMQjPycXMr35Zx/HRD9nwySZswkkLksgyQcvrpYMx0FELLJVBvWFtubZhDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- for the menu items -->
+<style>
+        .tag {
+            display: inline-block;
+            padding: 5px;
+            background-color: #f0f0f0;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        .close-icon {
+            cursor: pointer;
+            margin-left: 5px;
+        }
+    </style>
 <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
@@ -74,9 +87,13 @@
                                                     <input type="checkbox" id="Registered" name="Registered" value="1"><br>  
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="">tags</label>
+                                                    <label for="tags">Tags</label>
                                                     <textarea class="form-control" name="tags" id="tags" cols="30" rows="3"></textarea>
+                                                    
                                                 </div>
+                                                    <div id="tagsContainer">
+                                                        <!-- Tags will be dynamically added here -->
+                                                    </div>
                                                 <div class="form-group">
                                                     <label for="">Optional Url</label>
                                                     <input class="form-control" name="OptionalUrl" type="text">
@@ -197,6 +214,7 @@
                 <!-- footer  -->
 <script>
     $(document).ready(function(){
+
         $('#summernote').summernote();
         $('.dropify').dropify();
         // 1st form
@@ -222,6 +240,38 @@
             
         });
     });
+
+        
+        const tagsContainer = $("#tagsContainer");
+
+            $("#tags").keyup(function(event) {
+                if (event.key === "Enter") {
+                    const tagText = $(this).val().trim();
+                    if (tagText !== "") {
+                        const tagElement = createTagElement(tagText);
+                        tagsContainer.append(tagElement);
+                        $(this).val("");
+                    }
+                }
+            });
+
+            function createTagElement(text) {
+                const tagElement = $("<div></div>").addClass("tag").text(text);
+
+                const closeIcon = $("<span></span>").addClass("close-icon").text("x");
+
+                closeIcon.click(function() {
+                    $(this).parent().remove();
+                });
+
+                tagElement.append(closeIcon);
+
+                return tagElement;
+            }
+        
+
+
+
 
 
 //    pdf form

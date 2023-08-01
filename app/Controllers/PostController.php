@@ -66,6 +66,18 @@ class PostController extends BaseController{
         $ArticleModel = new ArticleModel;
         $articlerow = $ArticleModel->where('id',$id)->findAll();
 
+        // echo'<pre>';
+        // print_r($articlerow);
+        // die();
+
+        
+
+        $visibility = $articlerow[0]['visibility'];
+        $Featured = $articlerow[0]['Featured'];
+        $Breaking = $articlerow[0]['Breaking'];
+        $Slider = $articlerow[0]['Slider'];
+        $Recommended = $articlerow[0]['Recommended'];
+        $Registered = $articlerow[0]['Registered'];
 
         $LanguageModel = new LanguageModel();
         $languagetable = $LanguageModel->findAll();
@@ -73,7 +85,9 @@ class PostController extends BaseController{
         $CategoryModel = new VariantCategoryModel();
         $categoryTable = $CategoryModel->findAll();
 
-        return view('addpost/editpost',['lantable' => $languagetable, 'cattable' => $categoryTable, 'data'=>$articlerow]);
+        return view('addpost/editpost',['lantable' => $languagetable, 'cattable' => $categoryTable, 'data'=>$articlerow,
+        'visibility'=>$visibility,'Featured'=>$Featured,'Breaking'=>$Breaking,'Slider'=>$Slider,'Recommended'=>$Recommended,
+        'Registered'=>$Registered,]);
         
            
     }
@@ -81,8 +95,34 @@ class PostController extends BaseController{
     public function updatepost($id)
     {
        
-     $VariantCategoryModel = new VariantCategoryModel;
-     $catrow = $VariantCategoryModel->find($id);
+        $ArticleModel = new ArticleModel;
+        $articlerow = $ArticleModel->find($id);
+     
+        // echo "<pre>";
+        // print_r($articlerow);
+        // die();
+
+        $AdditionalImages = $this->request->getFile('AdditionalImages');
+        $Files = $this->request->getFile('Files');
+        
+        
+        // echo "<pre>";
+        // print_r($AdditionalImages);
+        // die();
+
+        
+            $old_photo = $articlerow['AdditionalImages'];    
+            if(file_exists("articleuploads/".$old_photo)){
+                unlink("articleuploads/".$old_photo);
+            }
+            $fileNameAdditionalImages = $AdditionalImages->getRandomName();
+            $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);
+      
+        
+
+        $fileNameFiles = $Files->getRandomName();
+        $Files->move('articleuploads/', $fileNameFiles);
+        
 
      $data = [
    
@@ -109,17 +149,22 @@ class PostController extends BaseController{
         'datePublished'=>$this->request->getPost('datePublished')   
        ];
         
-        $VariantCategoryModel->update($id,$data);
+        $ArticleModel->update($id,$data);
 
         // return $this->response->setJSON(['status' => 'success', 'message' => 'Form updated successfully.']);
 
         $VariantCategoryModel = new VariantCategoryModel();
         $cattable = $VariantCategoryModel->findAll();
         
+        $LanguageModel = new LanguageModel();
+        $languagetable = $LanguageModel->findAll();
+
+        $ArticleModel = new ArticleModel;
+        $articlerow = $ArticleModel->findAll();
         $sl=1;
         
         
-        return view('variantcategory/variantcategory',['cattable'=>$cattable, 'sl'=>$sl]);
+        return view('addpost/allpost',['articledata'=>$articlerow,'cattable'=>$cattable,'lantable' => $languagetable, 'sl'=>$sl]);
 
     }
 
@@ -166,7 +211,9 @@ class PostController extends BaseController{
         $fileNameFiles = $Files->getRandomName();
         $Files->move('articleuploads/', $fileNameFiles);
         
-        
+        // echo "<pre>";
+        // print_r($AdditionalImages);
+        // die();
 
        $data = [
    

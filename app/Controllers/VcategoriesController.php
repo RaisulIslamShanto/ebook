@@ -84,7 +84,21 @@ class VcategoriesController extends BaseController{
         $VariantCategoryModel = new VariantCategoryModel();
         $data = $VariantCategoryModel->where('id',$id)->findAll();
     
-        return view('variantcategory/editCategory', ['catdata'=>$data]); 
+        // echo '<pre>';
+        // print_r($data);
+        // die();
+
+        $menuValue = $data[0]['showOnMenu'];
+
+
+        $homepageValue = $data[0]['showOnHomePage'];
+
+        // echo '<pre>';
+        // print_r($menuValue);
+        // print_r($homepageValue);
+        // die();
+
+        return view('variantcategory/editCategory', ['catdata'=>$data,'menuValue'=>$menuValue,'homepageValue'=>$homepageValue]); 
        
     }
 
