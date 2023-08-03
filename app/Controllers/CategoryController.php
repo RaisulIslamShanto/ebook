@@ -79,9 +79,6 @@ class CategoryController extends Controller
     }
 
 
-
-
-
     // print_r($users);
     // die();  
 
@@ -170,12 +167,9 @@ class CategoryController extends Controller
     public function subcategoryview($id)
 {
     
-    
-
     $category = new CategoryModel;
     
     
-
     $data = $category->find($id);
 
     $categoryName = $data['category_name'];
@@ -189,8 +183,7 @@ class CategoryController extends Controller
     $data['category_name'] = $categoryName;
 
    
-
-    return view('category/subcategoryview', $data , $dataid );
+    return view('category/subcategoryview', $data , $dataid);
 
     // return redirect()->to(base_url('subcategoryview',$categoryName));
    
@@ -199,7 +192,7 @@ class CategoryController extends Controller
 
     public function addSubCategory()
 {
-    
+
     return view('category/add_sub_category');
 }
 
@@ -328,18 +321,6 @@ public function updatecatwithajax($id){
     return json_encode($data);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -26,6 +26,7 @@ class ArticleModel extends Model{
     'Registered',
     'tags',
     'OptionalUrl',
+    'content',
     'ImageUrl',
     'ImageDescription',
     'AdditionalImages',

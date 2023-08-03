@@ -14,35 +14,70 @@ class VcategoriesController extends BaseController{
 
     public function variantcategories()
     {
-        $VariantCategoryModel = new VariantCategoryModel();
-        $cattable = $VariantCategoryModel->findAll();
+        $db = \Config\Database::connect();
+
+        // $query = $db->table('languagetable')
+        //     ->select('*')
+        //     ->join('varcattable', 'languagetable.id = varcattable.language_id')
+        //     ->get();
+        //     $res = $query->getResultArray();
+
+        // $query = $db->table('varcattable')
+        //     ->select('a.*, b.catname as subcategory')
+        //     ->from('varcattable a')
+        //     ->join('varcattable b', 'a.parent_id = b.id', 'left outer join')
+        //     ->get()
+        //     ->getResultArray();
+       
+        $query = $db->table('varcattable a')
+            ->select('a.*, b.catname as subcategory,languageName')
+            ->join('varcattable b', 'a.parent_id = b.id', 'left')
+            ->join('languagetable', 'a.language_id = languagetable.id', 'left')
+            ->get();
+        $data = $query->getResultArray();
+           
         // echo '<pre>';
-        // print_r($cattable);
-        // die();
+        //     print_r( $data);
+        //     die();
+
         $sl=1;
 
-        return view('variantcategory/variantcategory',['cattable'=>$cattable, 'sl'=>$sl]);
+        return view('variantcategory/variantcategory',['sl'=>$sl ,'categories'=>$data]);
         
     }
 
     public function addvcategory()
     {
 
-        return view('variantcategory/addvcategory');
+        $languageModel = new LanguageModel();
+        $lantable = $languageModel->findAll();
+
+        $VariantCategoryModel = new VariantCategoryModel;
+        $cattable = $VariantCategoryModel->findAll();
+
+
+        // echo'<pre>';
+        // print_r($cattable);
+        // die();
+
+
+        return view('variantcategory/addvcategory',['languages'=>$lantable,'cattable'=>$cattable]);
         
     }
 
     public function addvarcategoryform(){
 
-        // $language = $this->request->getPost('language');
-        // $Email = $this->request->getPost('Email');
-        // $Phone = $this->request->getPost('Phone');
-        // $Contact = $this->request->getPost('Contact');
-       
+        
+        $parent_id = $this->request->getPost('parentCat');
+        
+        // print_r($parent_id);
+        // die();
+        
         $data = [
 
-            'language' => $this->request->getPost('language'),
-            'parentCat' => $this->request->getPost('parentCat'),
+            'language_id' => $this->request->getPost('language'),
+            'parent_id' => $parent_id,
+            
             'catname' => $this->request->getPost('catname'),   
             'slug' => $this->request->getPost('slug'),    
             'description' => $this->request->getPost('description'),    

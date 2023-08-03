@@ -70,8 +70,7 @@ class PostController extends BaseController{
         // print_r($articlerow);
         // die();
 
-        
-
+    
         $visibility = $articlerow[0]['visibility'];
         $Featured = $articlerow[0]['Featured'];
         $Breaking = $articlerow[0]['Breaking'];
@@ -119,9 +118,11 @@ class PostController extends BaseController{
             $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);
       
         
-
-        $fileNameFiles = $Files->getRandomName();
-        $Files->move('articleuploads/', $fileNameFiles);
+            
+                $fileNameFiles = $Files->getRandomName();
+                $Files->move('articleuploads/', $fileNameFiles);
+           
+        
         
 
      $data = [
@@ -169,11 +170,6 @@ class PostController extends BaseController{
     }
 
 
-
-
-
-
-
     public function article()
     {
 
@@ -195,21 +191,28 @@ class PostController extends BaseController{
     {
 
         // echo "hello";
-
-        // echo'<pre>';
+      // echo'<pre>';
         // print_r("clear");
         // die();
 
         $ArticleModel = new ArticleModel;
         
-        $AdditionalImages = $this->request->getFile('AdditionalImages');
-        $Files = $this->request->getFile('Files');
-        
-        $fileNameAdditionalImages = $AdditionalImages->getRandomName();
-        $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);
+        if ($this->request->getFile('AdditionalImages')->isValid()){
 
-        $fileNameFiles = $Files->getRandomName();
-        $Files->move('articleuploads/', $fileNameFiles);
+            $AdditionalImages = $this->request->getFile('AdditionalImages');
+            $fileNameAdditionalImages = $AdditionalImages->getRandomName();
+            $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);}
+        else{
+            $fileNameAdditionalImages = "no image";
+        }
+
+        if($this->request->getFile('Files')->isValid()){
+            $Files = $this->request->getFile('Files');
+            $fileNameFiles = $Files->getRandomName();
+            $Files->move('articleuploads/', $fileNameFiles);
+        }else{
+            $fileNameFiles = "no file";
+        }
         
         // echo "<pre>";
         // print_r($AdditionalImages);
@@ -243,13 +246,8 @@ class PostController extends BaseController{
         //    echo'<pre>';
         //    print_r($data);
         //    die();
-       
-
         
        $ArticleModel->insert($data);
-   
-
-
        return $this->response->setJSON(['status' => 'success', 'message' => 'File inserted successfully.']);
         
     }
@@ -270,15 +268,31 @@ class PostController extends BaseController{
 
         $GalleryModel = new GalleryModel;
         
-        $AdditionalImages = $this->request->getFile('AdditionalImages');
-        $Files = $this->request->getFile('Files');
+        // $AdditionalImages = $this->request->getFile('AdditionalImages');
+        // $Files = $this->request->getFile('Files');
         
-        $fileNameAdditionalImages = $AdditionalImages->getRandomName();
-        $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);
+        // $fileNameAdditionalImages = $AdditionalImages->getRandomName();
+        // $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);
 
-        $fileNameFiles = $Files->getRandomName();
-        $Files->move('articleuploads/', $fileNameFiles);
-        
+        // $fileNameFiles = $Files->getRandomName();
+        // $Files->move('articleuploads/', $fileNameFiles);
+
+        if ($this->request->getFile('AdditionalImages')->isValid()){
+
+            $AdditionalImages = $this->request->getFile('AdditionalImages');
+            $fileNameAdditionalImages = $AdditionalImages->getRandomName();
+            $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);}
+        else{
+            $fileNameAdditionalImages = "no image";
+        }
+
+        if($this->request->getFile('Files')->isValid()){
+            $Files = $this->request->getFile('Files');
+            $fileNameFiles = $Files->getRandomName();
+            $Files->move('articleuploads/', $fileNameFiles);
+        }else{
+            $fileNameFiles = "no file";
+        }
         
 
        $data = [
@@ -343,16 +357,31 @@ class PostController extends BaseController{
 
         $SortedListModel = new SortedListModel;
         
-        $AdditionalImages = $this->request->getFile('AdditionalImages');
-        $Files = $this->request->getFile('Files');
+        // $AdditionalImages = $this->request->getFile('AdditionalImages');
+        // $Files = $this->request->getFile('Files');
         
-        $fileNameAdditionalImages = $AdditionalImages->getRandomName();
-        $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);
+        // $fileNameAdditionalImages = $AdditionalImages->getRandomName();
+        // $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);
 
-        $fileNameFiles = $Files->getRandomName();
-        $Files->move('articleuploads/', $fileNameFiles);
+        // $fileNameFiles = $Files->getRandomName();
+        // $Files->move('articleuploads/', $fileNameFiles);
         
-        
+        if ($this->request->getFile('AdditionalImages')->isValid()){
+
+            $AdditionalImages = $this->request->getFile('AdditionalImages');
+            $fileNameAdditionalImages = $AdditionalImages->getRandomName();
+            $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);}
+        else{
+            $fileNameAdditionalImages = "no image";
+        }
+
+        if($this->request->getFile('Files')->isValid()){
+            $Files = $this->request->getFile('Files');
+            $fileNameFiles = $Files->getRandomName();
+            $Files->move('articleuploads/', $fileNameFiles);
+        }else{
+            $fileNameFiles = "no file";
+        }
 
        $data = [
         'type'=>$this->request->getPost('type'),
@@ -405,15 +434,31 @@ class PostController extends BaseController{
 
         $VideoModel = new VideoModel;
         
-        $AdditionalImages = $this->request->getFile('AdditionalImages');
-        $Files = $this->request->getFile('Files');
+        // $AdditionalImages = $this->request->getFile('AdditionalImages');
+        // $Files = $this->request->getFile('Files');
         
-        $fileNameAdditionalImages = $AdditionalImages->getRandomName();
-        $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);
+        // $fileNameAdditionalImages = $AdditionalImages->getRandomName();
+        // $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);
 
-        $fileNameFiles = $Files->getRandomName();
-        $Files->move('articleuploads/', $fileNameFiles);
+        // $fileNameFiles = $Files->getRandomName();
+        // $Files->move('articleuploads/', $fileNameFiles);
         
+        if ($this->request->getFile('AdditionalImages')->isValid()){
+
+            $AdditionalImages = $this->request->getFile('AdditionalImages');
+            $fileNameAdditionalImages = $AdditionalImages->getRandomName();
+            $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);}
+        else{
+            $fileNameAdditionalImages = "no image";
+        }
+
+        if($this->request->getFile('Files')->isValid()){
+            $Files = $this->request->getFile('Files');
+            $fileNameFiles = $Files->getRandomName();
+            $Files->move('articleuploads/', $fileNameFiles);
+        }else{
+            $fileNameFiles = "no file";
+        }
         // echo'<pre>';
         //    print_r('hello');
         //    die();
@@ -469,15 +514,30 @@ class PostController extends BaseController{
 
         $AudioModel = new AudioModel();
         
-        $AdditionalImages = $this->request->getFile('AdditionalImages');
-        $Files = $this->request->getFile('Files');
+        // $AdditionalImages = $this->request->getFile('AdditionalImages');
+        // $Files = $this->request->getFile('Files');
         
-        $fileNameAdditionalImages = $AdditionalImages->getRandomName();
-        $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);
+        // $fileNameAdditionalImages = $AdditionalImages->getRandomName();
+        // $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);
 
-        $fileNameFiles = $Files->getRandomName();
-        $Files->move('articleuploads/', $fileNameFiles);
-        
+        // $fileNameFiles = $Files->getRandomName();
+        // $Files->move('articleuploads/', $fileNameFiles);
+        if ($this->request->getFile('AdditionalImages')->isValid()){
+
+            $AdditionalImages = $this->request->getFile('AdditionalImages');
+            $fileNameAdditionalImages = $AdditionalImages->getRandomName();
+            $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);}
+        else{
+            $fileNameAdditionalImages = "no image";
+        }
+
+        if($this->request->getFile('Files')->isValid()){
+            $Files = $this->request->getFile('Files');
+            $fileNameFiles = $Files->getRandomName();
+            $Files->move('articleuploads/', $fileNameFiles);
+        }else{
+            $fileNameFiles = "no file";
+        }
         
 
        $data = [
@@ -530,15 +590,31 @@ class PostController extends BaseController{
 
         $QuizeModel = new QuizeModel();
         
-        $AdditionalImages = $this->request->getFile('AdditionalImages');
-        $Files = $this->request->getFile('Files');
+        // $AdditionalImages = $this->request->getFile('AdditionalImages');
+        // $Files = $this->request->getFile('Files');
         
-        $fileNameAdditionalImages = $AdditionalImages->getRandomName();
-        $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);
+        // $fileNameAdditionalImages = $AdditionalImages->getRandomName();
+        // $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);
 
-        $fileNameFiles = $Files->getRandomName();
-        $Files->move('articleuploads/', $fileNameFiles);
+        // $fileNameFiles = $Files->getRandomName();
+        // $Files->move('articleuploads/', $fileNameFiles);
         
+        if ($this->request->getFile('AdditionalImages')->isValid()){
+
+            $AdditionalImages = $this->request->getFile('AdditionalImages');
+            $fileNameAdditionalImages = $AdditionalImages->getRandomName();
+            $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);}
+        else{
+            $fileNameAdditionalImages = "no image";
+        }
+
+        if($this->request->getFile('Files')->isValid()){
+            $Files = $this->request->getFile('Files');
+            $fileNameFiles = $Files->getRandomName();
+            $Files->move('articleuploads/', $fileNameFiles);
+        }else{
+            $fileNameFiles = "no file";
+        }
         
 
        $data = [
@@ -576,6 +652,42 @@ class PostController extends BaseController{
         
     }
 
+
+    public function categoryUnderlanguage()
+    {
+        $languageId = $this->request->getGET('languageId');
+
+        $db = \Config\Database::connect();
+        
+        $query = $db->table('varcattable')
+            ->select('varcattable.*')
+            ->where('language_id ', $languageId)
+            ->get();
+        $data = $query->getResultArray();
+        // echo '<pre>';
+        // print_r($data);
+        // die();
+        return json_encode($data);
+
+    }
+
+    public function subcategoryUnderCategory()
+    {
+        $categoryId = $this->request->getGET('catId');
+
+        $db = \Config\Database::connect();
+        
+        $query = $db->table('varcattable')
+            ->select('varcattable.*')
+            ->where('parent_id ', $categoryId)
+            ->get();
+        $data = $query->getResultArray();
+        // echo '<pre>';
+        // print_r($data);
+        // die();
+        return json_encode($data);
+
+    }
 
 
 

@@ -41,9 +41,9 @@
                                             <label for="">Language</label>
                                             
                                             <select class="form-control" name="" id="">
-                                            <?php foreach($cattable as $value):?>
-                                                <option value="<?= $value['id']?>"><?= $value['language']?></option>
-                                            <?php endforeach?>
+                                            <?php// foreach($cattable as $value):?>
+                                                <option value="<?//= $value['id']?>"><?//= $value['language']?></option>
+                                            <?php// endforeach?>
                                             </select>
                                             
                                         </div>
@@ -51,9 +51,9 @@
                                             <label for="">Parent Category</label>
                                             <select class="form-control" name="" id="">
 
-                                            <?php foreach($cattable as $value):?>
-                                                <option value="<?= $value['id']?>"><?= $value['parentCat']?></option>
-                                            <?php endforeach?>
+                                            <?php// foreach($cattable as $value):?>
+                                                <option value="<?//=$value['id']?>"><?//= $value['parentCat']?></option>
+                                            <?php// endforeach?>
                                                 
                                             </select>
                                         </div>
@@ -89,14 +89,13 @@
                                     </thead>
                                     <tbody>
 
-                                    <?php foreach($cattable as $value) :?>
+                                    <?php foreach($categories as $value) :?>
                                             <tr>
-                                                
 
                                             <td><?= $sl++. '#' ?></td>
                                             <td><?= $value['catname'] ?></td>
-                                            <td><?= $value['language'] ?></td>
-                                            <td><?= $value['parentCat'] ?></td>
+                                            <td><?= $value['languageName'] ?></td>
+                                            <td><?= $value['subcategory'] ?></td>
                                             <td><?= $value['order'] ?></td>
                                             <td><div style="width: 20px; height: 20px; border-radius: 50%; background-color:<?= $value['color'] ?> ;"></div></td>
 

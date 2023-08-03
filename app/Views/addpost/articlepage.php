@@ -6,12 +6,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css" integrity="sha512-ngQ4IGzHQ3s/Hh8kMyG4FC74wzitukRMIcTOoKT3EyzFZCILOPF0twiXOQn75eDINUfKBYmzYn2AA8DkAk8veQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote.min.js" integrity="sha512-6rE6Bx6fCBpRXG/FWpQmvguMWDLWMQjPycXMr35Zx/HRD9nwySZswkkLksgyQcvrpYMx0FELLJVBvWFtubZhDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>
 <!-- for the menu items -->
 <style>
         .tag {
             display: inline-block;
             padding: 5px;
-            background-color: #f0f0f0;
+            background-color: #638421;
             margin: 5px;
             border-radius: 5px;
         }
@@ -88,8 +90,8 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="tags">Tags</label>
-                                                    <textarea class="form-control" name="tags" id="tags" cols="30" rows="3"></textarea>
-                                                    
+                                                    <!-- <textarea class="form-control" name="tags" id="tags" cols="30" rows="3" data-role="tagsinput"></textarea> -->
+                                                    <input type="text" name="tags" data-role="tagsinput">
                                                 </div>
                                                     <div id="tagsContainer">
                                                         <!-- Tags will be dynamically added here -->
@@ -108,17 +110,14 @@
                                                     <label for="">#1</label>  
                                                     <button type="button" class="btn btn-danger">X</button>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="">Title</label>
-                                                    <input class="form-control" type="text">
-                                                </div>
+                                                
                                                 <div class="form-group">
                                                     <label for="">Image</label>
-                                                    <input class="form-control dropify" type="file">
+                                                    <input class="form-control dropify" name="" type="file">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Content</label>
-                                                    <textarea class="form-control" name="" id="summernote" cols="50" rows="50"></textarea>
+                                                    <textarea class="form-control" name="content" id="summernote" cols="50" rows="50"></textarea>
                                                 </div>
                                             </form>
 
@@ -169,26 +168,24 @@
                                             <h5 class="">Category</h5>
                                             <div class="form-group">
                                                 <label for="">Language</label>
-                                                <select class="form-control" name="language" id="">
+                                                <select class="form-control" name="language" id="languageChange">
                                                     <?php foreach ($lantable as $value):?>
-                                                    <option value="<?= $value['languageName']?>"><?= $value['languageName']?></option>
+                                                    <option value="<?= $value['id']?>"><?= $value['languageName']?></option>
                                                     <?php endforeach ?>
                                                 </select>
                                             </div> 
                                             <div class="form-group">
                                                 <label for="">Category</label>
 
-                                                <select class="form-control" name="category" id="">
-                                                <?php foreach ($cattable as $value):?>
-                                                    <option value="<?= $value['parentCat']?>"><?= $value['parentCat']?></option>
-                                                <?php endforeach ?>
+                                                <select class="form-control" name="category" id="categorylistUnderLanguage">
+                                                
                                                 </select>
                                             </div> 
                                             <div class="form-group">
                                                 <label for="">Subcategory</label>
-                                                <select class="form-control" name="subcategory" id="">
-                                                    <option value="Cricket">Cricket</option>
-                                                    <option value="Football">Football</option>
+                                                <select class="form-control" name="subcategory" id="subcategoryList">
+                                                    <!-- <option value="Cricket">Cricket</option>
+                                                    <option value="Football">Football</option> -->
                                                 </select>
                                             </div> 
                                         </div>
@@ -242,39 +239,35 @@
     });
 
         
-        const tagsContainer = $("#tagsContainer");
+        // const tagsContainer = $("#tagsContainer");
 
-            $("#tags").keyup(function(event) {
-                if (event.key === "Enter") {
-                    const tagText = $(this).val().trim();
-                    if (tagText !== "") {
-                        const tagElement = createTagElement(tagText);
-                        tagsContainer.append(tagElement);
-                        $(this).val("");
-                    }
-                }
-            });
+        //     $("#tags").keyup(function(event) {
+        //         if (event.key === "Enter") {
+        //             const tagText = $(this).val().trim();
+        //             if (tagText !== "") {
+        //                 const tagElement = createTagElement(tagText);
+        //                 tagsContainer.append(tagElement);
+        //                 $(this).val("");
+        //             }
+        //         }
+        //     });
 
-            function createTagElement(text) {
-                const tagElement = $("<div></div>").addClass("tag").text(text);
+        //     function createTagElement(text) {
+        //         const tagElement = $("<div></div>").addClass("tag").text(text);
 
-                const closeIcon = $("<span></span>").addClass("close-icon").text("x");
+        //         const closeIcon = $("<span></span>").addClass("close-icon").text("x");
 
-                closeIcon.click(function() {
-                    $(this).parent().remove();
-                });
+        //         closeIcon.click(function() {
+        //             $(this).parent().remove();
+        //         });
 
-                tagElement.append(closeIcon);
+        //         tagElement.append(closeIcon);
 
-                return tagElement;
-            }
-        
-
-
-
-
+        //         return tagElement;
+        //     }
 
 //    pdf form
+
     $('#lanpdfile').on('submit', function(e){
         e.preventDefault();
 
@@ -283,8 +276,6 @@
                 var formData = new FormData(this);
                 console.log(formData);
                 
-                
-
                 $.ajax({
                     url: 'lanfile', 
                     type: 'POST',
@@ -335,13 +326,87 @@
         });
     });
 
-    
+    $('#languageChange').on('change',function(){
+
+        // alert("hi");
+
+        var id = $(this).val();
+
+         alert(id);
+         console.log(id);
+
+         $.ajax({
+            url: 'categoryUnderlanguage',
+            type: 'GET', 
+            data: {languageId: id},
+            dataType: 'json',
+            success: function (data) {
+                
+                console.log(data);
+                var selectOptions = '';
+
+                for (var i = 0; i < data.length; i++) {
+                    selectOptions += '<option value="' + data[i].id + '">' + data[i].catname + '</option>';
+                }
+
+                $('#categorylistUnderLanguage').html(selectOptions);
+            },
+            
+        });
+       
+
+
 
 
 
 
 
     });
+    
+    
+    $( "body" ).delegate( "#categorylistUnderLanguage", "change", function() {
+
+        alert("hi");
+
+        var id = $(this).val();
+
+        alert(id);
+        console.log(id);
+
+        $.ajax({
+            url: 'subcategoryUnderCategory',
+            type: 'GET', 
+            data: {catId: id},
+            dataType: 'json',
+            success: function (data) {
+                
+                console.log(data);
+                var selectOptions = '';
+
+                for (var i = 0; i < data.length; i++) {
+                    selectOptions += '<option value="' + data[i].id + '">' + data[i].catname + '</option>';
+                }
+
+                $('#subcategoryList').html(selectOptions);
+            },
+            error: function (xhr, status, error) {
+                
+                console.error(error);
+            }
+    });
+
+
+
+
+
+
+
+
+});
+
+
+
+});
     
 
 

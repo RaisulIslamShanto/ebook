@@ -12,13 +12,12 @@ class VariantCategoryModel extends Model{
 
     protected $table = 'varcattable'; 
     protected $primaryKey = 'id';
-    protected $allowedFields = ['language','parentCat','catname','slug','description','keywords','color','order','showOnMenu','showOnHomePage']; 
+    protected $allowedFields = ['language_id','parent_id','parentCat','catname','slug','description','keywords','color','order','showOnMenu','showOnHomePage']; 
 
 
+    
 
 }
-
-
 
 ?>
 

@@ -30,21 +30,27 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Post Details</h5>
+                                        
                                         <form id="addvarcategory">
                                             <div class="form-group">
                                                 <label class="form-label">Title</label>
-                                                <select class="form-control"  name="language" id="language">
-                                                    <option value="English">English</option>
-                                                    <option value="Bangla">Bangla</option>
+                                                
+                                                <select class="form-control" name="language" id="language">
+                                                   
+                                                <?php foreach($languages as $value):?>
+                                                    <option value="<?= $value['id']?>"><?= $value['languageName']?></option>
+                                                <?php endforeach?>
+                                                    
                                                 </select>
                                             </div>
                                             <div class="form-group">
                                                 <label class="form-label">Parent Category</label>
-                                                <select class="form-control"  name="parentCat" >
-                                                    <option value="Fashion">Fashion</option>
-                                                    <option value="Sports">Sports</option>
-                                                    <option value="Travel">Travel</option>
-                                                    <option value="Video">Video</option>
+                                                <select class="form-control" name="parentCat" >
+                                                    <option value="0">none</option>
+                                                <?php foreach($cattable as $value):?>
+                                                    
+                                                    <option value="<?= $value['id']?>"><?= $value['catname']?></option>
+                                                <?php endforeach?>
                                                 </select>
                                             </div>
                                             <div class="form-group">
@@ -132,28 +138,33 @@
     });
 
 //    pdf form
-    $('#lanpdfile').on('submit', function(e){
+    $(' language').on('', function(e){
         e.preventDefault();
 
                 alert('hi');
 
-                var formData = new FormData(this);
-                console.log(formData);
+                var id = $("#language").attr('value');
+
+                alert(id);
+                console.log(id);
+
+                // var formData = new FormData(this);
+                // console.log(formData);
                 
                 
 
-                $.ajax({
-                    url: 'lanfile', 
-                    type: 'POST',
-                    data: formData,
-                    contentType: false,
-                    processData: false,
-                    dataType: 'json',
-                    success: function (response) {
+                // $.ajax({
+                //     url: 'lanfile', 
+                //     type: 'POST',
+                //     data: formData,
+                //     contentType: false,
+                //     processData: false,
+                //     dataType: 'json',
+                //     success: function (response) {
                         
-                        alert(response.message);
-                    },
-                });
+                //         alert(response.message);
+                //     },
+                // });
             });
 
             //  default button

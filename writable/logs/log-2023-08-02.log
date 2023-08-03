@@ -1,0 +1,487 @@
+ERROR - 2023-08-02 05:27:38 --> mysqli_sql_exception: Unknown column 'language' in 'field list' in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\VcategoriesController.php(74): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\VcategoriesController->addvarcategoryform()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-02 05:27:38 --> Unknown column 'language' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `varcattable` (`language`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'3\', \'8\', \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `varcattable` (`language`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'3\', \'8\', \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `varcattable` (`language`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'3\', \'8\', \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `varcattable` (`language`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (:language:, :parentCat:, :catname:, :slug:, :description:, :keywords:, :color:, :order:, :showOnMenu:, :showOnHomePage:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VcategoriesController.php(74): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->addvarcategoryform()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-02 05:28:12 --> mysqli_sql_exception: Unknown column 'language' in 'field list' in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\VcategoriesController.php(74): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\VcategoriesController->addvarcategoryform()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-02 05:28:12 --> Unknown column 'language' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `varcattable` (`language`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'3\', \'8\', \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `varcattable` (`language`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'3\', \'8\', \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `varcattable` (`language`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'3\', \'8\', \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `varcattable` (`language`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (:language:, :parentCat:, :catname:, :slug:, :description:, :keywords:, :color:, :order:, :showOnMenu:, :showOnHomePage:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VcategoriesController.php(74): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->addvarcategoryform()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-02 05:37:41 --> mysqli_sql_exception: Column 'parentCat' cannot be null in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\VcategoriesController.php(72): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\VcategoriesController->addvarcategoryform()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-02 05:37:41 --> Column 'parentCat' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `varcattable` (`language_id`, `parent_id`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'1\', 0, NULL, \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `varcattable` (`language_id`, `parent_id`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'1\', 0, NULL, \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `varcattable` (`language_id`, `parent_id`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'1\', 0, NULL, \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `varcattable` (`language_id`, `parent_id`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (:language_id:, :parent_id:, :parentCat:, :catname:, :slug:, :description:, :keywords:, :color:, :order:, :showOnMenu:, :showOnHomePage:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VcategoriesController.php(72): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->addvarcategoryform()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-02 05:42:57 --> mysqli_sql_exception: Column 'showOnMenu' cannot be null in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\VcategoriesController.php(76): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\VcategoriesController->addvarcategoryform()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-02 05:42:57 --> Column 'showOnMenu' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `varcattable` (`language_id`, `parent_id`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'1\', 0, NULL, \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `varcattable` (`language_id`, `parent_id`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'1\', 0, NULL, \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `varcattable` (`language_id`, `parent_id`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'1\', 0, NULL, \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `varcattable` (`language_id`, `parent_id`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (:language_id:, :parent_id:, :parentCat:, :catname:, :slug:, :description:, :keywords:, :color:, :order:, :showOnMenu:, :showOnHomePage:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VcategoriesController.php(76): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->addvarcategoryform()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 05:47:28 --> Undefined array key "language"
+in APPPATH\Views\addpost\allpost.php on line 45.
+ 1 APPPATH\Views\addpost\allpost.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "language"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\allpost.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\allpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/allpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(43): view('addpost/allpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->allpost()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 05:53:35 --> Undefined array key "language"
+in APPPATH\Views\variantcategory\variantcategory.php on line 45.
+ 1 APPPATH\Views\variantcategory\variantcategory.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "language"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/variantcategory', [], true)
+ 5 APPPATH\Controllers\VcategoriesController.php(24): view('variantcategory/variantcategory', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 05:57:06 --> Undefined array key "language"
+in APPPATH\Views\variantcategory\variantcategory.php on line 45.
+ 1 APPPATH\Views\variantcategory\variantcategory.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "language"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/variantcategory', [], true)
+ 5 APPPATH\Controllers\VcategoriesController.php(27): view('variantcategory/variantcategory', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 05:57:28 --> Undefined array key "language"
+in APPPATH\Views\variantcategory\variantcategory.php on line 45.
+ 1 APPPATH\Views\variantcategory\variantcategory.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "language"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/variantcategory', [], true)
+ 5 APPPATH\Controllers\VcategoriesController.php(27): view('variantcategory/variantcategory', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 07:12:26 --> Undefined array key "language"
+in APPPATH\Views\variantcategory\variantcategory.php on line 45.
+ 1 APPPATH\Views\variantcategory\variantcategory.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "language"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/variantcategory', [], true)
+ 5 APPPATH\Controllers\VcategoriesController.php(27): view('variantcategory/variantcategory', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 07:12:41 --> Undefined array key "language"
+in APPPATH\Views\variantcategory\variantcategory.php on line 45.
+ 1 APPPATH\Views\variantcategory\variantcategory.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "language"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/variantcategory', [], true)
+ 5 APPPATH\Controllers\VcategoriesController.php(27): view('variantcategory/variantcategory', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 07:14:46 --> Undefined array key "language"
+in APPPATH\Views\variantcategory\variantcategory.php on line 45.
+ 1 APPPATH\Views\variantcategory\variantcategory.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "language"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/variantcategory', [], true)
+ 5 APPPATH\Controllers\VcategoriesController.php(27): view('variantcategory/variantcategory', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 07:14:52 --> Undefined array key "language"
+in APPPATH\Views\variantcategory\variantcategory.php on line 45.
+ 1 APPPATH\Views\variantcategory\variantcategory.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "language"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/variantcategory', [], true)
+ 5 APPPATH\Controllers\VcategoriesController.php(27): view('variantcategory/variantcategory', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 07:15:34 --> Undefined variable $value
+in APPPATH\Views\variantcategory\variantcategory.php on line 45.
+ 1 APPPATH\Views\variantcategory\variantcategory.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\variantcategory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/variantcategory', [], true)
+ 5 APPPATH\Controllers\VcategoriesController.php(27): view('variantcategory/variantcategory', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 08:21:00 --> Undefined variable $cattable
+in APPPATH\Controllers\VcategoriesController.php on line 27.
+ 1 APPPATH\Controllers\VcategoriesController.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cattable', 'C:\\xampp\\htdocs\\variant\\app\\Controllers\\VcategoriesController.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 10:02:31 --> Undefined array key "parentCat"
+in APPPATH\Views\variantcategory\addvcategory.php on line 52.
+ 1 APPPATH\Views\variantcategory\addvcategory.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "parentCat"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\addvcategory.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\addvcategory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/addvcategory', [], true)
+ 5 APPPATH\Controllers\VcategoriesController.php(47): view('variantcategory/addvcategory', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->addvcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 10:03:15 --> Undefined array key "parentCat"
+in APPPATH\Views\variantcategory\addvcategory.php on line 52.
+ 1 APPPATH\Views\variantcategory\addvcategory.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "parentCat"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\addvcategory.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\variantcategory\\addvcategory.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('variantcategory/addvcategory', [], true)
+ 5 APPPATH\Controllers\VcategoriesController.php(47): view('variantcategory/addvcategory', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->addvcategory()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-02 10:23:51 --> mysqli_sql_exception: Unknown column 'parentCat' in 'field list' in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `va...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `va...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `va...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `va...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\VcategoriesController.php(79): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\VcategoriesController->addvarcategoryform()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-02 10:23:51 --> Unknown column 'parentCat' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `varcattable` (`language_id`, `parent_id`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'3\', \'0\', \'0\', \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `varcattable` (`language_id`, `parent_id`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'3\', \'0\', \'0\', \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `varcattable` (`language_id`, `parent_id`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (\'3\', \'0\', \'0\', \'cricket\', \'\', \'\', \'\', \'#000000\', \'\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `varcattable` (`language_id`, `parent_id`, `parentCat`, `catname`, `slug`, `description`, `keywords`, `color`, `order`, `showOnMenu`, `showOnHomePage`) VALUES (:language_id:, :parent_id:, :parentCat:, :catname:, :slug:, :description:, :keywords:, :color:, :order:, :showOnMenu:, :showOnHomePage:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\VcategoriesController.php(79): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->addvarcategoryform()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-02 11:12:45 --> mysqli_sql_exception: Table 'variant.language' doesn't exist in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `categor...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `categor...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `categor...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `categor...', Array, false)
+#4 C:\xampp\htdocs\variant\app\Controllers\VcategoriesController.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+#6 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+#7 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-02 11:12:45 --> Table 'variant.language' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `category`.`id` AS `category_id`, `category`.`category_name`, `language`.`language`
+FROM `varcattable`
+JOIN `language` ON `category`.`language_id` = `language`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `category`.`id` AS `category_id`, `category`.`category_name`, `language`.`language`
+FROM `varcattable`
+JOIN `language` ON `category`.`language_id` = `language`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `category`.`id` AS `category_id`, `category`.`category_name`, `language`.`language`
+FROM `varcattable`
+JOIN `language` ON `category`.`language_id` = `language`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `category`.`id` AS `category_id`, `category`.`category_name`, `language`.`language`
+FROM `varcattable`
+JOIN `language` ON `category`.`language_id` = `language`.`id`', [], false)
+ 5 APPPATH\Controllers\VcategoriesController.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-02 11:14:57 --> mysqli_sql_exception: Unknown column 'category.id' in 'field list' in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `categor...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `categor...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `categor...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `categor...', Array, false)
+#4 C:\xampp\htdocs\variant\app\Controllers\VcategoriesController.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+#6 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+#7 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-02 11:14:57 --> Unknown column 'category.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `category`.`id` AS `category_id`, `category`.`category_name`, `language`.`language`
+FROM `varcattable`
+JOIN `languagetable` ON `category`.`language_id` = `language`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `category`.`id` AS `category_id`, `category`.`category_name`, `language`.`language`
+FROM `varcattable`
+JOIN `languagetable` ON `category`.`language_id` = `language`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `category`.`id` AS `category_id`, `category`.`category_name`, `language`.`language`
+FROM `varcattable`
+JOIN `languagetable` ON `category`.`language_id` = `language`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `category`.`id` AS `category_id`, `category`.`category_name`, `language`.`language`
+FROM `varcattable`
+JOIN `languagetable` ON `category`.`language_id` = `language`.`id`', [], false)
+ 5 APPPATH\Controllers\VcategoriesController.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-02 11:19:20 --> mysqli_sql_exception: Column 'id' in field list is ambiguous in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `c...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `c...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `c...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `c...', Array, false)
+#4 C:\xampp\htdocs\variant\app\Controllers\VcategoriesController.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+#6 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+#7 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-02 11:19:20 --> Column 'id' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `id`, `catname`, `languageName`
+FROM `varcattable`
+JOIN `languagetable` ON `id` = `language_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `catname`, `languageName`
+FROM `varcattable`
+JOIN `languagetable` ON `id` = `language_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `catname`, `languageName`
+FROM `varcattable`
+JOIN `languagetable` ON `id` = `language_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `catname`, `languageName`
+FROM `varcattable`
+JOIN `languagetable` ON `id` = `language_id`', [], false)
+ 5 APPPATH\Controllers\VcategoriesController.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-02 11:20:57 --> mysqli_sql_exception: Column 'id' in on clause is ambiguous in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\variant\app\Controllers\VcategoriesController.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+#6 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+#7 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-02 11:20:57 --> Column 'id' in on clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `varcattable`
+JOIN `languagetable` ON `id` = `language_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `varcattable`
+JOIN `languagetable` ON `id` = `language_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `varcattable`
+JOIN `languagetable` ON `id` = `language_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `varcattable`
+JOIN `languagetable` ON `id` = `language_id`', [], false)
+ 5 APPPATH\Controllers\VcategoriesController.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-02 11:26:56 --> mysqli_sql_exception: Unknown column 'languagetable.language_id' in 'on clause' in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\variant\app\Controllers\VcategoriesController.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+#6 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+#7 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-02 11:26:56 --> Unknown column 'languagetable.language_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `varcattable`
+JOIN `languagetable` ON `varcattable`.`id` =`languagetable`.`language_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `varcattable`
+JOIN `languagetable` ON `varcattable`.`id` =`languagetable`.`language_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `varcattable`
+JOIN `languagetable` ON `varcattable`.`id` =`languagetable`.`language_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `varcattable`
+JOIN `languagetable` ON `varcattable`.`id` =`languagetable`.`language_id`', [], false)
+ 5 APPPATH\Controllers\VcategoriesController.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-02 11:33:43 --> mysqli_sql_exception: Unknown column 'varcattable.language.id' in 'on clause' in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\variant\app\Controllers\VcategoriesController.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+#6 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+#7 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-02 11:33:43 --> Unknown column 'varcattable.language.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `varcattable`
+JOIN `languagetable` ON `languagetable`.`id` = `varcattable`.`language`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `varcattable`
+JOIN `languagetable` ON `languagetable`.`id` = `varcattable`.`language`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `varcattable`
+JOIN `languagetable` ON `languagetable`.`id` = `varcattable`.`language`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `varcattable`
+JOIN `languagetable` ON `languagetable`.`id` = `varcattable`.`language`.`id`', [], false)
+ 5 APPPATH\Controllers\VcategoriesController.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 11:37:49 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result_array()
+in APPPATH\Controllers\VcategoriesController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 11:38:07 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+in APPPATH\Controllers\VcategoriesController.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 11:46:04 --> Invalid file: "categories_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('categories_view.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('categories_view', [], true)
+ 3 APPPATH\Controllers\VcategoriesController.php(31): view('categories_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-02 11:47:08 --> Undefined variable $lantable
+in APPPATH\Controllers\VcategoriesController.php on line 37.
+ 1 APPPATH\Controllers\VcategoriesController.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lantable', 'C:\\xampp\\htdocs\\variant\\app\\Controllers\\VcategoriesController.php', 37)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\VcategoriesController->variantcategories()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VcategoriesController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -195,6 +195,12 @@ $routes->post('updatepost/(:num)', 'PostController::updatepost/$1');
 //articlepage
 $routes->get('article', 'PostController::article');
 $routes->post('articleform', 'PostController::articleform');
+$routes->get('categoryUnderlanguage', 'PostController::categoryUnderlanguage');
+$routes->get('subcategoryUnderCategory', 'PostController::subcategoryUnderCategory');
+
+
+
+
 //gallerypage
 $routes->get('gallery', 'PostController::gallery');
 $routes->post('galleryform', 'PostController::galleryform');
