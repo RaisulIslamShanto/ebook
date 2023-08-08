@@ -12,10 +12,19 @@ use App\Models\PostModel\VideoModel;
 use App\Models\PostModel\AudioModel;
 use App\Models\PostModel\QuizeModel;
 
+use App\Models\PostModel\ArticleContentModel;
+use App\Models\PostModel\QuizeContentModel;
+
 
 
 class PostController extends BaseController{
 
+    protected $db; 
+
+    public function __construct()
+    {
+        $this->db = \Config\Database::connect();
+    }
 
 
     public function postformate()
@@ -28,19 +37,24 @@ class PostController extends BaseController{
     public function allpost()
     {
 
-        $ArticleModel = new ArticleModel();
-        $articlerow = $ArticleModel->findAll();
+        $db = \Config\Database::connect();
+
+        $query = $db->table('articletable')
+            ->select('articletable.*,languageName')
+            
+            ->join('languagetable', 'articletable.language_id = languagetable.id', 'left')
+            ->get();
+        $data = $query->getResultArray();
 
         // echo '<pre>';
-        // print_r($articlerow);
+        // print_r($data);
         // die();
         
         $sl=1;
 
-        $VariantCategoryModel = new VariantCategoryModel();
-        $cattable = $VariantCategoryModel->findAll();
+       
 
-        return view('addpost/allpost',['articledata'=>$articlerow,'cattable'=>$cattable,'sl'=>$sl]);
+        return view('addpost/allpost',['articledata'=>$data,'sl'=>$sl]);
         
     }
 
@@ -49,15 +63,19 @@ class PostController extends BaseController{
         $ArticleModel = new ArticleModel();
         $delpost = $ArticleModel->delete($id);  
         
-        $ArticleModel = new ArticleModel();
-        $articlerow = $ArticleModel->findAll();
-        
+        $db = \Config\Database::connect();
+
+        $query = $db->table('articletable')
+            ->select('articletable.*,languageName')
+            
+            ->join('languagetable', 'articletable.language_id = languagetable.id', 'left')
+            ->get();
+        $data = $query->getResultArray();
         $sl=1;
 
-        $VariantCategoryModel = new VariantCategoryModel();
-        $cattable = $VariantCategoryModel->findAll();
+        
 
-        return view('addpost/allpost',['articledata'=>$articlerow,'cattable'=>$cattable,'sl'=>$sl]);
+        return view('addpost/allpost',['articledata'=>$data,'sl'=>$sl]);
     }
 
     public function editpost($id)
@@ -83,8 +101,22 @@ class PostController extends BaseController{
 
         $CategoryModel = new VariantCategoryModel();
         $categoryTable = $CategoryModel->findAll();
+        $db = \Config\Database::connect();
 
-        return view('addpost/editpost',['lantable' => $languagetable, 'cattable' => $categoryTable, 'data'=>$articlerow,
+        $query = $db->table('articletable')
+            ->select('articletable.*,languageName')
+            
+            ->join('languagetable', 'articletable.language_id = languagetable.id', 'left')
+            ->get();
+        $data = $query->getResultArray();
+        $sl=1;
+
+        $query = $db->where('id',$id)->findAll();
+        echo'<pre>';
+        print_r($data);
+        die();
+
+        return view('addpost/editpost',['lantable' => $languagetable, 'cattable' => $categoryTable, 'data'=>$data,
         'visibility'=>$visibility,'Featured'=>$Featured,'Breaking'=>$Breaking,'Slider'=>$Slider,'Recommended'=>$Recommended,
         'Registered'=>$Registered,]);
         
@@ -191,7 +223,7 @@ class PostController extends BaseController{
     {
 
         // echo "hello";
-      // echo'<pre>';
+         // echo'<pre>';
         // print_r("clear");
         // die();
 
@@ -217,6 +249,7 @@ class PostController extends BaseController{
         // echo "<pre>";
         // print_r($AdditionalImages);
         // die();
+        
 
        $data = [
    
@@ -233,11 +266,12 @@ class PostController extends BaseController{
         'Registered'=>$this->request->getPost('Registered'),
         'tags'=>$this->request->getPost('tags'),
         'OptionalUrl'=>$this->request->getPost('OptionalUrl'),
+        'content'=>$this->request->getPost('Acontent'),
         'ImageUrl'=>$this->request->getPost('ImageUrl'),
         'ImageDescription'=>$this->request->getPost('ImageDescription'),
         'AdditionalImages'=>$fileNameAdditionalImages,
         'Files'=>$fileNameFiles,
-        'language'=>$this->request->getPost('language'),
+        'language_id'=>$this->request->getPost('language'),
         'category'=>$this->request->getPost('category'),
         'subcategory'=>$this->request->getPost('subcategory'),   
         'datePublished'=>$this->request->getPost('datePublished')   
@@ -246,11 +280,22 @@ class PostController extends BaseController{
         //    echo'<pre>';
         //    print_r($data);
         //    die();
+        $ArticleContentModel = new ArticleContentModel;
+
+        $ContentData = [
+            'type'=>$this->request->getPost('type'),
+            'ArticleContent'=>$this->request->getPost('Acontent'),
+        ];
+
+        $ArticleContentModel->insert($ContentData);
         
-       $ArticleModel->insert($data);
-       return $this->response->setJSON(['status' => 'success', 'message' => 'File inserted successfully.']);
+        $ArticleModel->insert($data);
+
+        return $this->response->setJSON(['status' => 'success', 'message' => 'File inserted successfully.']);
         
     }
+
+    
 
     public function gallery()
     {
@@ -481,7 +526,7 @@ class PostController extends BaseController{
         'ImageDescription'=>$this->request->getPost('ImageDescription'),
         'AdditionalImages'=>$fileNameAdditionalImages,
         'Files'=>$fileNameFiles,
-        'language'=>$this->request->getPost('language'),
+        'language_id'=>$this->request->getPost('language'),
         'category'=>$this->request->getPost('category'),
         'subcategory'=>$this->request->getPost('subcategory'),   
         'datePublished'=>$this->request->getPost('datePublished')  
@@ -587,17 +632,9 @@ class PostController extends BaseController{
     }
     public function quizeform()
     {
-
+      
         $QuizeModel = new QuizeModel();
         
-        // $AdditionalImages = $this->request->getFile('AdditionalImages');
-        // $Files = $this->request->getFile('Files');
-        
-        // $fileNameAdditionalImages = $AdditionalImages->getRandomName();
-        // $AdditionalImages->move('articleuploads/', $fileNameAdditionalImages);
-
-        // $fileNameFiles = $Files->getRandomName();
-        // $Files->move('articleuploads/', $fileNameFiles);
         
         if ($this->request->getFile('AdditionalImages')->isValid()){
 
@@ -615,7 +652,11 @@ class PostController extends BaseController{
         }else{
             $fileNameFiles = "no file";
         }
-        
+
+        $contentdata = $this->request->getPost('qContent[]');
+        // echo'<pre>';
+        // print_r($contentdata);
+        // die();
 
        $data = [
         'type'=>$this->request->getPost('type'),
@@ -630,23 +671,116 @@ class PostController extends BaseController{
         'Recommended'=>$this->request->getPost('Recommended'),
         'Registered'=>$this->request->getPost('Registered'),
         'tags'=>$this->request->getPost('tags'),
+        'content'=>json_encode($contentdata),
         'OptionalUrl'=>$this->request->getPost('OptionalUrl'),
         'ImageUrl'=>$this->request->getPost('ImageUrl'),
         'ImageDescription'=>$this->request->getPost('ImageDescription'),
         'AdditionalImages'=>$fileNameAdditionalImages,
         'Files'=>$fileNameFiles,
-        'language'=>$this->request->getPost('language'),
+        'language_id'=>$this->request->getPost('language'),
         'category'=>$this->request->getPost('category'),
         'subcategory'=>$this->request->getPost('subcategory'),   
         'datePublished'=>$this->request->getPost('datePublished')  
 
        ];
-       
-        //    echo'<pre>';
-        //    print_r($data);
-        //    die();
 
-        $QuizeModel->insert($data);
+       $insertedRows = $QuizeModel->insert($data);
+
+        // $rowNo = gettype($insertedRows);
+        // print_r($insertedRows);
+        // var_dump($insertedRows);
+        // print_r($rowNo);
+        // die();
+
+       
+       $QuizeContentModel = new QuizeContentModel;
+    //    question img
+
+    //    print_r($_FILES);
+
+    // $files = $this->request->getFileMultiple('qImage');
+    // print_r($files);
+    // die();
+      $qImageNames = array();
+       if($this->request->getFileMultiple('qImage'))
+        {
+            $files = $this->request->getFileMultiple('qImage');
+ 
+            foreach ($files as $file) {
+ 
+                if ($file->isValid() && ! $file->hasMoved())
+                {
+                    $newName = $file->getRandomName();
+                    $file->move('quizeuploads/', $newName);
+
+                    // $qImagedata = [
+                    //     'name' => $file->getClientName(),
+                    //     'filepath' => 'quizeuploads/' . $newName,
+                    //     'filepath' =>  $newName,
+                    //     'type' => $file->getClientExtension()
+                    // ];
+
+                      $qImageNames[] = $newName;
+                    // $QuizeContentModel = new QuizeContentModel();
+                    // $QuizeContentModel->save($data);
+                    // $filesUploaded++;
+                    // print_r($qImagedata);
+                }
+                 
+            }
+           
+        }
+        
+        $rImageNames = array();
+        if($this->request->getFileMultiple('rImage'))
+            {
+                $files = $this->request->getFileMultiple('rImage');
+                foreach ($files as $file) {
+ 
+                    if ($file->isValid() && ! $file->hasMoved())
+                    {
+                        $newName = $file->getRandomName();
+                        $file->move('quizeuploads/', $newName);
+
+                        $rImageNames[] = $newName;
+                        
+                    }
+                     
+                }
+            }
+
+        $question = $this->request->getPost('question[]');
+        $qContent = $this->request->getPost('qContent[]');
+
+        $result = $this->request->getPost('result[]');
+        $rContent = $this->request->getPost('rContent[]');
+        $NumberOfCorrectAnswerMax = $this->request->getPost('NumberOfCorrectAnswerMax[]');
+        $NumberOfCorrectAnswerMin = $this->request->getPost('NumberOfCorrectAnswerMin[]');
+
+      
+       $ContentData = [
+           'type'=>$this->request->getPost('type'),
+           'maintable_id'=>$insertedRows,
+           'question'=>json_encode($question),
+           'qImage'=>json_encode($qImageNames),
+           'qContent'=>json_encode($qContent),
+           'result'=>json_encode($result),
+           'rImage'=>json_encode($rImageNames),
+           'rContent'=>json_encode($rContent),
+           'NumberOfCorrectAnswerMax'=>json_encode($NumberOfCorrectAnswerMax),
+           'NumberOfCorrectAnswerMin'=>json_encode($NumberOfCorrectAnswerMin),
+       ];
+
+        // echo '<pre>';
+        // print_r($ContentData);
+        // die();
+
+        $QuizeContentModel->insert($ContentData);
+        // return $this->response->setJSON(['status' => 'success', 'message' => 'QuizeContent inserted successfully.']);
+    //    $query = $this->db->getLastQuery();
+    //     echo $query;
+    //     die();
+        
    
        return $this->response->setJSON(['status' => 'success', 'message' => 'File inserted successfully.']);
         

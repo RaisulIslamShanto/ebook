@@ -12,6 +12,8 @@ class ArticleModel extends Model{
 
     protected $table = 'articletable'; 
     protected $primaryKey = 'id';
+    
+    
     protected $allowedFields = 
     ['type',
     'title',
@@ -31,7 +33,7 @@ class ArticleModel extends Model{
     'ImageDescription',
     'AdditionalImages',
     'Files',
-    'language',
+    'language_id',
     'category',
     'subcategory',
     'datePublished']; 

@@ -91,24 +91,24 @@
                                     <h5 class="mt-4">Question</h5>
                                     <div id="question" class="card mt-4">
                                         <div class="card-body">
-                                            <form>   
+                                              
                                                 <div class="form-group">
                                                     <label for="">#1</label>  
                                                     <button type="button" class="btn btn-danger deleteQ">X</button>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Question</label>
-                                                    <input class="form-control" type="text">
+                                                    <input class="form-control" type="text" name="question[]">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Image</label>
-                                                    <input class="form-control dropify" id="" type="file">
+                                                    <input class="form-control " type="file"  name="qImage[]" >
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Content</label>
-                                                    <textarea class="form-control summernote" name="" id="summernote" cols="30" rows="5"></textarea>
+                                                    <textarea class="form-control " name="qContent[]" cols="30" rows="5"></textarea>
                                                 </div>
-                                            </form>
+                                             
                                         </div>
 
                                     </div>
@@ -118,29 +118,29 @@
                                     <h5>Result</h5>
                                     <div id="result" class="card mt-4">
                                         <div class="card-body">
-                                            <form>   
-                                                <div class="form-group ">
+                                               
+                                                <div class="form-group">
                                                     <label for="">#1</label>  
                                                     <button type="button" class="btn btn-danger deleteR">X</button>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Result</label>
-                                                    <input class="form-control" type="text">
+                                                    <input class="form-control" name="result[]" type="text">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Image</label>
-                                                    <input class="form-control dropify" id="" type="file">
+                                                    <input class="form-control " name="rImage[]"  type="file">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Content</label>
-                                                    <textarea class="form-control summernote" name="" id="" cols="30" rows="5"></textarea>
+                                                    <textarea class="form-control " name="rContent[]"  cols="30" rows="5"></textarea>
                                                 </div>
                                                 <div class="form-group mt-3">
                                                     <label for="">Number of Correct Answers (The range of correct answers to show this result)</label>
-                                                    <input type="number"  id="" placeholder="Max">
-                                                    <input type="number"  id="" placeholder="Min">
+                                                    <input type="number" name="NumberOfCorrectAnswerMax[]"  placeholder="Max" >
+                                                    <input type="number" name="NumberOfCorrectAnswerMin[]"  placeholder="Min">
                                                 </div>
-                                            </form>
+                                           
                                         </div>
 
                                     </div>
@@ -190,26 +190,24 @@
                                             <h5 class="">Category</h5>
                                             <div class="form-group">
                                                 <label for="">Language</label>
-                                                <select class="form-control" name="language" id="">
+                                                <select class="form-control" name="language" id="languageChange">
                                                     <?php foreach ($lantable as $value):?>
-                                                    <option value="<?= $value['languageName']?>"><?= $value['languageName']?></option>
+                                                    <option value="<?= $value['id']?>"><?= $value['languageName']?></option>
                                                     <?php endforeach ?>
                                                 </select>
                                             </div> 
                                             <div class="form-group">
                                                 <label for="">Category</label>
 
-                                                <select class="form-control" name="category" id="">
-                                                <?php foreach ($cattable as $value):?>
-                                                    <option value="<?= $value['parentCat']?>"><?= $value['parentCat']?></option>
-                                                <?php endforeach ?>
+                                                <select class="form-control" name="category" id="categorylistUnderLanguage">
+                                                
                                                 </select>
                                             </div> 
                                             <div class="form-group">
                                                 <label for="">Subcategory</label>
-                                                <select class="form-control" name="subcategory" id="">
-                                                    <option value="Cricket">Cricket</option>
-                                                    <option value="Football">Football</option>
+                                                <select class="form-control" name="subcategory" id="subcategoryList">
+                                                    <!-- <option value="Cricket">Cricket</option>
+                                                    <option value="Football">Football</option> -->
                                                 </select>
                                             </div> 
                                         </div>
@@ -238,7 +236,7 @@
     $(document).ready(function(){
         
         $('.summernote').summernote();
-        $('.summernote2').summernote();
+       
         $('.dropify').dropify();
         // 1st form
     $('#quizeform').on('submit', function (e){
@@ -330,24 +328,24 @@
 
                                     `<div id="question" class="card mt-4">
                                         <div class="card-body">
-                                            <form>   
+  
                                                 <div class="form-group">
                                                     <label >${++id}</label>  
                                                     <button type="button" class="btn btn-danger deleteQ">X</button>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Question</label>
-                                                    <input class="form-control" type="text">
+                                                    <input class="form-control" type="text"  name="question[]">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Image</label>
-                                                    <input class="form-control dropify" id="" type="file">
+                                                    <input class="form-control " name="qImage[]" type="file" >
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Content</label>
-                                                    <textarea class="form-control summernote" name="" id="summernote" cols="30" rows="5"></textarea>
+                                                    <textarea class="form-control"  name="qContent[]"  cols="30" rows="5"></textarea>
                                                 </div>
-                                            </form>
+                                            
                                         </div>
 
                                     </div>`;
@@ -355,29 +353,29 @@
                                     var result = 
                                     `<div id="result" class="card mt-4">
                                         <div class="card-body">
-                                            <form>   
+                                     
                                                 <div class="form-group">
                                                     <label for="">#${++sl}</label>  
                                                     <button type="button" class="btn btn-danger deleteR">X</button>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Result</label>
-                                                    <input class="form-control" type="text">
+                                                    <input class="form-control" type="text" name="result[]">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Image</label>
-                                                    <input class="form-control dropify" id="" type="file">
+                                                    <input class="form-control"  type="file" name="rImage[]">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Content</label>
-                                                    <textarea class="form-control summernote" name="" id="" cols="30" rows="5"></textarea>
+                                                    <textarea class="form-control" name="rContent[]"  cols="30" rows="5"></textarea>
                                                 </div>
                                                 <div class="form-group mt-3">
                                                     <label for="">Number of Correct Answers (The range of correct answers to show this result)</label>
-                                                    <input type="number"  id="" placeholder="Max">
-                                                    <input type="number"  id="" placeholder="Min">
+                                                    <input type="number" name="NumberOfCorrectAnswerMax[]"  placeholder="Max" >
+                                                    <input type="number" name="NumberOfCorrectAnswerMin[]"  placeholder="Min">
                                                 </div>
-                                            </form>
+                                    
                                         </div>
 
                                     </div>`
@@ -407,8 +405,76 @@
         $(e.target).parent().parent().parent().parent().remove();
         });
 
+    $('#languageChange').on('change',function(){
+
+        // alert("hi");
+
+        var id = $(this).val();
+
+        alert(id);
+        console.log(id);
+
+            $.ajax({
+                url: 'categoryUnderlanguage',
+                type: 'GET', 
+                data: {languageId: id},
+                dataType: 'json',
+                success: function (data) {
+                    
+                    console.log(data);
+                    var selectOptions = '';
+
+                    // for (var i = 0; i < data.length; i++) {
+                    //     selectOptions += '<option value="' + data[i].id + '">' + data[i].catname + '</option>';
+                    // }
+                    for (var i = 0; i < data.length; i++) {
+                        selectOptions += `<option value="${data[i].id}">${data[i].catname}</option>`
+                    }
+
+
+                    $('#categorylistUnderLanguage').html(selectOptions);
+                },
+
+            });
+    });
+
+
+    $( "body" ).delegate( "#categorylistUnderLanguage", "change", function() {
+
+            alert("hi");
+
+        var id = $(this).val();
+
+        alert(id);
+        console.log(id);
+
+        $.ajax({
+            url: 'subcategoryUnderCategory',
+            type: 'GET', 
+            data: {catId: id},
+            dataType: 'json',
+            success: function (data) {
+                
+                console.log(data);
+                var selectOptions = '';
+
+                for (var i = 0; i < data.length; i++) {
+                    selectOptions += '<option value="' + data[i].id + '">' + data[i].catname + '</option>';
+                }
+
+                $('#subcategoryList').html(selectOptions);
+            },
+            error: function (xhr, status, error) {
+                
+                console.error(error);
+            }
+        });
 
     });
+
+    
+
+});
     
 
 

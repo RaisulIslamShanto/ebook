@@ -113,11 +113,11 @@
                                                 
                                                 <div class="form-group">
                                                     <label for="">Image</label>
-                                                    <input class="form-control dropify" name="" type="file">
+                                                    <input class="form-control dropify"  name="" type="file">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="">Content</label>
-                                                    <textarea class="form-control" name="content" id="summernote" cols="50" rows="50"></textarea>
+                                                    <textarea class="form-control" name="Acontent" id="summernote" cols="50" rows="50"></textarea>
                                                 </div>
                                             </form>
 
@@ -345,9 +345,13 @@
                 console.log(data);
                 var selectOptions = '';
 
+                // for (var i = 0; i < data.length; i++) {
+                //     selectOptions += '<option value="' + data[i].id + '">' + data[i].catname + '</option>';
+                // }
                 for (var i = 0; i < data.length; i++) {
-                    selectOptions += '<option value="' + data[i].id + '">' + data[i].catname + '</option>';
+                    selectOptions += `<option value="${data[i].id}">${data[i].catname}</option>`
                 }
+
 
                 $('#categorylistUnderLanguage').html(selectOptions);
             },
@@ -393,16 +397,9 @@
                 
                 console.error(error);
             }
+        });
+
     });
-
-
-
-
-
-
-
-
-});
 
 
 

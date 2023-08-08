@@ -1,0 +1,292 @@
+ERROR - 2023-08-06 04:25:07 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\PostController.php(661): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-06 04:25:07 --> Operand should contain 1 column(s)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `content`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language_id`, `category`, `subcategory`, `datePublished`) VALUES (\'quize\', \'\', \'\', \'\', \'\', NULL, NULL, NULL, NULL, NULL, NULL, \'\', (\'q1\',\'q2\',\'q3\'), \'\', \'\', \'\', \'no image\', \'no file\', \'1\', NULL, NULL, \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `content`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language_id`, `category`, `subcategory`, `datePublished`) VALUES (\'quize\', \'\', \'\', \'\', \'\', NULL, NULL, NULL, NULL, NULL, NULL, \'\', (\'q1\',\'q2\',\'q3\'), \'\', \'\', \'\', \'no image\', \'no file\', \'1\', NULL, NULL, \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `content`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language_id`, `category`, `subcategory`, `datePublished`) VALUES (\'quize\', \'\', \'\', \'\', \'\', NULL, NULL, NULL, NULL, NULL, NULL, \'\', (\'q1\',\'q2\',\'q3\'), \'\', \'\', \'\', \'no image\', \'no file\', \'1\', NULL, NULL, \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `content`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language_id`, `category`, `subcategory`, `datePublished`) VALUES (:type:, :title:, :Slug:, :Summary:, :Keywords:, :visibility:, :Featured:, :Breaking:, :Slider:, :Recommended:, :Registered:, :tags:, :content:, :OptionalUrl:, :ImageUrl:, :ImageDescription:, :AdditionalImages:, :Files:, :language_id:, :category:, :subcategory:, :datePublished:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\PostController.php(661): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-06 04:32:21 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\PostController.php(661): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-06 04:32:21 --> Operand should contain 1 column(s)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `content`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language_id`, `category`, `subcategory`, `datePublished`) VALUES (\'quize\', \'quize\', \'quize\', \'quize\', \'quize\', \'show\', \'1\', \'1\', \'1\', \'1\', \'1\', \'quize\', (\'quize1\',\'2\',\'3\'), \'quize\', \'quize\', \'quize\', \'1691296341_f44b1a2ae777d71a04d0.jpg\', \'1691296341_db27e0ac87e8688c8543.pdf\', \'3\', \'1\', \'5\', \'2023-08-03\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `content`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language_id`, `category`, `subcategory`, `datePublished`) VALUES (\'quize\', \'quize\', \'quize\', \'quize\', \'quize\', \'show\', \'1\', \'1\', \'1\', \'1\', \'1\', \'quize\', (\'quize1\',\'2\',\'3\'), \'quize\', \'quize\', \'quize\', \'1691296341_f44b1a2ae777d71a04d0.jpg\', \'1691296341_db27e0ac87e8688c8543.pdf\', \'3\', \'1\', \'5\', \'2023-08-03\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `content`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language_id`, `category`, `subcategory`, `datePublished`) VALUES (\'quize\', \'quize\', \'quize\', \'quize\', \'quize\', \'show\', \'1\', \'1\', \'1\', \'1\', \'1\', \'quize\', (\'quize1\',\'2\',\'3\'), \'quize\', \'quize\', \'quize\', \'1691296341_f44b1a2ae777d71a04d0.jpg\', \'1691296341_db27e0ac87e8688c8543.pdf\', \'3\', \'1\', \'5\', \'2023-08-03\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `articletable` (`type`, `title`, `Slug`, `Summary`, `Keywords`, `visibility`, `Featured`, `Breaking`, `Slider`, `Recommended`, `Registered`, `tags`, `content`, `OptionalUrl`, `ImageUrl`, `ImageDescription`, `AdditionalImages`, `Files`, `language_id`, `category`, `subcategory`, `datePublished`) VALUES (:type:, :title:, :Slug:, :Summary:, :Keywords:, :visibility:, :Featured:, :Breaking:, :Slider:, :Recommended:, :Registered:, :tags:, :content:, :OptionalUrl:, :ImageUrl:, :ImageDescription:, :AdditionalImages:, :Files:, :language_id:, :category:, :subcategory:, :datePublished:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\PostController.php(661): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-06 04:44:31 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\PostController.php(661): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-06 04:44:31 --> Operand should contain 1 column(s)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `articletable` (`content`) VALUES ((\'1\',\'2\',\'3\'))', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `articletable` (`content`) VALUES ((\'1\',\'2\',\'3\'))')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `articletable` (`content`) VALUES ((\'1\',\'2\',\'3\'))')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `articletable` (`content`) VALUES (:content:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\PostController.php(661): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-06 05:05:22 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\variant\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `ar...', 0)
+#1 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ar...')
+#2 C:\xampp\htdocs\variant\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ar...')
+#3 C:\xampp\htdocs\variant\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ar...', Array, false)
+#4 C:\xampp\htdocs\variant\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\variant\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\variant\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\variant\app\Controllers\PostController.php(661): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\variant\system\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+#9 C:\xampp\htdocs\variant\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+#10 C:\xampp\htdocs\variant\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\variant\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-08-06 05:05:22 --> Operand should contain 1 column(s)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `articletable` (`content`) VALUES ((\'1\',\'2\',\'3\'))', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `articletable` (`content`) VALUES ((\'1\',\'2\',\'3\'))')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `articletable` (`content`) VALUES ((\'1\',\'2\',\'3\'))')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `articletable` (`content`) VALUES (:content:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\PostController.php(661): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 05:26:35 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1706.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('{"content":["1","2","3"]}', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('{"content":["1","2","3"]}', true)
+ 3 APPPATH\Controllers\PostController.php(662): CodeIgniter\Model->insert('{"content":["1","2","3"]}')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 05:35:04 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1706.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('{"content":["1","2","3"]}', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('{"content":["1","2","3"]}', true)
+ 3 APPPATH\Controllers\PostController.php(666): CodeIgniter\Model->insert('{"content":["1","2","3"]}')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 05:48:28 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1706.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('{"content":["1","2","3","q4"]}', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('{"content":["1","2","3","q4"]}', true)
+ 3 APPPATH\Controllers\PostController.php(666): CodeIgniter\Model->insert('{"content":["1","2","3","q4"]}')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 05:50:06 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1706.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('{"title":"q"}', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('{"title":"q"}', true)
+ 3 APPPATH\Controllers\PostController.php(666): CodeIgniter\Model->insert('{"title":"q"}')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 05:53:18 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1706.
+ 1 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray('{"content":["1","2","3"]}', 'insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert('{"content":["1","2","3"]}', true)
+ 3 APPPATH\Controllers\PostController.php(666): CodeIgniter\Model->insert('{"content":["1","2","3"]}')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 08:14:46 --> Call to a member function isValid() on null
+in APPPATH\Controllers\PostController.php on line 672.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 09:22:04 --> Call to a member function isValid() on null
+in APPPATH\Controllers\PostController.php on line 672.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 10:08:08 --> Call to a member function isValid() on null
+in APPPATH\Controllers\PostController.php on line 664.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 10:17:50 --> Call to a member function isValid() on null
+in APPPATH\Controllers\PostController.php on line 664.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 10:36:39 --> Call to a member function isValid() on null
+in APPPATH\Controllers\PostController.php on line 664.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 10:43:41 --> Call to undefined function App\Controllers\getFile()
+in APPPATH\Controllers\PostController.php on line 664.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 11:03:48 --> Undefined variable $rNumberOfCorrectAnswerMax
+in APPPATH\Controllers\PostController.php on line 702.
+ 1 APPPATH\Controllers\PostController.php(702): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rNumberOfCorrectAnswerMax', 'C:\\xampp\\htdocs\\variant\\app\\Controllers\\PostController.php', 702)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 12:07:28 --> Call to a member function isValid() on null
+in APPPATH\Controllers\PostController.php on line 667.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->quizeform()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 12:30:11 --> Undefined array key "languageName"
+in APPPATH\Views\addpost\allpost.php on line 109.
+ 1 APPPATH\Views\addpost\allpost.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "languageName"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\allpost.php', 109)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\allpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/allpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(68): view('addpost/allpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->deletepost('10')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 13:06:13 --> Undefined array key "parentCat"
+in APPPATH\Views\addpost\editpost.php on line 135.
+ 1 APPPATH\Views\addpost\editpost.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "parentCat"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 135)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(101): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('16')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 13:14:11 --> Undefined variable $languagetable
+in APPPATH\Controllers\PostController.php on line 112.
+ 1 APPPATH\Controllers\PostController.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $languagetable', 'C:\\xampp\\htdocs\\variant\\app\\Controllers\\PostController.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('16')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 13:14:51 --> Undefined variable $lantable
+in APPPATH\Views\addpost\editpost.php on line 125.
+ 1 APPPATH\Views\addpost\editpost.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lantable', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 125)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(114): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('16')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 13:15:24 --> Undefined array key "language_id"
+in APPPATH\Views\addpost\editpost.php on line 126.
+ 1 APPPATH\Views\addpost\editpost.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "language_id"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 126)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(114): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('16')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 13:17:56 --> Undefined array key "parentCat"
+in APPPATH\Views\addpost\editpost.php on line 135.
+ 1 APPPATH\Views\addpost\editpost.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "parentCat"', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 135)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(114): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('16')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 13:29:47 --> syntax error, unexpected end of file
+in APPPATH\Views\addpost\editpost.php on line 215.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 3 APPPATH\Controllers\PostController.php(114): view('addpost/editpost', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('16')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-06 13:31:13 --> Undefined variable $value
+in APPPATH\Views\addpost\editpost.php on line 25.
+ 1 APPPATH\Views\addpost\editpost.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php', 25)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\variant\\app\\Views\\addpost\\editpost.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addpost/editpost', [], true)
+ 5 APPPATH\Controllers\PostController.php(114): view('addpost/editpost', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PostController->editpost('16')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

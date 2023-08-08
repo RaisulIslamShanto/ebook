@@ -213,25 +213,24 @@
                                             <h5 class="">Category</h5>
                                             <div class="form-group">
                                                 <label for="">Language</label>
-                                                <select class="form-control" name="language" id="">
+                                                <select class="form-control" name="language" id="languageChange">
                                                     <?php foreach ($lantable as $value):?>
-                                                        <option value="<?= $value['languageName']?>"><?= $value['languageName']?></option>
+                                                    <option value="<?= $value['id']?>"><?= $value['languageName']?></option>
                                                     <?php endforeach ?>
                                                 </select>
                                             </div> 
                                             <div class="form-group">
                                                 <label for="">Category</label>
-                                                <select class="form-control" name="category" id="">
-                                                    <?php foreach ($cattable as $value):?>
-                                                        <option value="<?= $value['parentCat']?>"><?= $value['parentCat']?></option>
-                                                    <?php endforeach ?>
+
+                                                <select class="form-control" name="category" id="categorylistUnderLanguage">
+                                                
                                                 </select>
                                             </div> 
                                             <div class="form-group">
                                                 <label for="">Subcategory</label>
-                                                <select class="form-control" name="subcategory" id="">
-                                                    <option value="Cricket">Cricket</option>
-                                                    <option value="Football">Football</option>
+                                                <select class="form-control" name="subcategory" id="subcategoryList">
+                                                    <!-- <option value="Cricket">Cricket</option>
+                                                    <option value="Football">Football</option> -->
                                                 </select>
                                             </div> 
                                         </div>
@@ -350,7 +349,72 @@
         });
     });
 
-    
+    $('#languageChange').on('change',function(){
+
+        // alert("hi");
+
+        var id = $(this).val();
+
+        alert(id);
+        console.log(id);
+
+        $.ajax({
+            url: 'categoryUnderlanguage',
+            type: 'GET', 
+            data: {languageId: id},
+            dataType: 'json',
+            success: function (data) {
+                
+                console.log(data);
+                var selectOptions = '';
+
+                // for (var i = 0; i < data.length; i++) {
+                //     selectOptions += '<option value="' + data[i].id + '">' + data[i].catname + '</option>';
+                // }
+                for (var i = 0; i < data.length; i++) {
+                    selectOptions += `<option value="${data[i].id}">${data[i].catname}</option>`
+                }
+
+
+                $('#categorylistUnderLanguage').html(selectOptions);
+            },
+
+        });
+    });
+
+
+    $( "body" ).delegate( "#categorylistUnderLanguage", "change", function() {
+
+            alert("hi");
+
+        var id = $(this).val();
+
+        alert(id);
+        console.log(id);
+
+        $.ajax({
+            url: 'subcategoryUnderCategory',
+            type: 'GET', 
+            data: {catId: id},
+            dataType: 'json',
+            success: function (data) {
+                
+                console.log(data);
+                var selectOptions = '';
+
+                for (var i = 0; i < data.length; i++) {
+                    selectOptions += '<option value="' + data[i].id + '">' + data[i].catname + '</option>';
+                }
+
+                $('#subcategoryList').html(selectOptions);
+            },
+            error: function (xhr, status, error) {
+                
+                console.error(error);
+            }
+        });
+
+    });
 
 
 

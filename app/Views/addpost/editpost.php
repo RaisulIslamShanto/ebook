@@ -26,7 +26,7 @@
                             <div class="row">
                                 <div class="col-md-8">
 
-                                <input type="hidden" value="<?= $value['id']?>">
+                                <input type="text" value="<?= $value['id']?>">
                                     <div class="card">
                                         <div class="card-body">
                                             <input type="hidden" name ="type" value="article">
@@ -123,7 +123,7 @@
                                                 <label for="">Language</label>
                                                 <select class="form-control" name="language" id="">
                                                     <?php foreach ($lantable as $value):?>
-                                                    <option value="<?= $value['languageName']?>"><?= $value['languageName']?></option>
+                                                    <option value="<?= $value['id']?>"><?= $value['languageName']?></option>
                                                     <?php endforeach ?>
                                                 </select>
                                             </div> 
@@ -132,7 +132,7 @@
 
                                                 <select class="form-control" name="category" id="">
                                                 <?php foreach ($cattable as $value):?>
-                                                    <option value="<?= $value['parentCat']?>"><?= $value['parentCat']?></option>
+                                                    <option value="<?= $value['id']?>"><?= $value['catname']?></option>
                                                 <?php endforeach ?>
                                                 </select>
                                             </div> 
@@ -194,67 +194,8 @@
     });
 
 
-//    pdf form
-    $('#lanpdfile').on('submit', function(e){
-        e.preventDefault();
 
-                alert('hi');
-
-                var formData = new FormData(this);
-                console.log(formData);
-                
-                
-
-                $.ajax({
-                    url: 'lanfile', 
-                    type: 'POST',
-                    data: formData,
-                    contentType: false,
-                    processData: false,
-                    dataType: 'json',
-                    success: function (response) {
-                        
-                        alert(response.message);
-                    },
-                });
-            });
-
-            //  default button
-
-    $('.def').click(function(e){
-        e.preventDefault();
-
-        
-
-        var id = $(this).attr('value');
-        alert(id);
-
-        var allbutton =$('.def');
-        allbutton.css('color', 'white');
-        var button = $(this);
-        button.css('color', 'black');
-       
-        
-        
-
-        $.ajax({
-            url: 'makedefault', 
-            type: 'POST',
-            data: {"id":id},
-            
-            
-            dataType: 'json',
-            success: function (response) {
-                
-                alert(response.message);
-
-
-
-
-            },
-        });
-    });
-
+   
     
 
 

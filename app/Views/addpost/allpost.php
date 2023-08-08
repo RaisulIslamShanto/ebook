@@ -41,9 +41,9 @@
                                             <label for="">Language</label>
                                             
                                             <select class="form-control" name="" id="">
-                                            <?php foreach($cattable as $value):?>
-                                                <option value="<?= $value['id']?>"><?= $value['language']?></option>
-                                            <?php endforeach?>
+                                            <?//php foreach($cattable as $value):?>
+                                                <option value="<?//= $value['id']?>"><?//= $value['language']?></option>
+                                            <?//php endforeach?>
                                             </select>
                                             
                                         </div>
@@ -51,9 +51,9 @@
                                             <label for="">Parent Category</label>
                                             <select class="form-control" name="" id="">
 
-                                            <?php foreach($cattable as $value):?>
-                                                <option value="<?= $value['id']?>"><?= $value['parentCat']?></option>
-                                            <?php endforeach?>
+                                            <?//php foreach($cattable as $value):?>
+                                                <option value="<?//= $value['id']?>"><?//= $value['parentCat']?></option>
+                                            <?//php endforeach?>
                                                 
                                             </select>
                                         </div>
@@ -106,7 +106,7 @@
                                                  }
                                                 ?>   
                                             </td>
-                                            <td><?= $value['language'] ?></td>
+                                            <td><?= $value['languageName'] ?></td>
                                             <td><?= $value['type'] ?></td>
                                             <td><?= "admin" ?></td>
                                             <td><?= "145" ?></td>
@@ -228,5 +228,5 @@
 </script>
 
 
-                <?= $this->endSection() ?>
+<?= $this->endSection() ?>
                 

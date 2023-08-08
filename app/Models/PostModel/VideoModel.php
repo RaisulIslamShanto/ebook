@@ -26,11 +26,12 @@ class VideoModel extends Model{
     'Registered',
     'tags',
     'OptionalUrl',
+    'content',
     'ImageUrl',
     'ImageDescription',
     'AdditionalImages',
     'Files',
-    'language',
+    'language_id',
     'category',
     'subcategory',
     'datePublished']; 
